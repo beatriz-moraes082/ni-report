@@ -4,7 +4,7 @@ window.NI_DATA = {
     "end": "2026-05-04",
     "label": "01/04 a 04/05"
   },
-  "generated_at": "06/05/2026 00:05",
+  "generated_at": "06/05/2026 03:12",
   "stats": {
     "totals": {
       "desqualificado": 97,
