@@ -45,6 +45,15 @@ body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;-webk
 .tabnav .kbd{display:inline-block;font-size:9px;font-weight:700;padding:1px 5px;border-radius:4px;background:rgba(0,0,0,.05);color:var(--muted);font-family:ui-monospace,monospace}
 .tabnav button.active .kbd{background:rgba(232,72,12,.15);color:var(--accent)}
 
+.period-switcher{background:var(--bg);padding:0 28px 12px;display:flex;gap:8px;align-items:center;position:sticky;top:115px;z-index:98;flex-wrap:wrap}
+.period-switcher .ps-lbl{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:6px;display:flex;align-items:center;gap:6px}
+.ps-btn{background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:7px 14px;font-size:12px;font-weight:600;color:var(--muted);cursor:pointer;font-family:inherit;transition:all .2s;display:inline-flex;align-items:center;gap:6px}
+.ps-btn:hover{color:var(--text);border-color:var(--accent);transform:translateY(-1px)}
+.ps-btn.active{background:var(--accent);color:#fff;border-color:var(--accent);box-shadow:0 2px 8px rgba(232,72,12,.25)}
+.ps-btn .ps-count{background:rgba(0,0,0,.08);padding:1px 7px;border-radius:999px;font-size:10px;font-weight:700}
+.ps-btn.active .ps-count{background:rgba(255,255,255,.25);color:#fff}
+@media(max-width:768px){.period-switcher{padding:0 16px 12px;top:auto;position:relative}}
+
 .tab-pane{display:none}
 .tab-pane.active{display:block;animation:slideIn .35s cubic-bezier(.4,0,.2,1) both}
 @keyframes slideIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
@@ -215,6 +224,14 @@ footer b{color:var(--text)}
   <button data-tab="plano"><svg class="ic" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Plano de Ação <span class="kbd">5</span></button>
 </div>
 
+<div class="period-switcher">
+  <span class="ps-lbl">
+    <svg class="ic" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+    Visualizar:
+  </span>
+  <div id="periodBtns"></div>
+</div>
+
 <div class="main">
 
   <div class="tab-pane active" id="overview">
@@ -345,8 +362,8 @@ const C={
 Chart.defaults.font.family="'Inter',sans-serif";
 Chart.defaults.color=C.muted;
 
-const D=window.NI_DATA;
-if(!D){
+const ROOT=window.NI_DATA;
+if(!ROOT){
   document.body.innerHTML='<div style="padding:40px;text-align:center;font-family:Inter,sans-serif"><h2>Dashboard sem dados</h2><p>Rode <code>python3 build.py</code> para gerar <code>data.js</code>.</p></div>';
   throw new Error('NI_DATA missing');
 }
@@ -358,220 +375,304 @@ const fmt={
   num:n=>(n||0).toLocaleString('pt-BR'),
 };
 
-document.getElementById('periodLabel').textContent=D.period.label;
-document.getElementById('investLabel').textContent=D.meta?fmt.brl(D.meta.spend):'—';
-document.getElementById('genAt').textContent=D.generated_at;
+document.getElementById('genAt').textContent=ROOT.generated_at;
 
-const t=D.stats.totals,n=D.stats.n_total;
-const kpis=[
-  {key:'leads',icon:'<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>',label:'Leads',value:n,sub:`${D.stats.empreend.length} empreendimentos`,trend:'base',trendCls:'neutral',spark:'total'},
-  {key:'atend',icon:'<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',label:'Em Atendimento',value:t.em_atendimento||0,sub:'pulmão do pipeline',trend:'ativo',spark:'atend'},
-  {key:'visita',icon:'<path d="M9 11l3 3L22 4"/>',label:'Visitas',value:t.visita||0,sub:'snapshot total',spark:'visita'},
-  {key:'qual',icon:'<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/>',label:'Qualificados',value:t.qualificado||0,sub:'avançaram funil',spark:'qual'},
-  {key:'proposta',icon:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>',label:'Propostas',value:t.proposta||0,sub:'',spark:'proposta'},
-  {key:'perda',icon:'<circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/>',label:'% Perda',value:fmt.pct(D.stats.pct_perda),sub:`${D.stats.perdidos} desqualificados`,spark:'perda'},
+// Period switcher
+const PERIOD_ORDER=[
+  {key:'total',label:'Período total'},
+  {key:'abril',label:'Abril'},
+  {key:'maio',label:'Maio'},
 ];
-document.getElementById('kpiGrid').innerHTML=kpis.map(k=>`
-  <div class="kpi" data-filter="${k.key}">
-    <div class="kpi-top">
-      <span class="kpi-label"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor">${k.icon}</svg>${k.label}</span>
-      ${k.trend?`<span class="kpi-trend ${k.trendCls||''}">${k.trend}</span>`:''}
-    </div>
-    <div class="kpi-value">${k.value}</div>
-    <div class="kpi-note">${k.sub}</div>
-    <svg class="kpi-spark" viewBox="0 0 200 30" preserveAspectRatio="none" data-spark="${k.spark}"></svg>
-  </div>
-`).join('');
+const periodBtnsEl=document.getElementById('periodBtns');
+periodBtnsEl.innerHTML=PERIOD_ORDER.map(p=>{
+  const v=ROOT.views[p.key];
+  if(!v)return '';
+  return `<button class="ps-btn" data-view="${p.key}">${p.label}<span class="ps-count">${v.stats.n_total}</span></button>`;
+}).join('');
 
+// State
+let state={viewKey:ROOT.default_view||'total'};
+let charts={status:null,emp:null,motivos:null};
+let sortKey='leads',sortDir='desc';
+
+function destroyCharts(){
+  Object.values(charts).forEach(c=>{if(c){try{c.destroy();}catch(e){}}});
+  charts={status:null,emp:null,motivos:null};
+}
+
+// Helpers de render
 function drawSpark(svg,data){
   if(!data||data.every(v=>v===0)){
     svg.innerHTML=`<line x1="0" y1="20" x2="200" y2="20" stroke="${C.border}" stroke-width="1" stroke-dasharray="3 3"/>`;return;
   }
   const max=Math.max(...data,1),len=data.length;
+  if(len<2){
+    svg.innerHTML=`<circle cx="100" cy="${28-(data[0]/max)*26}" r="3" fill="${C.accent}"/>`;return;
+  }
   const points=data.map((v,i)=>`${(i/(len-1))*200},${28-(v/max)*26}`).join(' ');
   svg.innerHTML=`<polygon points="0,30 ${points} 200,30" fill="${C.accent}" fill-opacity="0.08"/><polyline points="${points}" fill="none" stroke="${C.accent}" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>`;
 }
-document.querySelectorAll('[data-spark]').forEach(svg=>drawSpark(svg,D.stats.series[svg.dataset.spark]));
 
-const semStatus=t.sem_status||0;
-const lr=document.getElementById('leituraRapida');
-if(t.em_atendimento)lr.insertAdjacentHTML('beforeend',`<div class="insight neutral"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span><b>${(t.em_atendimento/n*100).toFixed(1).replace('.',',')}%</b> seguem em atendimento ativo. Pulmão do pipeline para virar visita nas próximas semanas.</span></div>`);
-if(semStatus)lr.insertAdjacentHTML('beforeend',`<div class="insight red"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 9v4M12 17h.01"/></svg><span><b>${(semStatus/n*100).toFixed(1).replace('.',',')}%</b> ainda estão sem status preenchido, mascarando o desempenho real.</span></div>`);
+function render(){
+  const D=ROOT.views[state.viewKey];
+  if(!D){console.error('view não existe',state.viewKey);return;}
 
-const funnel=[
-  {label:'Leads gerados',value:n,color:'#B5B0A8',rate:'100%',note:D.period.label,help:'Total de leads cadastrados nas planilhas dos empreendimentos no período'},
-  {label:'Em atendimento',value:t.em_atendimento||0,color:C.bege,rate:fmt.pct((t.em_atendimento||0)/n*100),note:'da base',help:'Leads ativos no pipeline, recebendo follow-up dos corretores'},
-  {label:'Visita',value:t.visita||0,color:C.orange3,rate:fmt.pct((t.visita||0)/n*100),note:'snapshot total',help:'Leads que confirmaram visita ao imóvel'},
-  {label:'Qualificado',value:t.qualificado||0,color:C.orange2,rate:fmt.pct((t.qualificado||0)/n*100),note:'avançou no funil',help:'Leads com perfil financeiro e interesse confirmado, prontos para proposta'},
-  {label:'Proposta',value:t.proposta||0,color:C.accent,rate:fmt.pct((t.proposta||0)/n*100),note:'',help:'Lead com proposta formal enviada, aguardando resposta'}
-];
-const maxV=funnel[0].value||1;
-const py=document.getElementById('pyramid');
-funnel.forEach((f,i)=>{
-  const w=Math.max(8,(f.value/maxV)*100);
-  py.insertAdjacentHTML('beforeend',`
-    <div class="pyr-row">
-      <div class="pyr-lbl">${f.label}</div>
-      <div class="pyr-mid">
-        <div class="pyr-bar" style="width:${w}%;background:${f.color}">${f.value}</div>
-        <div class="fn-tip"><b>${f.label}</b>: ${f.help}<br><span style="opacity:.7">${f.value} leads, ${f.rate} da base inicial</span></div>
+  // Topbar
+  document.getElementById('periodLabel').textContent=D.period.label;
+  document.getElementById('investLabel').textContent=D.meta?fmt.brl(D.meta.spend):'—';
+
+  // Period switcher active
+  document.querySelectorAll('.ps-btn').forEach(b=>b.classList.toggle('active',b.dataset.view===state.viewKey));
+
+  destroyCharts();
+  renderOverview(D);
+  renderEmpreend(D);
+  renderMidia(D);
+  renderPerda(D);
+  renderPlano(D);
+}
+
+// ─── Renderers (cada um recebe a view atual D) ──────────────────────────
+function renderOverview(D){
+  const t=D.stats.totals,n=D.stats.n_total;
+
+  const kpis=[
+    {key:'leads',icon:'<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>',label:'Leads',value:fmt.num(n),sub:`${D.stats.empreend.length} empreendimentos`,trend:'base',trendCls:'neutral',spark:'total'},
+    {key:'atend',icon:'<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',label:'Em Atendimento',value:fmt.num(t.em_atendimento||0),sub:'pulmão do pipeline',trend:'ativo',spark:'atend'},
+    {key:'visita',icon:'<path d="M9 11l3 3L22 4"/>',label:'Visitas',value:fmt.num(t.visita||0),sub:'snapshot total',spark:'visita'},
+    {key:'qual',icon:'<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/>',label:'Qualificados',value:fmt.num(t.qualificado||0),sub:'avançaram funil',spark:'qual'},
+    {key:'proposta',icon:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>',label:'Propostas',value:fmt.num(t.proposta||0),sub:'',spark:'proposta'},
+    {key:'perda',icon:'<circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/>',label:'% Perda',value:fmt.pct(D.stats.pct_perda),sub:`${D.stats.perdidos} desqualificados`,spark:'perda'},
+  ];
+  document.getElementById('kpiGrid').innerHTML=kpis.map(k=>`
+    <div class="kpi" data-filter="${k.key}">
+      <div class="kpi-top">
+        <span class="kpi-label"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor">${k.icon}</svg>${k.label}</span>
+        ${k.trend?`<span class="kpi-trend ${k.trendCls||''}">${k.trend}</span>`:''}
       </div>
-      <div class="pyr-rgt"><span class="rate-pill">${f.rate}</span><span style="font-size:11px;color:${C.muted}">${f.note}</span></div>
+      <div class="kpi-value">${k.value}</div>
+      <div class="kpi-note">${k.sub}</div>
+      <svg class="kpi-spark" viewBox="0 0 200 30" preserveAspectRatio="none" data-spark="${k.spark}"></svg>
     </div>
-    ${i<funnel.length-1?'<div class="pyr-arrow">↓</div>':''}
-  `);
-});
+  `).join('');
+  document.querySelectorAll('[data-spark]').forEach(svg=>drawSpark(svg,D.stats.series[svg.dataset.spark]));
 
-const statusOrder=[
-  ['Desqualificado','desqualificado',C.bege],
-  ['Em atendimento','em_atendimento',C.begeDark],
-  ['Sem status','sem_status','#D9D2CA'],
-  ['Outros produtos','outros_produtos','#E5DDD3'],
-  ['Qualificado','qualificado',C.orange2],
-  ['Visita','visita',C.accent],
-  ['Não é momento','nao_momento','#EFE8E0'],
-  ['Proposta','proposta','#1C1008'],
-];
-const sLabels=[],sData=[],sColors=[];
-statusOrder.forEach(([lbl,k,col])=>{const v=t[k]||0;if(v>0){sLabels.push(lbl);sData.push(v);sColors.push(col);}});
-new Chart(document.getElementById('statusChart'),{
-  type:'doughnut',
-  data:{labels:sLabels,datasets:[{data:sData,backgroundColor:sColors,borderColor:'#fff',borderWidth:2,hoverOffset:8}]},
-  options:{responsive:true,maintainAspectRatio:false,cutout:'62%',plugins:{legend:{position:'right',labels:{boxWidth:10,padding:12,font:{size:11,weight:'500'}}},tooltip:{backgroundColor:'#1C1008',padding:12,cornerRadius:8,callbacks:{label:c=>`${c.label}: ${c.raw} leads (${(c.raw/n*100).toFixed(1).replace('.',',')}%)`}}}}
-});
-
-let empData=D.stats.empreend.slice();
-empData.forEach(e=>{
-  e.pct=e.leads?Math.round(e.perda/e.leads*100):0;
-  e.score=e.leads?(e.atend+e.visita*2+e.qual*3+e.proposta*5)/e.leads:0;
-});
-const candidates=empData.filter(e=>e.leads>=5);
-const bestIdx=candidates.length?candidates.reduce((a,b)=>a.score>b.score?a:b):null;
-const worstIdx=candidates.length?candidates.reduce((a,b)=>a.pct>b.pct?a:b):null;
-
-new Chart(document.getElementById('empChart'),{
-  type:'bar',
-  data:{
-    labels:empData.map(e=>`${e.emp}\n${e.corretor}`),
-    datasets:[
-      {label:'Em atendimento',data:empData.map(e=>e.atend),backgroundColor:C.orange3,stack:'s'},
-      {label:'Visita',data:empData.map(e=>e.visita),backgroundColor:C.orange2,stack:'s'},
-      {label:'Qualificado',data:empData.map(e=>e.qual),backgroundColor:C.accent,stack:'s'},
-      {label:'Proposta',data:empData.map(e=>e.proposta),backgroundColor:'#1C1008',stack:'s'},
-      {label:'Perdas',data:empData.map(e=>e.perda),backgroundColor:'#EBE9E5',stack:'s'},
-      {label:'Outros',data:empData.map(e=>e.outros),backgroundColor:'#F0EDE8',stack:'s'},
-      {label:'Sem status',data:empData.map(e=>e.sem),backgroundColor:'#F5F2ED',stack:'s'}
-    ]
-  },
-  options:{
-    responsive:true,maintainAspectRatio:false,
-    plugins:{
-      legend:{position:'bottom',labels:{boxWidth:10,padding:14,font:{size:11,weight:'500'},usePointStyle:true,pointStyle:'rect'}},
-      tooltip:{backgroundColor:'#1C1008',padding:12,cornerRadius:8,
-        callbacks:{
-          title:items=>{const e=empData[items[0].dataIndex];return `${e.emp} (${e.corretor})`;},
-          label:c=>{const e=empData[c.dataIndex];const pct=e.leads?(c.raw/e.leads*100).toFixed(1):0;return ` ${c.dataset.label}: ${c.raw} (${pct.toString().replace('.',',')}% deste empreendimento)`;},
-          afterBody:items=>{const e=empData[items[0].dataIndex];return `\n${e.leads} leads no total, ${e.pct}% de perda`;}
-        }}
-    },
-    scales:{x:{stacked:true,grid:{display:false},ticks:{font:{size:10},maxRotation:25,minRotation:25}},y:{stacked:true,grid:{color:C.border,drawBorder:false}}}
+  // Leitura rápida
+  const lr=document.getElementById('leituraRapida');
+  lr.innerHTML='<h3 class="card-title">Leitura rápida</h3><p class="card-sub">Como os leads se distribuem hoje</p>';
+  if(n===0){
+    lr.insertAdjacentHTML('beforeend','<div class="empty" style="padding:20px 0;text-align:left">Nenhum lead registrado nesse período.</div>');
+  }else{
+    if(t.em_atendimento)lr.insertAdjacentHTML('beforeend',`<div class="insight neutral"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span><b>${(t.em_atendimento/n*100).toFixed(1).replace('.',',')}%</b> seguem em atendimento ativo. Pulmão do pipeline para virar visita nas próximas semanas.</span></div>`);
+    const sem=t.sem_status||0;
+    if(sem)lr.insertAdjacentHTML('beforeend',`<div class="insight red"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 9v4M12 17h.01"/></svg><span><b>${(sem/n*100).toFixed(1).replace('.',',')}%</b> ainda estão sem status preenchido, mascarando o desempenho real.</span></div>`);
   }
-});
 
-let sortKey='leads',sortDir='desc';
-function renderTable(){
-  const sorted=[...empData].sort((a,b)=>{
-    let av=a[sortKey],bv=b[sortKey];
-    if(typeof av==='string')return sortDir==='asc'?av.localeCompare(bv):bv.localeCompare(av);
-    return sortDir==='asc'?av-bv:bv-av;
+  // Funil
+  const py=document.getElementById('pyramid');
+  py.innerHTML='';
+  const funnel=[
+    {label:'Leads gerados',value:n,color:'#B5B0A8',rate:'100%',note:D.period.label,help:'Total de leads cadastrados nas planilhas dos empreendimentos no período'},
+    {label:'Em atendimento',value:t.em_atendimento||0,color:C.bege,rate:n?fmt.pct((t.em_atendimento||0)/n*100):'0%',note:'da base',help:'Leads ativos no pipeline, recebendo follow-up dos corretores'},
+    {label:'Visita',value:t.visita||0,color:C.orange3,rate:n?fmt.pct((t.visita||0)/n*100):'0%',note:'snapshot total',help:'Leads que confirmaram visita ao imóvel'},
+    {label:'Qualificado',value:t.qualificado||0,color:C.orange2,rate:n?fmt.pct((t.qualificado||0)/n*100):'0%',note:'avançou no funil',help:'Leads com perfil financeiro e interesse confirmado, prontos para proposta'},
+    {label:'Proposta',value:t.proposta||0,color:C.accent,rate:n?fmt.pct((t.proposta||0)/n*100):'0%',note:'',help:'Lead com proposta formal enviada, aguardando resposta'}
+  ];
+  const maxV=funnel[0].value||1;
+  funnel.forEach((f,i)=>{
+    const w=Math.max(8,(f.value/maxV)*100);
+    py.insertAdjacentHTML('beforeend',`
+      <div class="pyr-row">
+        <div class="pyr-lbl">${f.label}</div>
+        <div class="pyr-mid">
+          <div class="pyr-bar" style="width:${w}%;background:${f.color}">${f.value}</div>
+          <div class="fn-tip"><b>${f.label}</b>: ${f.help}<br><span style="opacity:.7">${f.value} leads, ${f.rate} da base inicial</span></div>
+        </div>
+        <div class="pyr-rgt"><span class="rate-pill">${f.rate}</span><span style="font-size:11px;color:${C.muted}">${f.note}</span></div>
+      </div>
+      ${i<funnel.length-1?'<div class="pyr-arrow">↓</div>':''}
+    `);
   });
-  const tbody=document.getElementById('empTable');
-  tbody.innerHTML='';
-  if(!sorted.length){tbody.innerHTML=`<tr><td colspan="10"><div class="empty">Nenhum empreendimento com dados no período</div></td></tr>`;return;}
-  sorted.forEach(e=>{
-    const pctBdg=e.pct>=60?'bdg-red':e.pct>=40?'bdg-orange':'bdg-soft';
-    const propostaCell=e.proposta>0?`<span class="bdg bdg-orange">${e.proposta}</span>`:`<span class="tc-m">0</span>`;
-    const isBest=e===bestIdx,isWorst=e===worstIdx;
-    const tend=`<div class="tendency" title="Em atendimento: ${e.atend}, Visita: ${e.visita}, Qualificado: ${e.qual}, Proposta: ${e.proposta}">
-      ${e.atend>0?`<span class="a" style="flex:${e.atend}"></span>`:''}
-      ${e.visita>0?`<span class="v" style="flex:${e.visita}"></span>`:''}
-      ${e.qual>0?`<span class="q" style="flex:${e.qual}"></span>`:''}
-      ${e.proposta>0?`<span class="p" style="flex:${e.proposta}"></span>`:''}
-      ${(e.atend+e.visita+e.qual+e.proposta)===0?`<span style="flex:1;background:var(--border);height:18px;border-radius:2px;opacity:.5"></span>`:''}
-    </div>`;
-    tbody.insertAdjacentHTML('beforeend',`
-      <tr class="${isBest?'best':''}">
-        <td class="nm">${isBest?'<span class="bdg bdg-orange" style="margin-right:6px">★</span>':isWorst?'<span class="bdg bdg-red" style="margin-right:6px">!</span>':''}${e.emp}</td>
-        <td>${e.corretor}</td>
-        <td class="r num">${e.leads}</td>
-        <td class="r num ${e.atend>0?'tc-a':'tc-m'}">${e.atend}</td>
-        <td class="r num ${e.visita>0?'tc-a':'tc-m'}">${e.visita}</td>
-        <td class="r num ${e.qual>0?'tc-a':'tc-m'}">${e.qual}</td>
-        <td class="r">${propostaCell}</td>
-        <td class="r num">${e.perda}</td>
-        <td class="r"><span class="bdg ${pctBdg}">${e.pct}%</span></td>
-        <td>${tend}</td>
-      </tr>`);
-  });
-  document.querySelectorAll('#empTHead th').forEach(th=>{
-    th.classList.remove('sorted');
-    const a=th.querySelector('.sort-arrow');if(a)a.textContent='↕';
-    if(th.dataset.sort===sortKey){th.classList.add('sorted');if(a)a.textContent=sortDir==='asc'?'↑':'↓';}
+
+  // Status doughnut
+  const statusOrder=[
+    ['Desqualificado','desqualificado',C.bege],
+    ['Em atendimento','em_atendimento',C.begeDark],
+    ['Sem status','sem_status','#D9D2CA'],
+    ['Outros produtos','outros_produtos','#E5DDD3'],
+    ['Qualificado','qualificado',C.orange2],
+    ['Visita','visita',C.accent],
+    ['Não é momento','nao_momento','#EFE8E0'],
+    ['Proposta','proposta','#1C1008'],
+  ];
+  const sLabels=[],sData=[],sColors=[];
+  statusOrder.forEach(([lbl,k,col])=>{const v=t[k]||0;if(v>0){sLabels.push(lbl);sData.push(v);sColors.push(col);}});
+  charts.status=new Chart(document.getElementById('statusChart'),{
+    type:'doughnut',
+    data:{labels:sLabels,datasets:[{data:sData,backgroundColor:sColors,borderColor:'#fff',borderWidth:2,hoverOffset:8}]},
+    options:{responsive:true,maintainAspectRatio:false,cutout:'62%',plugins:{legend:{position:'right',labels:{boxWidth:10,padding:12,font:{size:11,weight:'500'}}},tooltip:{backgroundColor:'#1C1008',padding:12,cornerRadius:8,callbacks:{label:c=>`${c.label}: ${c.raw} leads (${(c.raw/(n||1)*100).toFixed(1).replace('.',',')}%)`}}}}
   });
 }
-document.querySelectorAll('#empTHead th').forEach(th=>th.onclick=()=>{
-  const k=th.dataset.sort;
-  if(sortKey===k)sortDir=sortDir==='asc'?'desc':'asc';else{sortKey=k;sortDir='desc';}
+
+function renderEmpreend(D){
+  let empData=D.stats.empreend.map(e=>({...e}));
+  empData.forEach(e=>{
+    e.pct=e.leads?Math.round(e.perda/e.leads*100):0;
+    e.score=e.leads?(e.atend+e.visita*2+e.qual*3+e.proposta*5)/e.leads:0;
+  });
+  const candidates=empData.filter(e=>e.leads>=5);
+  const bestIdx=candidates.length?candidates.reduce((a,b)=>a.score>b.score?a:b):null;
+  const worstIdx=candidates.length?candidates.reduce((a,b)=>a.pct>b.pct?a:b):null;
+
+  charts.emp=new Chart(document.getElementById('empChart'),{
+    type:'bar',
+    data:{
+      labels:empData.map(e=>`${e.emp}\n${e.corretor}`),
+      datasets:[
+        {label:'Em atendimento',data:empData.map(e=>e.atend),backgroundColor:C.orange3,stack:'s'},
+        {label:'Visita',data:empData.map(e=>e.visita),backgroundColor:C.orange2,stack:'s'},
+        {label:'Qualificado',data:empData.map(e=>e.qual),backgroundColor:C.accent,stack:'s'},
+        {label:'Proposta',data:empData.map(e=>e.proposta),backgroundColor:'#1C1008',stack:'s'},
+        {label:'Perdas',data:empData.map(e=>e.perda),backgroundColor:'#EBE9E5',stack:'s'},
+        {label:'Outros',data:empData.map(e=>e.outros),backgroundColor:'#F0EDE8',stack:'s'},
+        {label:'Sem status',data:empData.map(e=>e.sem),backgroundColor:'#F5F2ED',stack:'s'}
+      ]
+    },
+    options:{
+      responsive:true,maintainAspectRatio:false,
+      plugins:{
+        legend:{position:'bottom',labels:{boxWidth:10,padding:14,font:{size:11,weight:'500'},usePointStyle:true,pointStyle:'rect'}},
+        tooltip:{backgroundColor:'#1C1008',padding:12,cornerRadius:8,
+          callbacks:{
+            title:items=>{const e=empData[items[0].dataIndex];return `${e.emp} (${e.corretor})`;},
+            label:c=>{const e=empData[c.dataIndex];const pct=e.leads?(c.raw/e.leads*100).toFixed(1):0;return ` ${c.dataset.label}: ${c.raw} (${pct.toString().replace('.',',')}% deste empreendimento)`;},
+            afterBody:items=>{const e=empData[items[0].dataIndex];return `\n${e.leads} leads no total, ${e.pct}% de perda`;}
+          }}
+      },
+      scales:{x:{stacked:true,grid:{display:false},ticks:{font:{size:10},maxRotation:25,minRotation:25}},y:{stacked:true,grid:{color:C.border,drawBorder:false}}}
+    }
+  });
+
+  function renderTable(){
+    const sorted=[...empData].sort((a,b)=>{
+      let av=a[sortKey],bv=b[sortKey];
+      if(typeof av==='string')return sortDir==='asc'?av.localeCompare(bv):bv.localeCompare(av);
+      return sortDir==='asc'?av-bv:bv-av;
+    });
+    const tbody=document.getElementById('empTable');
+    tbody.innerHTML='';
+    if(!sorted.length||D.stats.n_total===0){tbody.innerHTML=`<tr><td colspan="10"><div class="empty">Nenhum empreendimento com dados no período</div></td></tr>`;return;}
+    sorted.forEach(e=>{
+      const pctBdg=e.pct>=60?'bdg-red':e.pct>=40?'bdg-orange':'bdg-soft';
+      const propostaCell=e.proposta>0?`<span class="bdg bdg-orange">${e.proposta}</span>`:`<span class="tc-m">0</span>`;
+      const isBest=e===bestIdx,isWorst=e===worstIdx;
+      const tend=`<div class="tendency" title="Em atendimento: ${e.atend}, Visita: ${e.visita}, Qualificado: ${e.qual}, Proposta: ${e.proposta}">
+        ${e.atend>0?`<span class="a" style="flex:${e.atend}"></span>`:''}
+        ${e.visita>0?`<span class="v" style="flex:${e.visita}"></span>`:''}
+        ${e.qual>0?`<span class="q" style="flex:${e.qual}"></span>`:''}
+        ${e.proposta>0?`<span class="p" style="flex:${e.proposta}"></span>`:''}
+        ${(e.atend+e.visita+e.qual+e.proposta)===0?`<span style="flex:1;background:var(--border);height:18px;border-radius:2px;opacity:.5"></span>`:''}
+      </div>`;
+      tbody.insertAdjacentHTML('beforeend',`
+        <tr class="${isBest?'best':''}">
+          <td class="nm">${isBest?'<span class="bdg bdg-orange" style="margin-right:6px">★</span>':isWorst?'<span class="bdg bdg-red" style="margin-right:6px">!</span>':''}${e.emp}</td>
+          <td>${e.corretor}</td>
+          <td class="r num">${e.leads}</td>
+          <td class="r num ${e.atend>0?'tc-a':'tc-m'}">${e.atend}</td>
+          <td class="r num ${e.visita>0?'tc-a':'tc-m'}">${e.visita}</td>
+          <td class="r num ${e.qual>0?'tc-a':'tc-m'}">${e.qual}</td>
+          <td class="r">${propostaCell}</td>
+          <td class="r num">${e.perda}</td>
+          <td class="r"><span class="bdg ${pctBdg}">${e.pct}%</span></td>
+          <td>${tend}</td>
+        </tr>`);
+    });
+    document.querySelectorAll('#empTHead th').forEach(th=>{
+      th.classList.remove('sorted');
+      const a=th.querySelector('.sort-arrow');if(a)a.textContent='↕';
+      if(th.dataset.sort===sortKey){th.classList.add('sorted');if(a)a.textContent=sortDir==='asc'?'↑':'↓';}
+    });
+  }
+  document.querySelectorAll('#empTHead th').forEach(th=>th.onclick=()=>{
+    const k=th.dataset.sort;
+    if(sortKey===k)sortDir=sortDir==='asc'?'desc':'asc';else{sortKey=k;sortDir='desc';}
+    renderTable();
+  });
   renderTable();
-});
-renderTable();
-
-if(D.meta){
-  document.getElementById('midiaKpis').innerHTML=`
-    <div class="kpi"><div class="kpi-top"><span class="kpi-label">Investimento</span></div><div class="kpi-value">${fmt.brl(D.meta.spend)}</div><div class="kpi-note">no período</div></div>
-    <div class="kpi"><div class="kpi-top"><span class="kpi-label">Leads gerados</span></div><div class="kpi-value">${fmt.num(D.meta.leads_form)}</div><div class="kpi-note">via formulário Meta</div></div>
-    <div class="kpi"><div class="kpi-top"><span class="kpi-label">CPL Meta</span></div><div class="kpi-value">${fmt.brlc(D.meta.cpl)}</div><div class="kpi-note">custo por lead</div></div>
-  `;
-  const visitas=t.visita||0,qual=t.qualificado||0,em=t.em_atendimento||0;
-  const cpl_atend=em+visitas+qual?D.meta.spend/(em+visitas+qual):0;
-  const cpv=visitas?D.meta.spend/visitas:0;
-  const cpq=qual?D.meta.spend/qual:0;
-  document.getElementById('custoEtapa').innerHTML=`
-    <div class="kpi"><div class="kpi-top"><span class="kpi-label">Custo por lead em atendimento</span></div><div class="kpi-value">${fmt.brlc(cpl_atend)}</div><div class="kpi-note">incluindo visita e qualificado</div></div>
-    <div class="kpi"><div class="kpi-top"><span class="kpi-label">Custo por visita</span></div><div class="kpi-value tc-a">${fmt.brlc(cpv)}</div><div class="kpi-note">${visitas} visitas</div></div>
-    <div class="kpi"><div class="kpi-top"><span class="kpi-label">Custo por qualificado</span></div><div class="kpi-value tc-a">${fmt.brlc(cpq)}</div><div class="kpi-note">${qual} qualificados</div></div>
-  `;
-}else{
-  document.getElementById('midiaKpis').innerHTML='<div class="empty" style="grid-column:span 3">Sem dados de Meta no período</div>';
-  document.getElementById('custoEtapa').innerHTML='';
 }
 
-const motivos=D.stats.motivos;
-document.getElementById('perdaSecLabel').textContent=`Motivos de perda, ${D.stats.perdidos} leads desqualificados`;
-const pInsights=document.getElementById('perdaInsights');
-if(motivos.length){
-  const top=motivos[0];
-  pInsights.insertAdjacentHTML('beforeend',`<div class="insight red"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"/></svg><span><b>${top.pct.toString().replace('.',',')}%</b> das perdas são "${top.label.toLowerCase()}" (${top.value} leads). Maior sinal do mês.</span></div>`);
-  const ambig=motivos.find(m=>m.label.includes('ambíguo'));
-  if(ambig)pInsights.insertAdjacentHTML('beforeend',`<div class="insight orange"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/></svg><span><b>${ambig.pct.toString().replace('.',',')}%</b> caíram em "motivo ambíguo". Padronizar campo destrava análise.</span></div>`);
+function renderMidia(D){
+  const t=D.stats.totals;
+  if(D.meta){
+    document.getElementById('midiaKpis').innerHTML=`
+      <div class="kpi"><div class="kpi-top"><span class="kpi-label">Investimento</span></div><div class="kpi-value">${fmt.brl(D.meta.spend)}</div><div class="kpi-note">no período</div></div>
+      <div class="kpi"><div class="kpi-top"><span class="kpi-label">Leads gerados</span></div><div class="kpi-value">${fmt.num(D.meta.leads_form)}</div><div class="kpi-note">via formulário Meta</div></div>
+      <div class="kpi"><div class="kpi-top"><span class="kpi-label">CPL Meta</span></div><div class="kpi-value">${fmt.brlc(D.meta.cpl)}</div><div class="kpi-note">custo por lead</div></div>
+    `;
+    const visitas=t.visita||0,qual=t.qualificado||0,em=t.em_atendimento||0;
+    const cpl_atend=em+visitas+qual?D.meta.spend/(em+visitas+qual):0;
+    const cpv=visitas?D.meta.spend/visitas:0;
+    const cpq=qual?D.meta.spend/qual:0;
+    document.getElementById('custoEtapa').innerHTML=`
+      <div class="kpi"><div class="kpi-top"><span class="kpi-label">Custo por lead em atendimento</span></div><div class="kpi-value">${visitas+qual+em?fmt.brlc(cpl_atend):'—'}</div><div class="kpi-note">incluindo visita e qualificado</div></div>
+      <div class="kpi"><div class="kpi-top"><span class="kpi-label">Custo por visita</span></div><div class="kpi-value tc-a">${visitas?fmt.brlc(cpv):'—'}</div><div class="kpi-note">${visitas} visitas</div></div>
+      <div class="kpi"><div class="kpi-top"><span class="kpi-label">Custo por qualificado</span></div><div class="kpi-value tc-a">${qual?fmt.brlc(cpq):'—'}</div><div class="kpi-note">${qual} qualificados</div></div>
+    `;
+  }else{
+    document.getElementById('midiaKpis').innerHTML='<div class="empty" style="grid-column:span 3">Sem dados de Meta no período</div>';
+    document.getElementById('custoEtapa').innerHTML='';
+  }
 }
-new Chart(document.getElementById('motivosChart'),{
-  type:'bar',
-  data:{labels:motivos.map(m=>m.label),datasets:[{data:motivos.map(m=>m.value),backgroundColor:motivos.map((_,i)=>i===0?C.accent:i===1?C.orange2:C.bege),borderRadius:6,barThickness:18}]},
-  options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{backgroundColor:'#1C1008',padding:12,cornerRadius:8,callbacks:{label:c=>`${c.raw} leads (${(c.raw/D.stats.motivos_total*100).toFixed(1).replace('.',',')}%)`}}},scales:{x:{grid:{color:C.border,drawBorder:false},ticks:{font:{size:11}}},y:{grid:{display:false},ticks:{font:{size:12,weight:'600'}}}}}
+
+function renderPerda(D){
+  const motivos=D.stats.motivos;
+  document.getElementById('perdaSecLabel').textContent=`Motivos de perda, ${D.stats.perdidos} leads desqualificados`;
+  const pInsights=document.getElementById('perdaInsights');
+  pInsights.innerHTML='<h3 class="card-title">Leitura</h3><p class="card-sub">Padrões extraídos das observações</p>';
+  if(motivos.length){
+    const top=motivos[0];
+    pInsights.insertAdjacentHTML('beforeend',`<div class="insight red"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"/></svg><span><b>${top.pct.toString().replace('.',',')}%</b> das perdas são "${top.label.toLowerCase()}" (${top.value} leads). Maior sinal do período.</span></div>`);
+    const ambig=motivos.find(m=>m.label.includes('ambíguo'));
+    if(ambig)pInsights.insertAdjacentHTML('beforeend',`<div class="insight orange"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/></svg><span><b>${ambig.pct.toString().replace('.',',')}%</b> caíram em "motivo ambíguo". Padronizar campo destrava análise.</span></div>`);
+  }else{
+    pInsights.insertAdjacentHTML('beforeend','<div class="empty" style="padding:20px 0;text-align:left">Sem motivos registrados no período.</div>');
+  }
+  if(motivos.length){
+    charts.motivos=new Chart(document.getElementById('motivosChart'),{
+      type:'bar',
+      data:{labels:motivos.map(m=>m.label),datasets:[{data:motivos.map(m=>m.value),backgroundColor:motivos.map((_,i)=>i===0?C.accent:i===1?C.orange2:C.bege),borderRadius:6,barThickness:18}]},
+      options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{backgroundColor:'#1C1008',padding:12,cornerRadius:8,callbacks:{label:c=>`${c.raw} leads (${(c.raw/D.stats.motivos_total*100).toFixed(1).replace('.',',')}%)`}}},scales:{x:{grid:{color:C.border,drawBorder:false},ticks:{font:{size:11}}},y:{grid:{display:false},ticks:{font:{size:12,weight:'600'}}}}}
+    });
+  }
+}
+
+function renderPlano(D){
+  const ICONS={
+    alert:'<path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>',
+    team:'<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/><circle cx="9" cy="7" r="4"/>',
+    process:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/>',
+  };
+  const grid=document.getElementById('planGrid');
+  if(!D.plan||!D.plan.length){grid.innerHTML='<div class="empty" style="grid-column:span 2">Sem ações prioritárias registradas.</div>';return;}
+  grid.innerHTML=D.plan.map(p=>`
+    <div class="plan-card ${p.cls}">
+      <p class="plan-tag"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor">${ICONS[p.icon]||ICONS.process}</svg>${p.tag}</p>
+      <h3>${p.title}</h3><p>${p.desc}</p>
+    </div>
+  `).join('');
+}
+
+// ─── Period switcher binding ───────────────────────────────────────────
+document.querySelectorAll('.ps-btn').forEach(btn=>{
+  btn.onclick=()=>{
+    state.viewKey=btn.dataset.view;
+    sortKey='leads';sortDir='desc';
+    render();
+  };
 });
 
-const ICONS={
-  alert:'<path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>',
-  team:'<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/><circle cx="9" cy="7" r="4"/>',
-  process:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/>',
-};
-document.getElementById('planGrid').innerHTML=D.plan.map(p=>`
-  <div class="plan-card ${p.cls}">
-    <p class="plan-tag"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor">${ICONS[p.icon]||ICONS.process}</svg>${p.tag}</p>
-    <h3>${p.title}</h3><p>${p.desc}</p>
-  </div>
-`).join('');
+// Render inicial
+render();
 
 const tabBtns=document.querySelectorAll('.tabnav button');
 const tabPanes=document.querySelectorAll('.tab-pane');

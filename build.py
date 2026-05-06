@@ -1,13 +1,11 @@
 """
-Build script para o dashboard NI Negócios.
-Baixa as 9 planilhas dos corretores, puxa dados do Meta Ads API e gera data.js
-com todas as métricas que o dashboard consome.
+Build do dashboard NI Negócios.
+Gera data.js com 3 visões: período total, abril, maio.
 """
 import csv
 import io
 import json
 import os
-import re
 import sys
 import urllib.request
 import urllib.parse
@@ -29,13 +27,13 @@ SHEETS = [
 
 META_AD_ACCOUNT = "act_916115436468748"
 
-# Período do relatório (ajustar conforme necessário ou ler de env)
+# Período "total" do relatório
 PERIOD_START = os.environ.get("PERIOD_START") or "2026-04-01"
 PERIOD_END = os.environ.get("PERIOD_END") or "2026-05-04"
 
 
 # ─── HELPERS ─────────────────────────────────────────────────────────────
-def parse_date(s: str):
+def parse_date(s):
     s = (s or "").strip()
     if not s:
         return None
@@ -47,7 +45,7 @@ def parse_date(s: str):
     return None
 
 
-def norm_status(s: str) -> str:
+def norm_status(s):
     s = (s or "").strip().lower()
     if not s:
         return "sem_status"
@@ -72,7 +70,7 @@ def norm_status(s: str) -> str:
     return "outro"
 
 
-def cat_motivo(obs: str) -> str:
+def cat_motivo(obs):
     o = (obs or "").lower()
     if not o:
         return "Sem motivo registrado"
@@ -93,7 +91,7 @@ def cat_motivo(obs: str) -> str:
     return "Motivo ambíguo (revisar)"
 
 
-def fetch_csv(sheet_id: str) -> list[dict]:
+def fetch_csv(sheet_id):
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv&gid=0"
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 ni-report"})
     with urllib.request.urlopen(req, timeout=30) as resp:
@@ -101,24 +99,23 @@ def fetch_csv(sheet_id: str) -> list[dict]:
     return list(csv.DictReader(io.StringIO(text)))
 
 
-# ─── PROCESSAMENTO PLANILHAS ────────────────────────────────────────────
-def process_sheets():
-    ini = datetime.strptime(PERIOD_START, "%Y-%m-%d")
-    fim = datetime.strptime(PERIOD_END, "%Y-%m-%d") + timedelta(hours=23, minutes=59, seconds=59)
+def label_period(start, end):
+    a = datetime.strptime(start, "%Y-%m-%d").strftime("%d/%m")
+    b = datetime.strptime(end, "%Y-%m-%d").strftime("%d/%m")
+    return f"{a} a {b}"
+
+
+# ─── PROCESSA UMA VIEW (período arbitrário) ─────────────────────────────
+def process_view(rows_by_sheet, start_str, end_str):
+    ini = datetime.strptime(start_str, "%Y-%m-%d")
+    fim = datetime.strptime(end_str, "%Y-%m-%d") + timedelta(hours=23, minutes=59, seconds=59)
 
     per_emp = []
     totals = Counter()
     motivos = Counter()
     daily = defaultdict(lambda: Counter())
 
-    for sheet in SHEETS:
-        print(f"  Baixando: {sheet['emp']} ({sheet['corretor']})...", file=sys.stderr)
-        try:
-            rows = fetch_csv(sheet["id"])
-        except Exception as e:
-            print(f"    ERRO: {e}", file=sys.stderr)
-            rows = []
-
+    for sheet, rows in zip(SHEETS, rows_by_sheet):
         emp_data = Counter()
         for row in rows:
             d = parse_date(row.get("Data de entrada", ""))
@@ -130,10 +127,11 @@ def process_sheets():
             totals[st] += 1
             day_key = d.strftime("%Y-%m-%d")
             daily[day_key]["total"] += 1
-            if st in ("em_atendimento", "visita", "qualificado", "proposta", "desqualificado", "perdido"):
-                k = "perda" if st in ("desqualificado", "perdido") else st.replace("em_atendimento", "atend").replace("qualificado", "qual")
-                daily[day_key][k] += 1
-            if st in ("desqualificado", "perdido"):
+            mapping = {"em_atendimento": "atend", "qualificado": "qual"}
+            if st in ("em_atendimento", "visita", "qualificado", "proposta"):
+                daily[day_key][mapping.get(st, st)] += 1
+            elif st in ("desqualificado", "perdido"):
+                daily[day_key]["perda"] += 1
                 motivos[cat_motivo(obs)] += 1
 
         per_emp.append({
@@ -151,7 +149,7 @@ def process_sheets():
 
     per_emp.sort(key=lambda x: -x["leads"])
 
-    # Daily series
+    # Daily series do período
     day = ini
     series = {"labels": [], "total": [], "perda": [], "atend": [], "visita": [], "qual": [], "proposta": []}
     while day <= fim:
@@ -179,23 +177,26 @@ def process_sheets():
 
 
 # ─── META API ────────────────────────────────────────────────────────────
-def fetch_meta():
+def fetch_meta(start_str, end_str):
     token = os.environ.get("META_ACCESS_TOKEN")
     if not token:
-        print("  AVISO: META_ACCESS_TOKEN não definido, pulando Meta", file=sys.stderr)
+        print(f"  [Meta] sem token, pulando", file=sys.stderr)
         return None
 
     base = f"https://graph.facebook.com/v21.0/{META_AD_ACCOUNT}/insights"
     params = {
         "fields": "spend,impressions,clicks,ctr,frequency,reach,actions,cost_per_action_type,inline_link_clicks",
-        "time_range": json.dumps({"since": PERIOD_START, "until": PERIOD_END}),
+        "time_range": json.dumps({"since": start_str, "until": end_str}),
         "level": "account",
         "access_token": token,
     }
     url = f"{base}?{urllib.parse.urlencode(params)}"
-    print("  Puxando Meta API...", file=sys.stderr)
-    with urllib.request.urlopen(url, timeout=30) as resp:
-        data = json.loads(resp.read())
+    try:
+        with urllib.request.urlopen(url, timeout=30) as resp:
+            data = json.loads(resp.read())
+    except Exception as e:
+        print(f"  [Meta] erro: {e}", file=sys.stderr)
+        return None
 
     if not data.get("data"):
         return None
@@ -209,7 +210,6 @@ def fetch_meta():
 
     return {
         "spend": spend,
-        "spend_fmt": f"R$ {spend:,.2f}".replace(",", "X").replace(".", ",").replace("X", "."),
         "impressions": int(d["impressions"]),
         "clicks": int(d["clicks"]),
         "ctr": round(float(d["ctr"]), 2),
@@ -222,7 +222,7 @@ def fetch_meta():
     }
 
 
-# ─── PLANO DE AÇÃO (gerado a partir dos dados) ───────────────────────────
+# ─── PLANO DE AÇÃO ───────────────────────────────────────────────────────
 def build_plan(stats):
     plan = []
     nao_responde = next((m for m in stats["motivos"] if "Não responde" in m["label"]), None)
@@ -238,7 +238,7 @@ def build_plan(stats):
         plan.append({
             "tag": "Time comercial", "cls": "proc", "icon": "team",
             "title": "Sensia, calibrar distribuição",
-            "desc": "3 corretores no mesmo produto. A <b>única proposta do mês saiu daqui</b>, o produto tem demanda. Revisar como leads são distribuídos e padronizar a abordagem pode acelerar o ciclo.",
+            "desc": "3 corretores no mesmo produto. A <b>única proposta do período saiu daqui</b>, o produto tem demanda. Revisar como leads são distribuídos e padronizar a abordagem pode acelerar o ciclo.",
         })
 
     sem_status = sum(e["sem"] for e in stats["empreend"])
@@ -253,40 +253,57 @@ def build_plan(stats):
     return plan
 
 
-# ─── BUILD ───────────────────────────────────────────────────────────────
-def main():
-    print(f"Período: {PERIOD_START} a {PERIOD_END}", file=sys.stderr)
-    print("Processando planilhas...", file=sys.stderr)
-    stats = process_sheets()
-    print(f"  Total: {stats['n_total']} leads, {stats['pct_perda']}% perda", file=sys.stderr)
+# ─── BUILD UMA VIEW COMPLETA ─────────────────────────────────────────────
+def build_view(rows_by_sheet, start_str, end_str, label):
+    print(f"\n[{label}] {start_str} a {end_str}", file=sys.stderr)
+    stats = process_view(rows_by_sheet, start_str, end_str)
+    print(f"  {stats['n_total']} leads, {stats['pct_perda']}% perda", file=sys.stderr)
 
-    print("\nMeta Ads...", file=sys.stderr)
-    meta = fetch_meta()
+    meta = fetch_meta(start_str, end_str)
+    if meta:
+        print(f"  Meta: R$ {meta['spend']:,.2f}, {meta['total_meta']} leads, CPL R$ {meta['cpl']:.2f}", file=sys.stderr)
 
-    plan = build_plan(stats)
-
-    payload = {
-        "period": {
-            "start": PERIOD_START,
-            "end": PERIOD_END,
-            "label": f"{datetime.strptime(PERIOD_START, '%Y-%m-%d').strftime('%d/%m')} a {datetime.strptime(PERIOD_END, '%Y-%m-%d').strftime('%d/%m')}",
-        },
-        "generated_at": datetime.now().strftime("%d/%m/%Y %H:%M"),
+    return {
+        "period": {"start": start_str, "end": end_str, "label": label_period(start_str, end_str), "name": label},
         "stats": stats,
         "meta": meta,
-        "plan": plan,
+        "plan": build_plan(stats),
     }
 
-    out_path = os.path.join(os.path.dirname(__file__), "data.js")
-    with open(out_path, "w", encoding="utf-8") as f:
+
+# ─── MAIN ────────────────────────────────────────────────────────────────
+def main():
+    print("Baixando planilhas...", file=sys.stderr)
+    rows_by_sheet = []
+    for sheet in SHEETS:
+        try:
+            rows = fetch_csv(sheet["id"])
+            print(f"  {sheet['emp']} ({sheet['corretor']}): {len(rows)} linhas", file=sys.stderr)
+        except Exception as e:
+            print(f"  {sheet['emp']} ({sheet['corretor']}): ERRO {e}", file=sys.stderr)
+            rows = []
+        rows_by_sheet.append(rows)
+
+    # Define os 3 períodos. "total" usa as env vars; abril e maio são fixos.
+    views = {
+        "total": build_view(rows_by_sheet, PERIOD_START, PERIOD_END, "Período total"),
+        "abril": build_view(rows_by_sheet, "2026-04-01", "2026-04-30", "Abril"),
+        "maio":  build_view(rows_by_sheet, "2026-05-01", "2026-05-04", "Maio"),
+    }
+
+    payload = {
+        "generated_at": datetime.now().strftime("%d/%m/%Y %H:%M"),
+        "default_view": "total",
+        "views": views,
+    }
+
+    out = os.path.join(os.path.dirname(__file__), "data.js")
+    with open(out, "w", encoding="utf-8") as f:
         f.write("window.NI_DATA = ")
         json.dump(payload, f, ensure_ascii=False, indent=2)
         f.write(";\n")
 
-    print(f"\nGerado: {out_path}", file=sys.stderr)
-    print(f"  {stats['n_total']} leads, {len(stats['empreend'])} empreendimentos", file=sys.stderr)
-    if meta:
-        print(f"  Meta: {meta['spend_fmt']}, {meta['total_meta']} leads, CPL R$ {meta['cpl']:.2f}", file=sys.stderr)
+    print(f"\nGerado: {out}", file=sys.stderr)
 
 
 if __name__ == "__main__":
