@@ -1,0 +1,75 @@
+name: Build NI Report
+
+on:
+  schedule:
+    # Toda segunda às 8h (horário de Brasília = 11h UTC)
+    - cron: '0 11 * * 1'
+    # E todo dia 8h pra manter o dashboard fresco
+    - cron: '0 11 * * *'
+  workflow_dispatch:
+    inputs:
+      period_start:
+        description: 'Data início (YYYY-MM-DD)'
+        required: false
+        default: ''
+      period_end:
+        description: 'Data fim (YYYY-MM-DD)'
+        required: false
+        default: ''
+  push:
+    branches: [main]
+    paths:
+      - 'build.py'
+      - 'index.html'
+      - '.github/workflows/build.yml'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Build data.js
+        env:
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+          PERIOD_START: ${{ github.event.inputs.period_start }}
+          PERIOD_END: ${{ github.event.inputs.period_end }}
+        run: |
+          python3 build.py
+
+      - name: Commit data.js if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data.js
+          if git diff --staged --quiet; then
+            echo "Sem mudanças no data.js"
+          else
+            git commit -m "build: atualizar data.js [auto]"
+            git push
+          fi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to Pages
+        uses: actions/deploy-pages@v4
