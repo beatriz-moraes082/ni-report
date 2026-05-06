@@ -30,8 +30,8 @@ SHEETS = [
 META_AD_ACCOUNT = "act_916115436468748"
 
 # Período do relatório (ajustar conforme necessário ou ler de env)
-PERIOD_START = os.environ.get("PERIOD_START", "2026-04-01")
-PERIOD_END = os.environ.get("PERIOD_END", "2026-05-04")
+PERIOD_START = os.environ.get("PERIOD_START") or "2026-04-01"
+PERIOD_END = os.environ.get("PERIOD_END") or "2026-05-04"
 
 
 # ─── HELPERS ─────────────────────────────────────────────────────────────
