@@ -1,5 +1,5 @@
 window.NI_DATA = {
-  "generated_at": "06/05/2026 00:22",
+  "generated_at": "06/05/2026 03:22",
   "default_view": "total",
   "views": {
     "total": {
