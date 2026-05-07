@@ -1,12 +1,12 @@
 window.NI_DATA = {
-  "generated_at": "07/05/2026 15:23",
+  "generated_at": "07/05/2026 16:35",
   "default_view": "total",
   "views": {
     "total": {
       "period": {
         "start": "2026-04-01",
-        "end": "2026-05-05",
-        "label": "01/04 a 05/05",
+        "end": "2026-05-04",
+        "label": "01/04 a 04/05",
         "name": "Período total"
       },
       "stats": {
@@ -15,13 +15,13 @@ window.NI_DATA = {
           "em_atendimento": 46,
           "qualificado": 6,
           "visita": 6,
-          "sem_status": 28,
+          "sem_status": 20,
           "outros_produtos": 9,
           "nao_momento": 1
         },
-        "n_total": 193,
+        "n_total": 185,
         "perdidos": 97,
-        "pct_perda": 50.3,
+        "pct_perda": 52.4,
         "empreend": [
           {
             "emp": "Edf. Greco",
@@ -50,26 +50,14 @@ window.NI_DATA = {
           {
             "emp": "Edf. Sensia",
             "corretor": "Guilherme",
-            "leads": 18,
+            "leads": 17,
             "atend": 10,
             "visita": 0,
             "qual": 0,
             "proposta": 0,
             "perda": 5,
             "outros": 2,
-            "sem": 1
-          },
-          {
-            "emp": "Jatiúca",
-            "corretor": "Adriana",
-            "leads": 18,
-            "atend": 2,
-            "visita": 0,
-            "qual": 0,
-            "proposta": 0,
-            "perda": 0,
-            "outros": 0,
-            "sem": 16
+            "sem": 0
           },
           {
             "emp": "Edf. Guaxuma",
@@ -82,6 +70,18 @@ window.NI_DATA = {
             "perda": 4,
             "outros": 0,
             "sem": 0
+          },
+          {
+            "emp": "Jatiúca",
+            "corretor": "Adriana",
+            "leads": 11,
+            "atend": 2,
+            "visita": 0,
+            "qual": 0,
+            "proposta": 0,
+            "perda": 0,
+            "outros": 0,
+            "sem": 9
           },
           {
             "emp": "Edf. Jorge",
@@ -210,8 +210,7 @@ window.NI_DATA = {
             "01/05",
             "02/05",
             "03/05",
-            "04/05",
-            "05/05"
+            "04/05"
           ],
           "total": [
             6,
@@ -247,8 +246,7 @@ window.NI_DATA = {
             4,
             0,
             4,
-            4,
-            8
+            4
           ],
           "perda": [
             5,
@@ -284,8 +282,7 @@ window.NI_DATA = {
             0,
             0,
             2,
-            1,
-            0
+            1
           ],
           "atend": [
             0,
@@ -321,8 +318,7 @@ window.NI_DATA = {
             1,
             0,
             1,
-            1,
-            0
+            1
           ],
           "visita": [
             0,
@@ -358,7 +354,6 @@ window.NI_DATA = {
             0,
             0,
             0,
-            0,
             0
           ],
           "qual": [
@@ -381,7 +376,6 @@ window.NI_DATA = {
             0,
             1,
             1,
-            0,
             0,
             0,
             0,
@@ -432,22 +426,21 @@ window.NI_DATA = {
             0,
             0,
             0,
-            0,
             0
           ]
         }
       },
       "meta": {
-        "spend": 1937.9,
-        "impressions": 76409,
-        "clicks": 1760,
-        "ctr": 2.3,
-        "frequency": 2.73,
-        "reach": 28009,
-        "leads_form": 167,
+        "spend": 1888.18,
+        "impressions": 74854,
+        "clicks": 1731,
+        "ctr": 2.31,
+        "frequency": 2.68,
+        "reach": 27893,
+        "leads_form": 164,
         "msg_started": 15,
-        "total_meta": 182,
-        "cpl": 10.65
+        "total_meta": 179,
+        "cpl": 10.55
       },
       "plan": [
         {
@@ -469,7 +462,7 @@ window.NI_DATA = {
           "cls": "proc",
           "icon": "process",
           "title": "Padronizar planilhas",
-          "desc": "<b>15% dos leads sem status</b> (28 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
+          "desc": "<b>11% dos leads sem status</b> (20 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
         }
       ]
     },
@@ -912,32 +905,20 @@ window.NI_DATA = {
     "maio": {
       "period": {
         "start": "2026-05-01",
-        "end": "2026-05-05",
-        "label": "01/05 a 05/05",
+        "end": "2026-05-04",
+        "label": "01/05 a 04/05",
         "name": "Maio"
       },
       "stats": {
         "totals": {
-          "sem_status": 14,
+          "sem_status": 6,
           "em_atendimento": 3,
           "desqualificado": 3
         },
-        "n_total": 20,
+        "n_total": 12,
         "perdidos": 3,
-        "pct_perda": 15.0,
+        "pct_perda": 25.0,
         "empreend": [
-          {
-            "emp": "Jatiúca",
-            "corretor": "Adriana",
-            "leads": 11,
-            "atend": 1,
-            "visita": 0,
-            "qual": 0,
-            "proposta": 0,
-            "perda": 0,
-            "outros": 0,
-            "sem": 10
-          },
           {
             "emp": "Edf. Greco",
             "corretor": "Rose",
@@ -951,20 +932,20 @@ window.NI_DATA = {
             "sem": 2
           },
           {
-            "emp": "Edf. Jorge",
-            "corretor": "Tatiana",
-            "leads": 1,
-            "atend": 0,
+            "emp": "Jatiúca",
+            "corretor": "Adriana",
+            "leads": 4,
+            "atend": 1,
             "visita": 0,
             "qual": 0,
             "proposta": 0,
             "perda": 0,
             "outros": 0,
-            "sem": 1
+            "sem": 3
           },
           {
-            "emp": "Edf. Sensia",
-            "corretor": "Guilherme",
+            "emp": "Edf. Jorge",
+            "corretor": "Tatiana",
             "leads": 1,
             "atend": 0,
             "visita": 0,
@@ -1001,6 +982,18 @@ window.NI_DATA = {
           {
             "emp": "Edf. Sensia",
             "corretor": "Fernanda",
+            "leads": 0,
+            "atend": 0,
+            "visita": 0,
+            "qual": 0,
+            "proposta": 0,
+            "perda": 0,
+            "outros": 0,
+            "sem": 0
+          },
+          {
+            "emp": "Edf. Sensia",
+            "corretor": "Guilherme",
             "leads": 0,
             "atend": 0,
             "visita": 0,
@@ -1048,32 +1041,27 @@ window.NI_DATA = {
             "01/05",
             "02/05",
             "03/05",
-            "04/05",
-            "05/05"
+            "04/05"
           ],
           "total": [
             4,
             0,
             4,
-            4,
-            8
+            4
           ],
           "perda": [
             0,
             0,
             2,
-            1,
-            0
+            1
           ],
           "atend": [
             1,
             0,
             1,
-            1,
-            0
+            1
           ],
           "visita": [
-            0,
             0,
             0,
             0,
@@ -1083,11 +1071,9 @@ window.NI_DATA = {
             0,
             0,
             0,
-            0,
             0
           ],
           "proposta": [
-            0,
             0,
             0,
             0,
@@ -1096,16 +1082,16 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 282.33,
-        "impressions": 9966,
-        "clicks": 206,
-        "ctr": 2.07,
-        "frequency": 1.93,
-        "reach": 5168,
-        "leads_form": 20,
+        "spend": 232.61,
+        "impressions": 8411,
+        "clicks": 177,
+        "ctr": 2.1,
+        "frequency": 1.8,
+        "reach": 4678,
+        "leads_form": 17,
         "msg_started": 1,
-        "total_meta": 21,
-        "cpl": 13.44
+        "total_meta": 18,
+        "cpl": 12.92
       },
       "plan": [
         {
@@ -1127,7 +1113,7 @@ window.NI_DATA = {
           "cls": "proc",
           "icon": "process",
           "title": "Padronizar planilhas",
-          "desc": "<b>70% dos leads sem status</b> (14 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
+          "desc": "<b>50% dos leads sem status</b> (6 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
         }
       ]
     }
