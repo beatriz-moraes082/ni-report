@@ -284,11 +284,13 @@ def main():
             rows = []
         rows_by_sheet.append(rows)
 
-    # Define os 3 períodos. "total" usa as env vars; abril e maio são fixos.
+    # Define os 3 períodos. "total" usa as env vars; abril é fixo;
+    # maio expande conforme PERIOD_END (até a data mais recente do total).
+    maio_end = PERIOD_END if PERIOD_END >= "2026-05-01" else "2026-05-31"
     views = {
         "total": build_view(rows_by_sheet, PERIOD_START, PERIOD_END, "Período total"),
         "abril": build_view(rows_by_sheet, "2026-04-01", "2026-04-30", "Abril"),
-        "maio":  build_view(rows_by_sheet, "2026-05-01", "2026-05-04", "Maio"),
+        "maio":  build_view(rows_by_sheet, "2026-05-01", maio_end, "Maio"),
     }
 
     payload = {
