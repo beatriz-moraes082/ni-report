@@ -1,5 +1,5 @@
 window.NI_DATA = {
-  "generated_at": "08/05/2026 16:02",
+  "generated_at": "09/05/2026 14:36",
   "default_view": "total",
   "views": {
     "total": {
@@ -12,10 +12,10 @@ window.NI_DATA = {
       "stats": {
         "totals": {
           "desqualificado": 97,
-          "em_atendimento": 46,
+          "em_atendimento": 49,
           "qualificado": 6,
           "visita": 6,
-          "sem_status": 20,
+          "sem_status": 17,
           "outros_produtos": 9,
           "nao_momento": 1
         },
@@ -75,25 +75,25 @@ window.NI_DATA = {
             "emp": "Jatiúca",
             "corretor": "Adriana",
             "leads": 11,
-            "atend": 2,
+            "atend": 4,
             "visita": 0,
             "qual": 0,
             "proposta": 0,
             "perda": 0,
             "outros": 0,
-            "sem": 9
+            "sem": 7
           },
           {
             "emp": "Edf. Jorge",
             "corretor": "Tatiana",
             "leads": 7,
-            "atend": 1,
+            "atend": 2,
             "visita": 0,
             "qual": 0,
             "proposta": 0,
             "perda": 3,
             "outros": 0,
-            "sem": 3
+            "sem": 2
           },
           {
             "emp": "Edf. Sensia",
@@ -313,12 +313,12 @@ window.NI_DATA = {
             1,
             1,
             1,
-            6,
+            8,
             4,
             1,
             0,
             1,
-            1
+            2
           ],
           "visita": [
             0,
@@ -462,7 +462,7 @@ window.NI_DATA = {
           "cls": "proc",
           "icon": "process",
           "title": "Padronizar planilhas",
-          "desc": "<b>11% dos leads sem status</b> (20 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
+          "desc": "<b>9% dos leads sem status</b> (17 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
         }
       ]
     },
@@ -476,10 +476,10 @@ window.NI_DATA = {
       "stats": {
         "totals": {
           "desqualificado": 94,
-          "em_atendimento": 43,
+          "em_atendimento": 45,
           "qualificado": 6,
           "visita": 6,
-          "sem_status": 14,
+          "sem_status": 12,
           "outros_produtos": 9,
           "nao_momento": 1
         },
@@ -551,13 +551,13 @@ window.NI_DATA = {
             "emp": "Jatiúca",
             "corretor": "Adriana",
             "leads": 7,
-            "atend": 1,
+            "atend": 3,
             "visita": 0,
             "qual": 0,
             "proposta": 0,
             "perda": 0,
             "outros": 0,
-            "sem": 6
+            "sem": 4
           },
           {
             "emp": "Edf. Jorge",
@@ -765,7 +765,7 @@ window.NI_DATA = {
             1,
             1,
             1,
-            6,
+            8,
             4
           ],
           "visita": [
@@ -898,7 +898,7 @@ window.NI_DATA = {
           "cls": "proc",
           "icon": "process",
           "title": "Padronizar planilhas",
-          "desc": "<b>8% dos leads sem status</b> (14 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
+          "desc": "<b>7% dos leads sem status</b> (12 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
         }
       ]
     },
@@ -911,9 +911,9 @@ window.NI_DATA = {
       },
       "stats": {
         "totals": {
-          "sem_status": 6,
-          "em_atendimento": 3,
-          "desqualificado": 3
+          "em_atendimento": 4,
+          "desqualificado": 3,
+          "sem_status": 5
         },
         "n_total": 12,
         "perdidos": 3,
@@ -947,13 +947,13 @@ window.NI_DATA = {
             "emp": "Edf. Jorge",
             "corretor": "Tatiana",
             "leads": 1,
-            "atend": 0,
+            "atend": 1,
             "visita": 0,
             "qual": 0,
             "proposta": 0,
             "perda": 0,
             "outros": 0,
-            "sem": 1
+            "sem": 0
           },
           {
             "emp": "Edf. Sensia",
@@ -1059,7 +1059,7 @@ window.NI_DATA = {
             1,
             0,
             1,
-            1
+            2
           ],
           "visita": [
             0,
@@ -1113,7 +1113,7 @@ window.NI_DATA = {
           "cls": "proc",
           "icon": "process",
           "title": "Padronizar planilhas",
-          "desc": "<b>50% dos leads sem status</b> (6 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
+          "desc": "<b>42% dos leads sem status</b> (5 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
         }
       ]
     }
