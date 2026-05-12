@@ -1,5 +1,5 @@
 window.NI_DATA = {
-  "generated_at": "11/05/2026 18:04",
+  "generated_at": "12/05/2026 18:20",
   "default_view": "total",
   "views": {
     "total": {
@@ -13,8 +13,8 @@ window.NI_DATA = {
         "totals": {
           "desqualificado": 97,
           "em_atendimento": 49,
-          "qualificado": 6,
-          "visita": 6,
+          "qualificado": 5,
+          "visita": 7,
           "sem_status": 17,
           "outros_produtos": 9,
           "nao_momento": 1
@@ -112,8 +112,8 @@ window.NI_DATA = {
             "corretor": "Nath",
             "leads": 7,
             "atend": 3,
-            "visita": 1,
-            "qual": 2,
+            "visita": 2,
+            "qual": 1,
             "proposta": 0,
             "perda": 1,
             "outros": 0,
@@ -323,7 +323,7 @@ window.NI_DATA = {
           "visita": [
             0,
             0,
-            0,
+            1,
             0,
             0,
             1,
@@ -359,7 +359,7 @@ window.NI_DATA = {
           "qual": [
             0,
             0,
-            1,
+            0,
             0,
             0,
             1,
@@ -477,8 +477,8 @@ window.NI_DATA = {
         "totals": {
           "desqualificado": 94,
           "em_atendimento": 45,
-          "qualificado": 6,
-          "visita": 6,
+          "qualificado": 5,
+          "visita": 7,
           "sem_status": 12,
           "outros_produtos": 9,
           "nao_momento": 1
@@ -576,8 +576,8 @@ window.NI_DATA = {
             "corretor": "Nath",
             "leads": 6,
             "atend": 2,
-            "visita": 1,
-            "qual": 2,
+            "visita": 2,
+            "qual": 1,
             "proposta": 0,
             "perda": 1,
             "outros": 0,
@@ -771,7 +771,7 @@ window.NI_DATA = {
           "visita": [
             0,
             0,
-            0,
+            1,
             0,
             0,
             1,
@@ -803,7 +803,7 @@ window.NI_DATA = {
           "qual": [
             0,
             0,
-            1,
+            0,
             0,
             0,
             1,
