@@ -1,5 +1,5 @@
 window.NI_DATA = {
-  "generated_at": "13/05/2026 01:28",
+  "generated_at": "13/05/2026 08:46",
   "default_view": "total",
   "views": {
     "total": {
@@ -42,7 +42,9 @@ window.NI_DATA = {
               "start_label": "01/04/26",
               "end_label": "01/05/26",
               "ad_status": "PAUSED",
-              "ad_name": "Edf. Greco | Rose"
+              "ad_name": "Edf. Greco | Rose",
+              "spend": 840.52,
+              "spend_shared": false
             }
           },
           {
@@ -64,7 +66,9 @@ window.NI_DATA = {
               "start_label": "01/04/26",
               "end_label": "01/05/26",
               "ad_status": "ACTIVE",
-              "ad_name": "Casa no Antares | Gedson"
+              "ad_name": "Casa no Antares | Gedson",
+              "spend": 265.03,
+              "spend_shared": false
             }
           },
           {
@@ -86,7 +90,9 @@ window.NI_DATA = {
               "start_label": "27/02/26",
               "end_label": "29/03/26",
               "ad_status": "ACTIVE",
-              "ad_name": "Sensia | Nath/Guilherme/Fernanda"
+              "ad_name": "Sensia | Nath/Guilherme/Fernanda",
+              "spend": 162.8,
+              "spend_shared": false
             }
           },
           {
@@ -108,7 +114,9 @@ window.NI_DATA = {
               "start_label": "22/04/26",
               "end_label": "22/05/26",
               "ad_status": "ACTIVE",
-              "ad_name": "Edf. Guaxuma | Fernanda"
+              "ad_name": "Edf. Guaxuma | Fernanda",
+              "spend": 195.99,
+              "spend_shared": false
             }
           },
           {
@@ -130,7 +138,9 @@ window.NI_DATA = {
               "start_label": "27/04/26",
               "end_label": "27/05/26",
               "ad_status": "ACTIVE",
-              "ad_name": "Jatiúca | Adriana"
+              "ad_name": "Jatiúca | Adriana",
+              "spend": 225.71,
+              "spend_shared": false
             }
           },
           {
@@ -152,7 +162,9 @@ window.NI_DATA = {
               "start_label": "01/04/26",
               "end_label": "01/05/26",
               "ad_status": "PAUSED",
-              "ad_name": "Edf. Jorge | Tatiana"
+              "ad_name": "Edf. Jorge | Tatiana",
+              "spend": 67.65,
+              "spend_shared": false
             }
           },
           {
@@ -174,7 +186,9 @@ window.NI_DATA = {
               "start_label": "27/02/26",
               "end_label": "29/03/26",
               "ad_status": "ACTIVE",
-              "ad_name": "Sensia | Nath/Guilherme/Fernanda"
+              "ad_name": "Sensia | Nath/Guilherme/Fernanda",
+              "spend": 162.8,
+              "spend_shared": false
             }
           },
           {
@@ -196,7 +210,9 @@ window.NI_DATA = {
               "start_label": "27/02/26",
               "end_label": "29/03/26",
               "ad_status": "ACTIVE",
-              "ad_name": "Sensia | Nath/Guilherme/Fernanda"
+              "ad_name": "Sensia | Nath/Guilherme/Fernanda",
+              "spend": 162.8,
+              "spend_shared": false
             }
           },
           {
@@ -218,7 +234,9 @@ window.NI_DATA = {
               "start_label": "27/04/26",
               "end_label": "27/05/26",
               "ad_status": "ACTIVE",
-              "ad_name": "JTR Jatiúca | Nathalia"
+              "ad_name": "JTR Jatiúca | Nathalia",
+              "spend": 36.14,
+              "spend_shared": false
             }
           }
         ],
@@ -675,7 +693,9 @@ window.NI_DATA = {
               "start_label": "01/04/26",
               "end_label": "01/05/26",
               "ad_status": "PAUSED",
-              "ad_name": "Edf. Greco | Rose"
+              "ad_name": "Edf. Greco | Rose",
+              "spend": 770.85,
+              "spend_shared": false
             }
           },
           {
@@ -697,7 +717,9 @@ window.NI_DATA = {
               "start_label": "01/04/26",
               "end_label": "01/05/26",
               "ad_status": "ACTIVE",
-              "ad_name": "Casa no Antares | Gedson"
+              "ad_name": "Casa no Antares | Gedson",
+              "spend": 259.34,
+              "spend_shared": false
             }
           },
           {
@@ -719,7 +741,9 @@ window.NI_DATA = {
               "start_label": "27/02/26",
               "end_label": "29/03/26",
               "ad_status": "ACTIVE",
-              "ad_name": "Sensia | Nath/Guilherme/Fernanda"
+              "ad_name": "Sensia | Nath/Guilherme/Fernanda",
+              "spend": 139.03,
+              "spend_shared": false
             }
           },
           {
@@ -741,7 +765,9 @@ window.NI_DATA = {
               "start_label": "22/04/26",
               "end_label": "22/05/26",
               "ad_status": "ACTIVE",
-              "ad_name": "Edf. Guaxuma | Fernanda"
+              "ad_name": "Edf. Guaxuma | Fernanda",
+              "spend": 195.53,
+              "spend_shared": false
             }
           },
           {
@@ -763,7 +789,9 @@ window.NI_DATA = {
               "start_label": "27/02/26",
               "end_label": "29/03/26",
               "ad_status": "ACTIVE",
-              "ad_name": "Sensia | Nath/Guilherme/Fernanda"
+              "ad_name": "Sensia | Nath/Guilherme/Fernanda",
+              "spend": 139.03,
+              "spend_shared": false
             }
           },
           {
@@ -785,7 +813,9 @@ window.NI_DATA = {
               "start_label": "27/04/26",
               "end_label": "27/05/26",
               "ad_status": "ACTIVE",
-              "ad_name": "Jatiúca | Adriana"
+              "ad_name": "Jatiúca | Adriana",
+              "spend": 96.85,
+              "spend_shared": false
             }
           },
           {
@@ -807,7 +837,9 @@ window.NI_DATA = {
               "start_label": "01/04/26",
               "end_label": "01/05/26",
               "ad_status": "PAUSED",
-              "ad_name": "Edf. Jorge | Tatiana"
+              "ad_name": "Edf. Jorge | Tatiana",
+              "spend": 64.91,
+              "spend_shared": false
             }
           },
           {
@@ -829,7 +861,9 @@ window.NI_DATA = {
               "start_label": "27/02/26",
               "end_label": "29/03/26",
               "ad_status": "ACTIVE",
-              "ad_name": "Sensia | Nath/Guilherme/Fernanda"
+              "ad_name": "Sensia | Nath/Guilherme/Fernanda",
+              "spend": 139.03,
+              "spend_shared": false
             }
           },
           {
@@ -851,7 +885,9 @@ window.NI_DATA = {
               "start_label": "27/04/26",
               "end_label": "27/05/26",
               "ad_status": "ACTIVE",
-              "ad_name": "JTR Jatiúca | Nathalia"
+              "ad_name": "JTR Jatiúca | Nathalia",
+              "spend": 34.72,
+              "spend_shared": false
             }
           }
         ],
@@ -1276,7 +1312,9 @@ window.NI_DATA = {
               "start_label": "01/04/26",
               "end_label": "01/05/26",
               "ad_status": "PAUSED",
-              "ad_name": "Edf. Greco | Rose"
+              "ad_name": "Edf. Greco | Rose",
+              "spend": 69.67,
+              "spend_shared": false
             }
           },
           {
@@ -1298,7 +1336,9 @@ window.NI_DATA = {
               "start_label": "27/04/26",
               "end_label": "27/05/26",
               "ad_status": "ACTIVE",
-              "ad_name": "Jatiúca | Adriana"
+              "ad_name": "Jatiúca | Adriana",
+              "spend": 128.86,
+              "spend_shared": false
             }
           },
           {
@@ -1320,7 +1360,9 @@ window.NI_DATA = {
               "start_label": "01/04/26",
               "end_label": "01/05/26",
               "ad_status": "PAUSED",
-              "ad_name": "Edf. Jorge | Tatiana"
+              "ad_name": "Edf. Jorge | Tatiana",
+              "spend": 2.74,
+              "spend_shared": false
             }
           },
           {
@@ -1342,7 +1384,9 @@ window.NI_DATA = {
               "start_label": "27/02/26",
               "end_label": "29/03/26",
               "ad_status": "ACTIVE",
-              "ad_name": "Sensia | Nath/Guilherme/Fernanda"
+              "ad_name": "Sensia | Nath/Guilherme/Fernanda",
+              "spend": 23.77,
+              "spend_shared": false
             }
           },
           {
@@ -1364,7 +1408,9 @@ window.NI_DATA = {
               "start_label": "01/04/26",
               "end_label": "01/05/26",
               "ad_status": "ACTIVE",
-              "ad_name": "Casa no Antares | Gedson"
+              "ad_name": "Casa no Antares | Gedson",
+              "spend": 5.69,
+              "spend_shared": false
             }
           },
           {
@@ -1386,7 +1432,9 @@ window.NI_DATA = {
               "start_label": "27/02/26",
               "end_label": "29/03/26",
               "ad_status": "ACTIVE",
-              "ad_name": "Sensia | Nath/Guilherme/Fernanda"
+              "ad_name": "Sensia | Nath/Guilherme/Fernanda",
+              "spend": 23.77,
+              "spend_shared": false
             }
           },
           {
@@ -1408,7 +1456,9 @@ window.NI_DATA = {
               "start_label": "27/02/26",
               "end_label": "29/03/26",
               "ad_status": "ACTIVE",
-              "ad_name": "Sensia | Nath/Guilherme/Fernanda"
+              "ad_name": "Sensia | Nath/Guilherme/Fernanda",
+              "spend": 23.77,
+              "spend_shared": false
             }
           },
           {
@@ -1430,7 +1480,9 @@ window.NI_DATA = {
               "start_label": "22/04/26",
               "end_label": "22/05/26",
               "ad_status": "ACTIVE",
-              "ad_name": "Edf. Guaxuma | Fernanda"
+              "ad_name": "Edf. Guaxuma | Fernanda",
+              "spend": 0.46,
+              "spend_shared": false
             }
           },
           {
@@ -1452,7 +1504,9 @@ window.NI_DATA = {
               "start_label": "27/04/26",
               "end_label": "27/05/26",
               "ad_status": "ACTIVE",
-              "ad_name": "JTR Jatiúca | Nathalia"
+              "ad_name": "JTR Jatiúca | Nathalia",
+              "spend": 1.42,
+              "spend_shared": false
             }
           }
         ],

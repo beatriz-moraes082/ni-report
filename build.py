@@ -55,7 +55,7 @@ def fetch_ads_for_campaign(campaign_id):
     if not token or not campaign_id:
         return []
     url = f"https://graph.facebook.com/v21.0/{campaign_id}/ads?" + urllib.parse.urlencode({
-        "fields": "name,effective_status,created_time",
+        "fields": "id,name,effective_status,created_time",
         "limit": 200,
         "access_token": token,
     })
@@ -67,6 +67,31 @@ def fetch_ads_for_campaign(campaign_id):
         print(f"  [ads] erro: {e}", file=sys.stderr)
         _ADS_CACHE = []
     return _ADS_CACHE
+
+
+def fetch_ad_spend(account_id, start_str, end_str):
+    """Retorna {ad_name: spend} no período (level=ad). Usa name pq facilita o matching."""
+    token = os.environ.get("META_ACCESS_TOKEN")
+    if not token:
+        return {}
+    url = f"https://graph.facebook.com/v21.0/{account_id}/insights?" + urllib.parse.urlencode({
+        "fields": "ad_id,ad_name,spend",
+        "time_range": json.dumps({"since": start_str, "until": end_str}),
+        "level": "ad",
+        "limit": 500,
+        "access_token": token,
+    })
+    try:
+        with urllib.request.urlopen(url, timeout=30) as resp:
+            data = json.loads(resp.read())
+    except Exception as e:
+        print(f"  [ad spend] erro: {e}", file=sys.stderr)
+        return {}
+    out = defaultdict(float)
+    for row in data.get("data", []):
+        name = row.get("ad_name") or row.get("ad_id")
+        out[name] += float(row.get("spend", 0))
+    return dict(out)
 
 
 def _norm(s):
@@ -223,7 +248,32 @@ def label_period(start, end):
 
 
 # ─── PROCESSA UMA VIEW (período arbitrário) ─────────────────────────────
-def process_view(rows_by_sheet, start_str, end_str):
+def emp_spend_in_period(emp, corretor, ad_spend_by_name):
+    """Retorna (spend_total, is_shared). spend é o gasto bruto dos ads do empreendimento;
+    is_shared=True quando o ad é compartilhado entre múltiplos corretores."""
+    if not ad_spend_by_name:
+        return 0.0, False
+    emp_k = _norm(emp).replace("edf. ", "").replace("edf ", "").strip()
+    cor_k = _norm(corretor).strip()
+    total_exact = 0.0
+    has_exact = False
+    for name, spend in ad_spend_by_name.items():
+        n = _norm(name)
+        if emp_k in n and cor_k in n:
+            total_exact += spend
+            has_exact = True
+    if has_exact:
+        return total_exact, False
+    # fallback: ad compartilhado (ex Sensia)
+    total = 0.0
+    for name, spend in ad_spend_by_name.items():
+        n = _norm(name)
+        if emp_k in n:
+            total += spend
+    return total, total > 0
+
+
+def process_view(rows_by_sheet, start_str, end_str, ad_spend_by_name=None):
     ini = datetime.strptime(start_str, "%Y-%m-%d")
     fim = datetime.strptime(end_str, "%Y-%m-%d") + timedelta(hours=23, minutes=59, seconds=59)
 
@@ -267,6 +317,10 @@ def process_view(rows_by_sheet, start_str, end_str):
                 "motivos": dict(emp_motivos),
             })
 
+        timing = emp_timing(sheet["emp"], sheet["corretor"])
+        spend, shared = emp_spend_in_period(sheet["emp"], sheet["corretor"], ad_spend_by_name)
+        timing["spend"] = round(spend, 2)
+        timing["spend_shared"] = shared
         per_emp.append({
             "emp": sheet["emp"],
             "corretor": sheet["corretor"],
@@ -278,7 +332,7 @@ def process_view(rows_by_sheet, start_str, end_str):
             "perda": perdas_total,
             "outros": emp_data["outros_produtos"] + emp_data["nao_momento"],
             "sem": emp_data["sem_status"],
-            "timing": emp_timing(sheet["emp"], sheet["corretor"]),
+            "timing": timing,
         })
 
     perdas_by_emp.sort(key=lambda x: -x["perdas"])
@@ -426,7 +480,9 @@ def build_plan(stats):
 # ─── BUILD UMA VIEW COMPLETA ─────────────────────────────────────────────
 def build_view(rows_by_sheet, start_str, end_str, label):
     print(f"\n[{label}] {start_str} a {end_str}", file=sys.stderr)
-    stats = process_view(rows_by_sheet, start_str, end_str)
+    # spend por ad no período
+    ad_spend = fetch_ad_spend(META_AD_ACCOUNT, start_str, end_str)
+    stats = process_view(rows_by_sheet, start_str, end_str, ad_spend_by_name=ad_spend)
     print(f"  {stats['n_total']} leads, {stats['pct_perda']}% perda", file=sys.stderr)
 
     meta = fetch_meta(start_str, end_str)

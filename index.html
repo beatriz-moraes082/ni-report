@@ -196,6 +196,7 @@ td{padding:13px 18px;font-size:13px;vertical-align:middle}
 .timing-card .t-row .val.warn{color:var(--accent)}
 .timing-card .t-row .val.danger{color:var(--danger)}
 .timing-card .t-row .val.muted{color:var(--light)}
+.timing-card .t-shared{display:inline-block;margin-left:6px;padding:1px 6px;border-radius:999px;font-size:9px;font-weight:600;background:var(--surface-soft);color:var(--muted);border:1px solid var(--border);text-transform:lowercase;cursor:help}
 .timing-bar{height:4px;background:var(--border);border-radius:2px;overflow:hidden;margin-top:10px}
 .timing-bar > div{height:100%;background:var(--accent);transition:width .5s}
 
@@ -604,6 +605,9 @@ function renderEmpreendTiming(D){
     const adStatus=t.ad_status||'NONE';
     const stCls=adStatus==='ACTIVE'?'active':adStatus==='PAUSED'?'paused':'none';
     const stLabel=adStatus==='ACTIVE'?'Rodando':adStatus==='PAUSED'?'Pausado':'Sem ad';
+    const spend=t.spend||0;
+    const sharedNote=t.spend_shared?'<span class="t-shared" title="Mesmo criativo compartilhado entre os corretores deste empreendimento">compartilhado</span>':'';
+    const spendVal=spend>0?`<span class="val tc-a">${fmt.brlc(spend)}</span>${sharedNote}`:'<span class="val muted">—</span>';
     cards.push(`
       <div class="timing-card">
         <div class="t-head">
@@ -613,6 +617,7 @@ function renderEmpreendTiming(D){
           </div>
           <span class="t-status ${stCls}">${stLabel}</span>
         </div>
+        <div class="t-row"><span class="lbl">Investido no período</span>${spendVal}</div>
         <div class="t-row"><span class="lbl">Criativo ativo desde</span>${startVal}</div>
         <div class="t-row"><span class="lbl">Tempo rodando</span>${activeVal}</div>
         <div class="t-row"><span class="lbl">Ciclo de 30 dias</span>${endVal}</div>
