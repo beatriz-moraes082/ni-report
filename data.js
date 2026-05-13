@@ -1,5 +1,5 @@
 window.NI_DATA = {
-  "generated_at": "13/05/2026 11:46",
+  "generated_at": "13/05/2026 18:21",
   "default_view": "total",
   "views": {
     "total": {
@@ -11,17 +11,17 @@ window.NI_DATA = {
       },
       "stats": {
         "totals": {
-          "desqualificado": 97,
-          "em_atendimento": 49,
+          "desqualificado": 100,
+          "em_atendimento": 52,
           "qualificado": 5,
           "visita": 7,
-          "sem_status": 17,
+          "sem_status": 11,
           "outros_produtos": 9,
           "nao_momento": 1
         },
         "n_total": 185,
-        "perdidos": 97,
-        "pct_perda": 52.4,
+        "perdidos": 100,
+        "pct_perda": 54.1,
         "empreend": [
           {
             "emp": "Edf. Greco",
@@ -123,13 +123,13 @@ window.NI_DATA = {
             "emp": "Jatiúca",
             "corretor": "Adriana",
             "leads": 11,
-            "atend": 4,
+            "atend": 7,
             "visita": 0,
             "qual": 0,
             "proposta": 0,
-            "perda": 0,
+            "perda": 3,
             "outros": 0,
-            "sem": 7,
+            "sem": 1,
             "timing": {
               "start": "2026-04-27",
               "end": "2026-05-27",
@@ -244,45 +244,45 @@ window.NI_DATA = {
           {
             "label": "Não responde / não atende",
             "value": 56,
-            "pct": 57.7
+            "pct": 56.0
           },
           {
             "label": "Motivo ambíguo (revisar)",
             "value": 23,
-            "pct": 23.7
+            "pct": 23.0
+          },
+          {
+            "label": "Sem motivo registrado",
+            "value": 6,
+            "pct": 6.0
           },
           {
             "label": "Lead repetido",
             "value": 4,
-            "pct": 4.1
-          },
-          {
-            "label": "Sem motivo registrado",
-            "value": 3,
-            "pct": 3.1
+            "pct": 4.0
           },
           {
             "label": "Não gostou do imóvel/região",
             "value": 3,
-            "pct": 3.1
+            "pct": 3.0
           },
           {
             "label": "Valor / orçamento",
             "value": 3,
-            "pct": 3.1
+            "pct": 3.0
           },
           {
             "label": "Lead inválido",
             "value": 3,
-            "pct": 3.1
+            "pct": 3.0
           },
           {
             "label": "Comprou com concorrente",
             "value": 2,
-            "pct": 2.1
+            "pct": 2.0
           }
         ],
-        "motivos_total": 97,
+        "motivos_total": 100,
         "perdas_by_emp": [
           {
             "emp": "Edf. Greco",
@@ -344,6 +344,14 @@ window.NI_DATA = {
             "motivos": {
               "Lead repetido": 1,
               "Não responde / não atende": 2
+            }
+          },
+          {
+            "emp": "Jatiúca",
+            "corretor": "Adriana",
+            "perdas": 3,
+            "motivos": {
+              "Sem motivo registrado": 3
             }
           },
           {
@@ -458,8 +466,8 @@ window.NI_DATA = {
             1,
             1,
             0,
-            1,
-            0,
+            2,
+            2,
             0,
             2,
             1
@@ -492,8 +500,8 @@ window.NI_DATA = {
             2,
             1,
             1,
-            1,
-            8,
+            2,
+            10,
             4,
             1,
             0,
@@ -649,7 +657,7 @@ window.NI_DATA = {
           "cls": "proc",
           "icon": "process",
           "title": "Padronizar planilhas",
-          "desc": "<b>9% dos leads sem status</b> (17 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
+          "desc": "<b>6% dos leads sem status</b> (11 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
         }
       ]
     },
@@ -662,17 +670,17 @@ window.NI_DATA = {
       },
       "stats": {
         "totals": {
-          "desqualificado": 94,
-          "em_atendimento": 45,
+          "desqualificado": 95,
+          "em_atendimento": 48,
           "qualificado": 5,
           "visita": 7,
-          "sem_status": 12,
+          "sem_status": 8,
           "outros_produtos": 9,
           "nao_momento": 1
         },
         "n_total": 173,
-        "perdidos": 94,
-        "pct_perda": 54.3,
+        "perdidos": 95,
+        "pct_perda": 54.9,
         "empreend": [
           {
             "emp": "Edf. Greco",
@@ -798,13 +806,13 @@ window.NI_DATA = {
             "emp": "Jatiúca",
             "corretor": "Adriana",
             "leads": 7,
-            "atend": 3,
+            "atend": 6,
             "visita": 0,
             "qual": 0,
             "proposta": 0,
-            "perda": 0,
+            "perda": 1,
             "outros": 0,
-            "sem": 4,
+            "sem": 0,
             "timing": {
               "start": "2026-04-27",
               "end": "2026-05-27",
@@ -895,22 +903,22 @@ window.NI_DATA = {
           {
             "label": "Não responde / não atende",
             "value": 53,
-            "pct": 56.4
+            "pct": 55.8
           },
           {
             "label": "Motivo ambíguo (revisar)",
             "value": 23,
-            "pct": 24.5
+            "pct": 24.2
+          },
+          {
+            "label": "Sem motivo registrado",
+            "value": 4,
+            "pct": 4.2
           },
           {
             "label": "Lead repetido",
             "value": 4,
-            "pct": 4.3
-          },
-          {
-            "label": "Sem motivo registrado",
-            "value": 3,
-            "pct": 3.2
+            "pct": 4.2
           },
           {
             "label": "Não gostou do imóvel/região",
@@ -933,7 +941,7 @@ window.NI_DATA = {
             "pct": 2.1
           }
         ],
-        "motivos_total": 94,
+        "motivos_total": 95,
         "perdas_by_emp": [
           {
             "emp": "Edf. Greco",
@@ -1003,6 +1011,14 @@ window.NI_DATA = {
             "perdas": 1,
             "motivos": {
               "Motivo ambíguo (revisar)": 1
+            }
+          },
+          {
+            "emp": "Jatiúca",
+            "corretor": "Adriana",
+            "perdas": 1,
+            "motivos": {
+              "Sem motivo registrado": 1
             }
           }
         ],
@@ -1101,7 +1117,7 @@ window.NI_DATA = {
             1,
             1,
             0,
-            1
+            2
           ],
           "atend": [
             0,
@@ -1131,8 +1147,8 @@ window.NI_DATA = {
             2,
             1,
             1,
-            1,
-            8,
+            2,
+            10,
             4
           ],
           "visita": [
@@ -1272,7 +1288,7 @@ window.NI_DATA = {
           "cls": "proc",
           "icon": "process",
           "title": "Padronizar planilhas",
-          "desc": "<b>7% dos leads sem status</b> (12 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
+          "desc": "<b>5% dos leads sem status</b> (8 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
         }
       ]
     },
@@ -1286,12 +1302,12 @@ window.NI_DATA = {
       "stats": {
         "totals": {
           "em_atendimento": 4,
-          "desqualificado": 3,
-          "sem_status": 5
+          "desqualificado": 5,
+          "sem_status": 3
         },
         "n_total": 12,
-        "perdidos": 3,
-        "pct_perda": 25.0,
+        "perdidos": 5,
+        "pct_perda": 41.7,
         "empreend": [
           {
             "emp": "Edf. Greco",
@@ -1325,9 +1341,9 @@ window.NI_DATA = {
             "visita": 0,
             "qual": 0,
             "proposta": 0,
-            "perda": 0,
+            "perda": 2,
             "outros": 0,
-            "sem": 3,
+            "sem": 1,
             "timing": {
               "start": "2026-04-27",
               "end": "2026-05-27",
@@ -1514,10 +1530,15 @@ window.NI_DATA = {
           {
             "label": "Não responde / não atende",
             "value": 3,
-            "pct": 100.0
+            "pct": 60.0
+          },
+          {
+            "label": "Sem motivo registrado",
+            "value": 2,
+            "pct": 40.0
           }
         ],
-        "motivos_total": 3,
+        "motivos_total": 5,
         "perdas_by_emp": [
           {
             "emp": "Edf. Greco",
@@ -1525,6 +1546,14 @@ window.NI_DATA = {
             "perdas": 3,
             "motivos": {
               "Não responde / não atende": 3
+            }
+          },
+          {
+            "emp": "Jatiúca",
+            "corretor": "Adriana",
+            "perdas": 2,
+            "motivos": {
+              "Sem motivo registrado": 2
             }
           }
         ],
@@ -1542,7 +1571,7 @@ window.NI_DATA = {
             4
           ],
           "perda": [
-            0,
+            2,
             0,
             2,
             1
@@ -1612,7 +1641,7 @@ window.NI_DATA = {
           "cls": "proc",
           "icon": "process",
           "title": "Padronizar planilhas",
-          "desc": "<b>42% dos leads sem status</b> (5 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
+          "desc": "<b>25% dos leads sem status</b> (3 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
         }
       ]
     }
