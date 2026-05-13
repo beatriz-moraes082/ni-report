@@ -1,5 +1,5 @@
 window.NI_DATA = {
-  "generated_at": "13/05/2026 01:15",
+  "generated_at": "12/05/2026 22:19",
   "default_view": "total",
   "views": {
     "total": {
@@ -35,12 +35,14 @@ window.NI_DATA = {
             "outros": 8,
             "sem": 3,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null
+              "start": "2026-04-01",
+              "end": "2026-05-01",
+              "days_active": 41,
+              "days_left": -11,
+              "start_label": "01/04/26",
+              "end_label": "01/05/26",
+              "ad_status": "PAUSED",
+              "ad_name": "Edf. Greco | Rose"
             }
           },
           {
@@ -55,12 +57,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 3,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null
+              "start": "2026-04-01",
+              "end": "2026-05-01",
+              "days_active": 41,
+              "days_left": -11,
+              "start_label": "01/04/26",
+              "end_label": "01/05/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Casa no Antares | Gedson"
             }
           },
           {
@@ -75,12 +79,14 @@ window.NI_DATA = {
             "outros": 2,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null
+              "start": "2026-02-27",
+              "end": "2026-03-29",
+              "days_active": 74,
+              "days_left": -44,
+              "start_label": "27/02/26",
+              "end_label": "29/03/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Sensia | Nath/Guilherme/Fernanda"
             }
           },
           {
@@ -95,12 +101,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null
+              "start": "2026-04-22",
+              "end": "2026-05-22",
+              "days_active": 20,
+              "days_left": 10,
+              "start_label": "22/04/26",
+              "end_label": "22/05/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Edf. Guaxuma | Fernanda"
             }
           },
           {
@@ -115,12 +123,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 7,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null
+              "start": "2026-04-27",
+              "end": "2026-05-27",
+              "days_active": 15,
+              "days_left": 15,
+              "start_label": "27/04/26",
+              "end_label": "27/05/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Jatiúca | Adriana"
             }
           },
           {
@@ -135,12 +145,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 2,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null
+              "start": "2026-04-01",
+              "end": "2026-05-01",
+              "days_active": 41,
+              "days_left": -11,
+              "start_label": "01/04/26",
+              "end_label": "01/05/26",
+              "ad_status": "PAUSED",
+              "ad_name": "Edf. Jorge | Tatiana"
             }
           },
           {
@@ -155,12 +167,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null
+              "start": "2026-02-27",
+              "end": "2026-03-29",
+              "days_active": 74,
+              "days_left": -44,
+              "start_label": "27/02/26",
+              "end_label": "29/03/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Sensia | Nath/Guilherme/Fernanda"
             }
           },
           {
@@ -175,12 +189,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null
+              "start": "2026-02-27",
+              "end": "2026-03-29",
+              "days_active": 74,
+              "days_left": -44,
+              "start_label": "27/02/26",
+              "end_label": "29/03/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Sensia | Nath/Guilherme/Fernanda"
             }
           },
           {
@@ -195,12 +211,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 2,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null
+              "start": "2026-04-27",
+              "end": "2026-05-27",
+              "days_active": 15,
+              "days_left": 15,
+              "start_label": "27/04/26",
+              "end_label": "27/05/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "JTR Jatiúca | Nathalia"
             }
           }
         ],
@@ -650,12 +668,14 @@ window.NI_DATA = {
             "outros": 8,
             "sem": 1,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null
+              "start": "2026-04-01",
+              "end": "2026-05-01",
+              "days_active": 41,
+              "days_left": -11,
+              "start_label": "01/04/26",
+              "end_label": "01/05/26",
+              "ad_status": "PAUSED",
+              "ad_name": "Edf. Greco | Rose"
             }
           },
           {
@@ -670,12 +690,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 3,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null
+              "start": "2026-04-01",
+              "end": "2026-05-01",
+              "days_active": 41,
+              "days_left": -11,
+              "start_label": "01/04/26",
+              "end_label": "01/05/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Casa no Antares | Gedson"
             }
           },
           {
@@ -690,12 +712,14 @@ window.NI_DATA = {
             "outros": 2,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null
+              "start": "2026-02-27",
+              "end": "2026-03-29",
+              "days_active": 74,
+              "days_left": -44,
+              "start_label": "27/02/26",
+              "end_label": "29/03/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Sensia | Nath/Guilherme/Fernanda"
             }
           },
           {
@@ -710,12 +734,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null
+              "start": "2026-04-22",
+              "end": "2026-05-22",
+              "days_active": 20,
+              "days_left": 10,
+              "start_label": "22/04/26",
+              "end_label": "22/05/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Edf. Guaxuma | Fernanda"
             }
           },
           {
@@ -730,12 +756,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null
+              "start": "2026-02-27",
+              "end": "2026-03-29",
+              "days_active": 74,
+              "days_left": -44,
+              "start_label": "27/02/26",
+              "end_label": "29/03/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Sensia | Nath/Guilherme/Fernanda"
             }
           },
           {
@@ -750,12 +778,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 4,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null
+              "start": "2026-04-27",
+              "end": "2026-05-27",
+              "days_active": 15,
+              "days_left": 15,
+              "start_label": "27/04/26",
+              "end_label": "27/05/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Jatiúca | Adriana"
             }
           },
           {
@@ -770,12 +800,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 2,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null
+              "start": "2026-04-01",
+              "end": "2026-05-01",
+              "days_active": 41,
+              "days_left": -11,
+              "start_label": "01/04/26",
+              "end_label": "01/05/26",
+              "ad_status": "PAUSED",
+              "ad_name": "Edf. Jorge | Tatiana"
             }
           },
           {
@@ -790,12 +822,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null
+              "start": "2026-02-27",
+              "end": "2026-03-29",
+              "days_active": 74,
+              "days_left": -44,
+              "start_label": "27/02/26",
+              "end_label": "29/03/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Sensia | Nath/Guilherme/Fernanda"
             }
           },
           {
@@ -810,12 +844,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 2,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null
+              "start": "2026-04-27",
+              "end": "2026-05-27",
+              "days_active": 15,
+              "days_left": 15,
+              "start_label": "27/04/26",
+              "end_label": "27/05/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "JTR Jatiúca | Nathalia"
             }
           }
         ],
@@ -1233,12 +1269,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 2,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null
+              "start": "2026-04-01",
+              "end": "2026-05-01",
+              "days_active": 41,
+              "days_left": -11,
+              "start_label": "01/04/26",
+              "end_label": "01/05/26",
+              "ad_status": "PAUSED",
+              "ad_name": "Edf. Greco | Rose"
             }
           },
           {
@@ -1253,12 +1291,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 3,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null
+              "start": "2026-04-27",
+              "end": "2026-05-27",
+              "days_active": 15,
+              "days_left": 15,
+              "start_label": "27/04/26",
+              "end_label": "27/05/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Jatiúca | Adriana"
             }
           },
           {
@@ -1273,12 +1313,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null
+              "start": "2026-04-01",
+              "end": "2026-05-01",
+              "days_active": 41,
+              "days_left": -11,
+              "start_label": "01/04/26",
+              "end_label": "01/05/26",
+              "ad_status": "PAUSED",
+              "ad_name": "Edf. Jorge | Tatiana"
             }
           },
           {
@@ -1293,12 +1335,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null
+              "start": "2026-02-27",
+              "end": "2026-03-29",
+              "days_active": 74,
+              "days_left": -44,
+              "start_label": "27/02/26",
+              "end_label": "29/03/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Sensia | Nath/Guilherme/Fernanda"
             }
           },
           {
@@ -1313,12 +1357,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null
+              "start": "2026-04-01",
+              "end": "2026-05-01",
+              "days_active": 41,
+              "days_left": -11,
+              "start_label": "01/04/26",
+              "end_label": "01/05/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Casa no Antares | Gedson"
             }
           },
           {
@@ -1333,12 +1379,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null
+              "start": "2026-02-27",
+              "end": "2026-03-29",
+              "days_active": 74,
+              "days_left": -44,
+              "start_label": "27/02/26",
+              "end_label": "29/03/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Sensia | Nath/Guilherme/Fernanda"
             }
           },
           {
@@ -1353,12 +1401,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null
+              "start": "2026-02-27",
+              "end": "2026-03-29",
+              "days_active": 74,
+              "days_left": -44,
+              "start_label": "27/02/26",
+              "end_label": "29/03/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Sensia | Nath/Guilherme/Fernanda"
             }
           },
           {
@@ -1373,12 +1423,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null
+              "start": "2026-04-22",
+              "end": "2026-05-22",
+              "days_active": 20,
+              "days_left": 10,
+              "start_label": "22/04/26",
+              "end_label": "22/05/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Edf. Guaxuma | Fernanda"
             }
           },
           {
@@ -1393,12 +1445,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null
+              "start": "2026-04-27",
+              "end": "2026-05-27",
+              "days_active": 15,
+              "days_left": 15,
+              "start_label": "27/04/26",
+              "end_label": "27/05/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "JTR Jatiúca | Nathalia"
             }
           }
         ],

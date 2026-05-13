@@ -31,39 +31,117 @@ META_AD_ACCOUNT = "act_916115436468748"
 PERIOD_START = os.environ.get("PERIOD_START") or "2026-04-01"
 PERIOD_END = os.environ.get("PERIOD_END") or "2026-05-04"
 
-# Datas de ativação/término de cada empreendimento (lido de empreendimentos.json)
-def load_empreend_dates():
-    path = os.path.join(os.path.dirname(__file__), "empreendimentos.json")
-    if not os.path.exists(path):
-        return {}
+# Datas de ativação puxadas dos ads do Meta (cada criativo roda 30 dias).
+# empreendimentos.json funciona como override manual se preciso.
+EMP_DATE_OVERRIDES = {}
+_OVERRIDE_PATH = os.path.join(os.path.dirname(__file__), "empreendimentos.json")
+if os.path.exists(_OVERRIDE_PATH):
     try:
-        return {k: v for k, v in json.load(open(path, encoding="utf-8")).items() if not k.startswith("_")}
+        EMP_DATE_OVERRIDES = {k: v for k, v in json.load(open(_OVERRIDE_PATH, encoding="utf-8")).items()
+                              if not k.startswith("_")}
     except Exception as e:
-        print(f"  [empreend dates] erro: {e}", file=sys.stderr)
-        return {}
+        print(f"  [override] erro: {e}", file=sys.stderr)
 
-EMP_DATES = load_empreend_dates()
+# Cache dos ads (preenchido em fetch_ads_for_campaign)
+_ADS_CACHE = None
+
+
+def fetch_ads_for_campaign(campaign_id):
+    """Retorna todos os ads de uma campanha com status e data de criação."""
+    global _ADS_CACHE
+    if _ADS_CACHE is not None:
+        return _ADS_CACHE
+    token = os.environ.get("META_ACCESS_TOKEN")
+    if not token or not campaign_id:
+        return []
+    url = f"https://graph.facebook.com/v21.0/{campaign_id}/ads?" + urllib.parse.urlencode({
+        "fields": "name,effective_status,created_time",
+        "limit": 200,
+        "access_token": token,
+    })
+    try:
+        with urllib.request.urlopen(url, timeout=30) as resp:
+            data = json.loads(resp.read())
+        _ADS_CACHE = data.get("data", [])
+    except Exception as e:
+        print(f"  [ads] erro: {e}", file=sys.stderr)
+        _ADS_CACHE = []
+    return _ADS_CACHE
+
+
+def _norm(s):
+    s = (s or "").lower()
+    for a, b in [("á","a"),("â","a"),("ã","a"),("é","e"),("ê","e"),("í","i"),
+                 ("ó","o"),("ô","o"),("õ","o"),("ú","u"),("ç","c")]:
+        s = s.replace(a, b)
+    return s
+
+
+def find_emp_ad(emp, corretor):
+    """Procura o ad que corresponde a um empreendimento + corretor.
+    Retorna o ad ATIVO mais antigo (a campanha começou quando subiu o primeiro ad ativo).
+    Se não houver ATIVO, retorna o PAUSED mais recente.
+    """
+    ads = _ADS_CACHE or []
+    emp_k = _norm(emp).replace("edf. ", "").replace("edf ", "").strip()
+    cor_k = _norm(corretor).strip()
+    matches = []
+    for ad in ads:
+        name = _norm(ad.get("name", ""))
+        if emp_k not in name:
+            continue
+        # match perfeito de corretor; ou nome do corretor está na lista (ex "Nath/Guilherme/Fernanda")
+        cor_in_name = cor_k in name
+        matches.append((ad, cor_in_name))
+    # prioriza match exato de corretor; se não houver, qualquer ad do empreendimento
+    exact = [a for a, m in matches if m]
+    pool = exact if exact else [a for a, _ in matches]
+    if not pool:
+        return None
+    actives = [a for a in pool if a.get("effective_status") == "ACTIVE"]
+    if actives:
+        return min(actives, key=lambda a: a["created_time"])
+    return max(pool, key=lambda a: a["created_time"])
 
 
 def emp_timing(emp, corretor, today=None):
-    """Retorna dict com info de tempo do empreendimento: ativo_desde (dias), dias_restantes, start_str, end_str."""
-    key = f"{emp}|{corretor}"
-    info = EMP_DATES.get(key, {})
-    start = info.get("start", "").strip() or None
-    end = info.get("end", "").strip() or None
+    """Calcula o timing do empreendimento. Prioridade: override manual > ad Meta + 30 dias."""
     today = today or datetime.now().date()
-    out = {"start": start, "end": end, "days_active": None, "days_left": None,
-           "start_label": None, "end_label": None}
-    if start:
+    out = {"start": None, "end": None, "days_active": None, "days_left": None,
+           "start_label": None, "end_label": None, "ad_status": None, "ad_name": None}
+
+    # 1) override manual (se preenchido no JSON)
+    key = f"{emp}|{corretor}"
+    ov = EMP_DATE_OVERRIDES.get(key, {})
+    start_str = (ov.get("start") or "").strip() or None
+    end_str = (ov.get("end") or "").strip() or None
+
+    # 2) tenta puxar do ad do Meta
+    if not start_str:
+        ad = find_emp_ad(emp, corretor)
+        if ad:
+            ct = ad.get("created_time", "")[:10]
+            try:
+                sd = datetime.strptime(ct, "%Y-%m-%d").date()
+                start_str = sd.strftime("%Y-%m-%d")
+                end_str = end_str or (sd + timedelta(days=30)).strftime("%Y-%m-%d")
+                out["ad_status"] = ad.get("effective_status")
+                out["ad_name"] = ad.get("name")
+            except Exception:
+                pass
+
+    out["start"] = start_str
+    out["end"] = end_str
+    if start_str:
         try:
-            sd = datetime.strptime(start, "%Y-%m-%d").date()
+            sd = datetime.strptime(start_str, "%Y-%m-%d").date()
             out["days_active"] = (today - sd).days
             out["start_label"] = sd.strftime("%d/%m/%y")
         except ValueError:
             pass
-    if end:
+    if end_str:
         try:
-            ed = datetime.strptime(end, "%Y-%m-%d").date()
+            ed = datetime.strptime(end_str, "%Y-%m-%d").date()
             out["days_left"] = (ed - today).days
             out["end_label"] = ed.strftime("%d/%m/%y")
         except ValueError:
@@ -375,6 +453,28 @@ def main():
             print(f"  {sheet['emp']} ({sheet['corretor']}): ERRO {e}", file=sys.stderr)
             rows = []
         rows_by_sheet.append(rows)
+
+    # Pré-carrega ads da campanha ativa, pra mapear data de ativação por empreendimento.
+    print("\nPuxando campanha + ads do Meta...", file=sys.stderr)
+    camp = fetch_campaign_status()
+    if camp and camp.get("status") in ("ACTIVE", "PAUSED"):
+        # busca o ID da campanha pra puxar os ads
+        token = os.environ.get("META_ACCESS_TOKEN")
+        if token:
+            url = f"https://graph.facebook.com/v21.0/{META_AD_ACCOUNT}/campaigns?" + urllib.parse.urlencode({
+                "fields": "id,name,effective_status",
+                "limit": 100,
+                "access_token": token,
+            })
+            try:
+                with urllib.request.urlopen(url, timeout=30) as resp:
+                    cdata = json.loads(resp.read())
+                active = next((c for c in cdata.get("data", []) if c.get("effective_status") == "ACTIVE"), None)
+                if active:
+                    ads = fetch_ads_for_campaign(active["id"])
+                    print(f"  {len(ads)} ads encontrados na campanha ativa", file=sys.stderr)
+            except Exception as e:
+                print(f"  [ads main] erro: {e}", file=sys.stderr)
 
     # Define os 3 períodos. "total" usa as env vars; abril é fixo;
     # maio expande conforme PERIOD_END (até a data mais recente do total).

@@ -179,10 +179,16 @@ td{padding:13px 18px;font-size:13px;vertical-align:middle}
 .timing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:12px}
 @media(max-width:900px){.timing-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.timing-grid{grid-template-columns:1fr}}
-.timing-card{background:var(--surface);border-radius:var(--r);padding:14px 16px;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s;animation:fadeUp .5s backwards}
+.timing-card{background:var(--surface);border-radius:var(--r);padding:14px 16px;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s;animation:fadeUp .5s backwards;position:relative}
 .timing-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-hover)}
+.timing-card .t-head{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:10px}
 .timing-card .t-emp{font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px}
-.timing-card .t-cor{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+.timing-card .t-cor{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.timing-card .t-status{display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border-radius:999px;font-size:9px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;flex-shrink:0}
+.timing-card .t-status.active{background:rgba(34,197,94,.12);color:#15803d}
+.timing-card .t-status.paused{background:var(--danger-soft);color:var(--danger)}
+.timing-card .t-status.none{background:var(--surface-soft);color:var(--muted)}
+.timing-card .t-status::before{content:'';width:5px;height:5px;border-radius:50%;background:currentColor}
 .timing-card .t-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;font-size:11px;border-top:1px solid var(--border)}
 .timing-card .t-row:first-of-type{border-top:none}
 .timing-card .t-row .lbl{color:var(--muted)}
@@ -587,17 +593,26 @@ function renderEmpreendTiming(D){
         progress=`<div class="timing-bar"><div style="width:${pct}%"></div></div>`;
       }
     }
+    const adStatus=t.ad_status||'NONE';
+    const stCls=adStatus==='ACTIVE'?'active':adStatus==='PAUSED'?'paused':'none';
+    const stLabel=adStatus==='ACTIVE'?'Rodando':adStatus==='PAUSED'?'Pausado':'Sem ad';
     cards.push(`
       <div class="timing-card">
-        <div class="t-emp">${e.emp}</div>
-        <div class="t-cor">${e.corretor}</div>
-        <div class="t-row"><span class="lbl">Ativo desde</span>${startVal}</div>
-        <div class="t-row"><span class="lbl">Tempo ativo</span>${activeVal}</div>
-        <div class="t-row"><span class="lbl">Término</span>${endVal}</div>
+        <div class="t-head">
+          <div>
+            <div class="t-emp">${e.emp}</div>
+            <div class="t-cor">${e.corretor}</div>
+          </div>
+          <span class="t-status ${stCls}">${stLabel}</span>
+        </div>
+        <div class="t-row"><span class="lbl">Criativo ativo desde</span>${startVal}</div>
+        <div class="t-row"><span class="lbl">Tempo rodando</span>${activeVal}</div>
+        <div class="t-row"><span class="lbl">Ciclo de 30 dias</span>${endVal}</div>
         ${progress}
       </div>`);
   });
-  wrap.innerHTML=`<div class="timing-grid">${cards.join('')}</div>`;
+  wrap.innerHTML=`<div class="timing-grid">${cards.join('')}</div>
+    <p style="font-size:11px;color:var(--muted);margin-top:10px">Cada criativo de empreendimento roda 30 dias. Datas puxadas automaticamente do criativo correspondente no Meta Ads.</p>`;
 }
 
 function renderCampaignStatus(D){
