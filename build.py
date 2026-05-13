@@ -31,6 +31,45 @@ META_AD_ACCOUNT = "act_916115436468748"
 PERIOD_START = os.environ.get("PERIOD_START") or "2026-04-01"
 PERIOD_END = os.environ.get("PERIOD_END") or "2026-05-04"
 
+# Datas de ativação/término de cada empreendimento (lido de empreendimentos.json)
+def load_empreend_dates():
+    path = os.path.join(os.path.dirname(__file__), "empreendimentos.json")
+    if not os.path.exists(path):
+        return {}
+    try:
+        return {k: v for k, v in json.load(open(path, encoding="utf-8")).items() if not k.startswith("_")}
+    except Exception as e:
+        print(f"  [empreend dates] erro: {e}", file=sys.stderr)
+        return {}
+
+EMP_DATES = load_empreend_dates()
+
+
+def emp_timing(emp, corretor, today=None):
+    """Retorna dict com info de tempo do empreendimento: ativo_desde (dias), dias_restantes, start_str, end_str."""
+    key = f"{emp}|{corretor}"
+    info = EMP_DATES.get(key, {})
+    start = info.get("start", "").strip() or None
+    end = info.get("end", "").strip() or None
+    today = today or datetime.now().date()
+    out = {"start": start, "end": end, "days_active": None, "days_left": None,
+           "start_label": None, "end_label": None}
+    if start:
+        try:
+            sd = datetime.strptime(start, "%Y-%m-%d").date()
+            out["days_active"] = (today - sd).days
+            out["start_label"] = sd.strftime("%d/%m/%y")
+        except ValueError:
+            pass
+    if end:
+        try:
+            ed = datetime.strptime(end, "%Y-%m-%d").date()
+            out["days_left"] = (ed - today).days
+            out["end_label"] = ed.strftime("%d/%m/%y")
+        except ValueError:
+            pass
+    return out
+
 
 # ─── HELPERS ─────────────────────────────────────────────────────────────
 def parse_date(s):
@@ -113,10 +152,14 @@ def process_view(rows_by_sheet, start_str, end_str):
     per_emp = []
     totals = Counter()
     motivos = Counter()
+    motivos_by_emp = defaultdict(Counter)   # {empreendimento: Counter(motivo: count)}
+    perdas_by_emp = []                      # [{emp, corretor, perdas, motivos: {...}}]
     daily = defaultdict(lambda: Counter())
 
     for sheet, rows in zip(SHEETS, rows_by_sheet):
         emp_data = Counter()
+        emp_motivos = Counter()
+        emp_key = f"{sheet['emp']} ({sheet['corretor']})"
         for row in rows:
             d = parse_date(row.get("Data de entrada", ""))
             if not d or d < ini or d > fim:
@@ -132,7 +175,19 @@ def process_view(rows_by_sheet, start_str, end_str):
                 daily[day_key][mapping.get(st, st)] += 1
             elif st in ("desqualificado", "perdido"):
                 daily[day_key]["perda"] += 1
-                motivos[cat_motivo(obs)] += 1
+                m = cat_motivo(obs)
+                motivos[m] += 1
+                emp_motivos[m] += 1
+                motivos_by_emp[emp_key][m] += 1
+
+        perdas_total = emp_data["desqualificado"] + emp_data["perdido"]
+        if perdas_total > 0:
+            perdas_by_emp.append({
+                "emp": sheet["emp"],
+                "corretor": sheet["corretor"],
+                "perdas": perdas_total,
+                "motivos": dict(emp_motivos),
+            })
 
         per_emp.append({
             "emp": sheet["emp"],
@@ -142,10 +197,13 @@ def process_view(rows_by_sheet, start_str, end_str):
             "visita": emp_data["visita"],
             "qual": emp_data["qualificado"],
             "proposta": emp_data["proposta"],
-            "perda": emp_data["desqualificado"] + emp_data["perdido"],
+            "perda": perdas_total,
             "outros": emp_data["outros_produtos"] + emp_data["nao_momento"],
             "sem": emp_data["sem_status"],
+            "timing": emp_timing(sheet["emp"], sheet["corretor"]),
         })
+
+    perdas_by_emp.sort(key=lambda x: -x["perdas"])
 
     per_emp.sort(key=lambda x: -x["leads"])
 
@@ -172,11 +230,44 @@ def process_view(rows_by_sheet, start_str, end_str):
         "motivos": [{"label": m, "value": n, "pct": round(n / motivos_total * 100, 1) if motivos_total else 0}
                     for m, n in motivos.most_common()],
         "motivos_total": motivos_total,
+        "perdas_by_emp": perdas_by_emp,
         "series": series,
     }
 
 
 # ─── META API ────────────────────────────────────────────────────────────
+def fetch_campaign_status():
+    """Retorna status agregado das campanhas da conta. Pega a campanha ATIVA
+    (effective_status=ACTIVE) se houver; senão retorna a mais recentemente pausada."""
+    token = os.environ.get("META_ACCESS_TOKEN")
+    if not token:
+        return None
+    url = f"https://graph.facebook.com/v21.0/{META_AD_ACCOUNT}/campaigns?" + urllib.parse.urlencode({
+        "fields": "name,effective_status,objective,start_time,stop_time",
+        "limit": 100,
+        "access_token": token,
+    })
+    try:
+        with urllib.request.urlopen(url, timeout=30) as resp:
+            data = json.loads(resp.read())
+    except Exception as e:
+        print(f"  [Meta campanhas] erro: {e}", file=sys.stderr)
+        return None
+    campaigns = data.get("data", [])
+    active = [c for c in campaigns if c.get("effective_status") == "ACTIVE"]
+    if active:
+        c = active[0]
+        return {"name": c.get("name"), "status": "ACTIVE", "label": "Ativa",
+                "start_time": c.get("start_time"), "objective": c.get("objective")}
+    # senão, primeira pausada (pra dar contexto)
+    paused = [c for c in campaigns if c.get("effective_status") == "PAUSED"]
+    if paused:
+        c = paused[0]
+        return {"name": c.get("name"), "status": "PAUSED", "label": "Pausada",
+                "start_time": c.get("start_time"), "objective": c.get("objective")}
+    return {"name": None, "status": "NONE", "label": "Sem campanha ativa"}
+
+
 def fetch_meta(start_str, end_str):
     token = os.environ.get("META_ACCESS_TOKEN")
     if not token:
@@ -219,6 +310,7 @@ def fetch_meta(start_str, end_str):
         "msg_started": msg_started,
         "total_meta": total_meta,
         "cpl": round(spend / total_meta, 2) if total_meta else 0,
+        "campaign": fetch_campaign_status(),
     }
 
 

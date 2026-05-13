@@ -1,5 +1,5 @@
 window.NI_DATA = {
-  "generated_at": "12/05/2026 18:20",
+  "generated_at": "12/05/2026 22:14",
   "default_view": "total",
   "views": {
     "total": {
@@ -33,7 +33,15 @@ window.NI_DATA = {
             "proposta": 0,
             "perda": 64,
             "outros": 8,
-            "sem": 3
+            "sem": 3,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null
+            }
           },
           {
             "emp": "Casa no Antares",
@@ -45,7 +53,15 @@ window.NI_DATA = {
             "proposta": 0,
             "perda": 16,
             "outros": 0,
-            "sem": 3
+            "sem": 3,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null
+            }
           },
           {
             "emp": "Edf. Sensia",
@@ -57,7 +73,15 @@ window.NI_DATA = {
             "proposta": 0,
             "perda": 5,
             "outros": 2,
-            "sem": 0
+            "sem": 0,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null
+            }
           },
           {
             "emp": "Edf. Guaxuma",
@@ -69,7 +93,15 @@ window.NI_DATA = {
             "proposta": 0,
             "perda": 4,
             "outros": 0,
-            "sem": 0
+            "sem": 0,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null
+            }
           },
           {
             "emp": "Jatiúca",
@@ -81,7 +113,15 @@ window.NI_DATA = {
             "proposta": 0,
             "perda": 0,
             "outros": 0,
-            "sem": 7
+            "sem": 7,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null
+            }
           },
           {
             "emp": "Edf. Jorge",
@@ -93,7 +133,15 @@ window.NI_DATA = {
             "proposta": 0,
             "perda": 3,
             "outros": 0,
-            "sem": 2
+            "sem": 2,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null
+            }
           },
           {
             "emp": "Edf. Sensia",
@@ -105,7 +153,15 @@ window.NI_DATA = {
             "proposta": 0,
             "perda": 4,
             "outros": 0,
-            "sem": 0
+            "sem": 0,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null
+            }
           },
           {
             "emp": "Edf. Sensia",
@@ -117,7 +173,15 @@ window.NI_DATA = {
             "proposta": 0,
             "perda": 1,
             "outros": 0,
-            "sem": 0
+            "sem": 0,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null
+            }
           },
           {
             "emp": "JTR Jatiúca",
@@ -129,7 +193,15 @@ window.NI_DATA = {
             "proposta": 0,
             "perda": 0,
             "outros": 0,
-            "sem": 2
+            "sem": 2,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null
+            }
           }
         ],
         "motivos": [
@@ -175,6 +247,78 @@ window.NI_DATA = {
           }
         ],
         "motivos_total": 97,
+        "perdas_by_emp": [
+          {
+            "emp": "Edf. Greco",
+            "corretor": "Rose",
+            "perdas": 64,
+            "motivos": {
+              "Motivo ambíguo (revisar)": 16,
+              "Não responde / não atende": 42,
+              "Valor / orçamento": 3,
+              "Comprou com concorrente": 2,
+              "Não gostou do imóvel/região": 1
+            }
+          },
+          {
+            "emp": "Casa no Antares",
+            "corretor": "Gedson",
+            "perdas": 16,
+            "motivos": {
+              "Sem motivo registrado": 2,
+              "Não gostou do imóvel/região": 1,
+              "Não responde / não atende": 9,
+              "Motivo ambíguo (revisar)": 1,
+              "Lead repetido": 3
+            }
+          },
+          {
+            "emp": "Edf. Sensia",
+            "corretor": "Guilherme",
+            "perdas": 5,
+            "motivos": {
+              "Não gostou do imóvel/região": 1,
+              "Não responde / não atende": 1,
+              "Motivo ambíguo (revisar)": 3
+            }
+          },
+          {
+            "emp": "Edf. Sensia",
+            "corretor": "Fernanda",
+            "perdas": 4,
+            "motivos": {
+              "Lead inválido": 3,
+              "Não responde / não atende": 1
+            }
+          },
+          {
+            "emp": "Edf. Guaxuma",
+            "corretor": "Fernanda",
+            "perdas": 4,
+            "motivos": {
+              "Sem motivo registrado": 1,
+              "Motivo ambíguo (revisar)": 2,
+              "Não responde / não atende": 1
+            }
+          },
+          {
+            "emp": "Edf. Jorge",
+            "corretor": "Tatiana",
+            "perdas": 3,
+            "motivos": {
+              "Lead repetido": 1,
+              "Não responde / não atende": 2
+            }
+          },
+          {
+            "emp": "Edf. Sensia",
+            "corretor": "Nath",
+            "perdas": 1,
+            "motivos": {
+              "Motivo ambíguo (revisar)": 1
+            }
+          }
+        ],
         "series": {
           "labels": [
             "01/04",
@@ -440,7 +584,14 @@ window.NI_DATA = {
         "leads_form": 164,
         "msg_started": 15,
         "total_meta": 179,
-        "cpl": 10.55
+        "cpl": 10.55,
+        "campaign": {
+          "name": "Fundo de Funil | Formulário | Alto padrão | 13/11/25 #TP",
+          "status": "ACTIVE",
+          "label": "Ativa",
+          "start_time": "2025-11-13T12:46:22-0300",
+          "objective": "OUTCOME_LEADS"
+        }
       },
       "plan": [
         {
@@ -497,7 +648,15 @@ window.NI_DATA = {
             "proposta": 0,
             "perda": 61,
             "outros": 8,
-            "sem": 1
+            "sem": 1,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null
+            }
           },
           {
             "emp": "Casa no Antares",
@@ -509,7 +668,15 @@ window.NI_DATA = {
             "proposta": 0,
             "perda": 16,
             "outros": 0,
-            "sem": 3
+            "sem": 3,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null
+            }
           },
           {
             "emp": "Edf. Sensia",
@@ -521,7 +688,15 @@ window.NI_DATA = {
             "proposta": 0,
             "perda": 5,
             "outros": 2,
-            "sem": 0
+            "sem": 0,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null
+            }
           },
           {
             "emp": "Edf. Guaxuma",
@@ -533,7 +708,15 @@ window.NI_DATA = {
             "proposta": 0,
             "perda": 4,
             "outros": 0,
-            "sem": 0
+            "sem": 0,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null
+            }
           },
           {
             "emp": "Edf. Sensia",
@@ -545,7 +728,15 @@ window.NI_DATA = {
             "proposta": 0,
             "perda": 4,
             "outros": 0,
-            "sem": 0
+            "sem": 0,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null
+            }
           },
           {
             "emp": "Jatiúca",
@@ -557,7 +748,15 @@ window.NI_DATA = {
             "proposta": 0,
             "perda": 0,
             "outros": 0,
-            "sem": 4
+            "sem": 4,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null
+            }
           },
           {
             "emp": "Edf. Jorge",
@@ -569,7 +768,15 @@ window.NI_DATA = {
             "proposta": 0,
             "perda": 3,
             "outros": 0,
-            "sem": 2
+            "sem": 2,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null
+            }
           },
           {
             "emp": "Edf. Sensia",
@@ -581,7 +788,15 @@ window.NI_DATA = {
             "proposta": 0,
             "perda": 1,
             "outros": 0,
-            "sem": 0
+            "sem": 0,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null
+            }
           },
           {
             "emp": "JTR Jatiúca",
@@ -593,7 +808,15 @@ window.NI_DATA = {
             "proposta": 0,
             "perda": 0,
             "outros": 0,
-            "sem": 2
+            "sem": 2,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null
+            }
           }
         ],
         "motivos": [
@@ -639,6 +862,78 @@ window.NI_DATA = {
           }
         ],
         "motivos_total": 94,
+        "perdas_by_emp": [
+          {
+            "emp": "Edf. Greco",
+            "corretor": "Rose",
+            "perdas": 61,
+            "motivos": {
+              "Motivo ambíguo (revisar)": 16,
+              "Não responde / não atende": 39,
+              "Valor / orçamento": 3,
+              "Comprou com concorrente": 2,
+              "Não gostou do imóvel/região": 1
+            }
+          },
+          {
+            "emp": "Casa no Antares",
+            "corretor": "Gedson",
+            "perdas": 16,
+            "motivos": {
+              "Sem motivo registrado": 2,
+              "Não gostou do imóvel/região": 1,
+              "Não responde / não atende": 9,
+              "Motivo ambíguo (revisar)": 1,
+              "Lead repetido": 3
+            }
+          },
+          {
+            "emp": "Edf. Sensia",
+            "corretor": "Guilherme",
+            "perdas": 5,
+            "motivos": {
+              "Não gostou do imóvel/região": 1,
+              "Não responde / não atende": 1,
+              "Motivo ambíguo (revisar)": 3
+            }
+          },
+          {
+            "emp": "Edf. Sensia",
+            "corretor": "Fernanda",
+            "perdas": 4,
+            "motivos": {
+              "Lead inválido": 3,
+              "Não responde / não atende": 1
+            }
+          },
+          {
+            "emp": "Edf. Guaxuma",
+            "corretor": "Fernanda",
+            "perdas": 4,
+            "motivos": {
+              "Sem motivo registrado": 1,
+              "Motivo ambíguo (revisar)": 2,
+              "Não responde / não atende": 1
+            }
+          },
+          {
+            "emp": "Edf. Jorge",
+            "corretor": "Tatiana",
+            "perdas": 3,
+            "motivos": {
+              "Lead repetido": 1,
+              "Não responde / não atende": 2
+            }
+          },
+          {
+            "emp": "Edf. Sensia",
+            "corretor": "Nath",
+            "perdas": 1,
+            "motivos": {
+              "Motivo ambíguo (revisar)": 1
+            }
+          }
+        ],
         "series": {
           "labels": [
             "01/04",
@@ -876,7 +1171,14 @@ window.NI_DATA = {
         "leads_form": 147,
         "msg_started": 14,
         "total_meta": 161,
-        "cpl": 10.28
+        "cpl": 10.28,
+        "campaign": {
+          "name": "Fundo de Funil | Formulário | Alto padrão | 13/11/25 #TP",
+          "status": "ACTIVE",
+          "label": "Ativa",
+          "start_time": "2025-11-13T12:46:22-0300",
+          "objective": "OUTCOME_LEADS"
+        }
       },
       "plan": [
         {
@@ -929,7 +1231,15 @@ window.NI_DATA = {
             "proposta": 0,
             "perda": 3,
             "outros": 0,
-            "sem": 2
+            "sem": 2,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null
+            }
           },
           {
             "emp": "Jatiúca",
@@ -941,7 +1251,15 @@ window.NI_DATA = {
             "proposta": 0,
             "perda": 0,
             "outros": 0,
-            "sem": 3
+            "sem": 3,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null
+            }
           },
           {
             "emp": "Edf. Jorge",
@@ -953,7 +1271,15 @@ window.NI_DATA = {
             "proposta": 0,
             "perda": 0,
             "outros": 0,
-            "sem": 0
+            "sem": 0,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null
+            }
           },
           {
             "emp": "Edf. Sensia",
@@ -965,7 +1291,15 @@ window.NI_DATA = {
             "proposta": 0,
             "perda": 0,
             "outros": 0,
-            "sem": 0
+            "sem": 0,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null
+            }
           },
           {
             "emp": "Casa no Antares",
@@ -977,7 +1311,15 @@ window.NI_DATA = {
             "proposta": 0,
             "perda": 0,
             "outros": 0,
-            "sem": 0
+            "sem": 0,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null
+            }
           },
           {
             "emp": "Edf. Sensia",
@@ -989,7 +1331,15 @@ window.NI_DATA = {
             "proposta": 0,
             "perda": 0,
             "outros": 0,
-            "sem": 0
+            "sem": 0,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null
+            }
           },
           {
             "emp": "Edf. Sensia",
@@ -1001,7 +1351,15 @@ window.NI_DATA = {
             "proposta": 0,
             "perda": 0,
             "outros": 0,
-            "sem": 0
+            "sem": 0,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null
+            }
           },
           {
             "emp": "Edf. Guaxuma",
@@ -1013,7 +1371,15 @@ window.NI_DATA = {
             "proposta": 0,
             "perda": 0,
             "outros": 0,
-            "sem": 0
+            "sem": 0,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null
+            }
           },
           {
             "emp": "JTR Jatiúca",
@@ -1025,7 +1391,15 @@ window.NI_DATA = {
             "proposta": 0,
             "perda": 0,
             "outros": 0,
-            "sem": 0
+            "sem": 0,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null
+            }
           }
         ],
         "motivos": [
@@ -1036,6 +1410,16 @@ window.NI_DATA = {
           }
         ],
         "motivos_total": 3,
+        "perdas_by_emp": [
+          {
+            "emp": "Edf. Greco",
+            "corretor": "Rose",
+            "perdas": 3,
+            "motivos": {
+              "Não responde / não atende": 3
+            }
+          }
+        ],
         "series": {
           "labels": [
             "01/05",
@@ -1091,7 +1475,14 @@ window.NI_DATA = {
         "leads_form": 17,
         "msg_started": 1,
         "total_meta": 18,
-        "cpl": 12.92
+        "cpl": 12.92,
+        "campaign": {
+          "name": "Fundo de Funil | Formulário | Alto padrão | 13/11/25 #TP",
+          "status": "ACTIVE",
+          "label": "Ativa",
+          "start_time": "2025-11-13T12:46:22-0300",
+          "objective": "OUTCOME_LEADS"
+        }
       },
       "plan": [
         {

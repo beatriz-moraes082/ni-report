@@ -1,0 +1,12 @@
+{
+  "_comment": "Datas de início e fim do contrato/campanha de cada empreendimento. Formato: YYYY-MM-DD. Deixe end vazio se não tiver data definida.",
+  "Casa no Antares|Gedson":       {"start": "", "end": ""},
+  "Edf. Jorge|Tatiana":           {"start": "", "end": ""},
+  "Edf. Greco|Rose":              {"start": "", "end": ""},
+  "Edf. Sensia|Fernanda":         {"start": "", "end": ""},
+  "Edf. Sensia|Guilherme":        {"start": "", "end": ""},
+  "Edf. Sensia|Nath":             {"start": "", "end": ""},
+  "Edf. Guaxuma|Fernanda":        {"start": "", "end": ""},
+  "JTR Jatiúca|Nathalia":         {"start": "", "end": ""},
+  "Jatiúca|Adriana":              {"start": "", "end": ""}
+}
