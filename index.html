@@ -203,6 +203,14 @@ td{padding:13px 18px;font-size:13px;vertical-align:middle}
 .mini-stack{display:flex;gap:1px;height:14px;border-radius:3px;overflow:hidden;min-width:140px}
 .mini-stack span{height:14px}
 
+/* Lista de motivos por empreendimento (chips) */
+.mot-chips{display:flex;flex-wrap:wrap;gap:5px;max-width:380px}
+.mot-chip{display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border-radius:999px;font-size:11px;font-weight:600;background:var(--surface-soft);color:var(--text);border:1px solid var(--border)}
+.mot-chip .mot-n{color:var(--muted);font-variant-numeric:tabular-nums;font-weight:700;background:#fff;padding:1px 6px;border-radius:999px;font-size:10px}
+.mot-chip.top{background:var(--accent-light);color:var(--accent);border-color:rgba(232,72,12,.25)}
+.mot-chip.top .mot-n{background:#fff;color:var(--accent)}
+.mot-chip .mot-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+
 footer{text-align:center;padding:24px;font-size:11px;color:var(--muted);border-top:1px solid var(--border);margin-top:32px}
 footer b{color:var(--text)}
 
@@ -382,7 +390,7 @@ footer b{color:var(--text)}
               <th>Corretor</th>
               <th class="r">Perdas</th>
               <th>Distribuição dos motivos</th>
-              <th>Top motivo</th>
+              <th>Motivos detalhados</th>
             </tr>
           </thead>
           <tbody id="perdasByEmpTable"></tbody>
@@ -654,14 +662,18 @@ function renderPerdasByEmp(D){
   list.forEach(p=>{
     const motivos=Object.entries(p.motivos).sort((a,b)=>b[1]-a[1]);
     const stack=motivos.map(([m,n])=>`<span title="${m}: ${n}" style="flex:${n};background:${MOT_COLORS[m]||C.bege}"></span>`).join('');
-    const topMot=motivos[0];
+    const chips=motivos.map(([m,n],i)=>{
+      const color=MOT_COLORS[m]||C.bege;
+      const cls=i===0?'mot-chip top':'mot-chip';
+      return `<span class="${cls}" title="${m}: ${n} leads"><span class="mot-dot" style="background:${color}"></span>${m}<span class="mot-n">${n}</span></span>`;
+    }).join('');
     tbody.insertAdjacentHTML('beforeend',`
       <tr>
         <td class="nm">${p.emp}</td>
         <td>${p.corretor}</td>
         <td class="r num">${p.perdas}</td>
         <td><div class="mini-stack">${stack}</div></td>
-        <td><span style="font-size:11px;color:${C.muted}"><b style="color:${C.text}">${topMot[0]}</b> · ${topMot[1]} leads</span></td>
+        <td><div class="mot-chips">${chips}</div></td>
       </tr>`);
   });
 }
