@@ -1,5 +1,5 @@
 window.NI_DATA = {
-  "generated_at": "23/05/2026 20:14",
+  "generated_at": "23/05/2026 20:33",
   "default_view": "total",
   "views": {
     "total": {
@@ -91,7 +91,7 @@ window.NI_DATA = {
               "end_label": "21/06/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Paradise Beach | Gedson",
-              "spend": 37.93,
+              "spend": 38.03,
               "spend_shared": false
             }
           },
@@ -251,14 +251,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-05-13",
+              "end": "2026-06-12",
+              "days_active": 10,
+              "days_left": 20,
+              "start_label": "13/05/26",
+              "end_label": "12/06/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "VD01",
               "spend": 0.0,
               "spend_shared": false
             }
@@ -275,14 +275,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-05-13",
+              "end": "2026-06-12",
+              "days_active": 10,
+              "days_left": 20,
+              "start_label": "13/05/26",
+              "end_label": "12/06/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "VD01",
               "spend": 0.0,
               "spend_shared": false
             }
@@ -347,14 +347,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-05-13",
+              "end": "2026-06-12",
+              "days_active": 10,
+              "days_left": 20,
+              "start_label": "13/05/26",
+              "end_label": "12/06/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "VD01",
               "spend": 0.0,
               "spend_shared": false
             }
@@ -884,8 +884,8 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 3083.44,
-        "impressions": 104309,
+        "spend": 3083.57,
+        "impressions": 104321,
         "clicks": 2294,
         "ctr": 2.2,
         "frequency": 3.21,
@@ -1199,14 +1199,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-05-13",
+              "end": "2026-06-12",
+              "days_active": 10,
+              "days_left": 20,
+              "start_label": "13/05/26",
+              "end_label": "12/06/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "VD01",
               "spend": 0.0,
               "spend_shared": false
             }
@@ -1223,14 +1223,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-05-13",
+              "end": "2026-06-12",
+              "days_active": 10,
+              "days_left": 20,
+              "start_label": "13/05/26",
+              "end_label": "12/06/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "VD01",
               "spend": 0.0,
               "spend_shared": false
             }
@@ -1247,14 +1247,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-05-13",
+              "end": "2026-06-12",
+              "days_active": 10,
+              "days_left": 20,
+              "start_label": "13/05/26",
+              "end_label": "12/06/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "VD01",
               "spend": 0.0,
               "spend_shared": false
             }
@@ -1849,7 +1849,7 @@ window.NI_DATA = {
               "end_label": "21/06/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Paradise Beach | Gedson",
-              "spend": 37.93,
+              "spend": 38.03,
               "spend_shared": false
             }
           },
@@ -1913,14 +1913,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-05-13",
+              "end": "2026-06-12",
+              "days_active": 10,
+              "days_left": 20,
+              "start_label": "13/05/26",
+              "end_label": "12/06/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "VD01",
               "spend": 0.0,
               "spend_shared": false
             }
@@ -1961,14 +1961,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-05-13",
+              "end": "2026-06-12",
+              "days_active": 10,
+              "days_left": 20,
+              "start_label": "13/05/26",
+              "end_label": "12/06/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "VD01",
               "spend": 0.0,
               "spend_shared": false
             }
@@ -2033,14 +2033,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-05-13",
+              "end": "2026-06-12",
+              "days_active": 10,
+              "days_left": 20,
+              "start_label": "13/05/26",
+              "end_label": "12/06/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "VD01",
               "spend": 0.0,
               "spend_shared": false
             }
@@ -2277,8 +2277,8 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 1427.87,
-        "impressions": 37866,
+        "spend": 1428.0,
+        "impressions": 37878,
         "clicks": 740,
         "ctr": 1.95,
         "frequency": 3.02,
