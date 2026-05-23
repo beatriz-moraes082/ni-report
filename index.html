@@ -324,12 +324,20 @@ footer b{color:var(--text)}
         <h3 class="card-title">Performance por empreendimento e corretor</h3>
         <p class="card-sub">Clique nos cabeçalhos para ordenar</p>
       </div>
+      <div class="emp-filters" style="display:flex;flex-wrap:wrap;gap:8px;padding:0 16px 12px;align-items:center;font-size:13px;color:var(--muted)">
+        <span style="font-weight:600;color:var(--text)">Filtrar:</span>
+        <button class="emp-filter-btn active" data-filter="all" style="padding:4px 12px;border:1px solid var(--border);background:var(--accent);color:#fff;border-radius:12px;cursor:pointer;font-size:12px;font-weight:500">Todos</button>
+        <button class="emp-filter-btn" data-filter="ACTIVE" style="padding:4px 12px;border:1px solid var(--border);background:#fff;color:var(--text);border-radius:12px;cursor:pointer;font-size:12px;font-weight:500">Ativos</button>
+        <button class="emp-filter-btn" data-filter="PAUSED" style="padding:4px 12px;border:1px solid var(--border);background:#fff;color:var(--text);border-radius:12px;cursor:pointer;font-size:12px;font-weight:500">Pausados</button>
+        <button class="emp-filter-btn" data-filter="NONE" style="padding:4px 12px;border:1px solid var(--border);background:#fff;color:var(--text);border-radius:12px;cursor:pointer;font-size:12px;font-weight:500">Sem AD</button>
+      </div>
       <div class="table-wrap">
         <table>
           <thead>
             <tr id="empTHead">
               <th data-sort="emp">Empreendimento <span class="sort-arrow">↕</span></th>
               <th data-sort="corretor">Corretor <span class="sort-arrow">↕</span></th>
+              <th data-sort="ad_status">Status do ad <span class="sort-arrow">↕</span></th>
               <th class="r sorted" data-sort="leads">Leads <span class="sort-arrow">↓</span></th>
               <th class="r" data-sort="atend">Em atend. <span class="sort-arrow">↕</span></th>
               <th class="r" data-sort="visita">Visita <span class="sort-arrow">↕</span></th>
@@ -688,6 +696,7 @@ function renderEmpreend(D){
   empData.forEach(e=>{
     e.pct=e.leads?Math.round(e.perda/e.leads*100):0;
     e.score=e.leads?(e.atend+e.visita*2+e.qual*3+e.proposta*5)/e.leads:0;
+    e.ad_status=(e.timing&&e.timing.ad_status)||'NONE';
   });
   const candidates=empData.filter(e=>e.leads>=5);
   const bestIdx=candidates.length?candidates.reduce((a,b)=>a.score>b.score?a:b):null;
@@ -722,19 +731,23 @@ function renderEmpreend(D){
     }
   });
 
+  let currentFilter='all';
   function renderTable(){
-    const sorted=[...empData].sort((a,b)=>{
+    const filtered=currentFilter==='all'?empData:empData.filter(e=>e.ad_status===currentFilter);
+    const sorted=[...filtered].sort((a,b)=>{
       let av=a[sortKey],bv=b[sortKey];
       if(typeof av==='string')return sortDir==='asc'?av.localeCompare(bv):bv.localeCompare(av);
       return sortDir==='asc'?av-bv:bv-av;
     });
     const tbody=document.getElementById('empTable');
     tbody.innerHTML='';
-    if(!sorted.length||D.stats.n_total===0){tbody.innerHTML=`<tr><td colspan="10"><div class="empty">Nenhum empreendimento com dados no período</div></td></tr>`;return;}
+    if(!sorted.length||D.stats.n_total===0){tbody.innerHTML=`<tr><td colspan="11"><div class="empty">Nenhum empreendimento com dados no período (ou filtro vazio)</div></td></tr>`;return;}
     sorted.forEach(e=>{
       const pctBdg=e.pct>=60?'bdg-red':e.pct>=40?'bdg-orange':'bdg-soft';
       const propostaCell=e.proposta>0?`<span class="bdg bdg-orange">${e.proposta}</span>`:`<span class="tc-m">0</span>`;
       const isBest=e===bestIdx,isWorst=e===worstIdx;
+      const stBdg=e.ad_status==='ACTIVE'?'bdg-soft" style="background:#DCFCE7;color:#15803D':e.ad_status==='PAUSED'?'bdg-orange':'bdg-soft" style="background:#F3F4F6;color:#6B7280';
+      const stLabel=e.ad_status==='ACTIVE'?'Ativo':e.ad_status==='PAUSED'?'Pausado':'Sem ad';
       const tend=`<div class="tendency" title="Em atendimento: ${e.atend}, Visita: ${e.visita}, Qualificado: ${e.qual}, Proposta: ${e.proposta}">
         ${e.atend>0?`<span class="a" style="flex:${e.atend}"></span>`:''}
         ${e.visita>0?`<span class="v" style="flex:${e.visita}"></span>`:''}
@@ -746,6 +759,7 @@ function renderEmpreend(D){
         <tr class="${isBest?'best':''}">
           <td class="nm">${isBest?'<span class="bdg bdg-orange" style="margin-right:6px">★</span>':isWorst?'<span class="bdg bdg-red" style="margin-right:6px">!</span>':''}${e.emp}</td>
           <td>${e.corretor}</td>
+          <td><span class="bdg ${stBdg}">${stLabel}</span></td>
           <td class="r num">${e.leads}</td>
           <td class="r num ${e.atend>0?'tc-a':'tc-m'}">${e.atend}</td>
           <td class="r num ${e.visita>0?'tc-a':'tc-m'}">${e.visita}</td>
@@ -765,6 +779,16 @@ function renderEmpreend(D){
   document.querySelectorAll('#empTHead th').forEach(th=>th.onclick=()=>{
     const k=th.dataset.sort;
     if(sortKey===k)sortDir=sortDir==='asc'?'desc':'asc';else{sortKey=k;sortDir='desc';}
+    renderTable();
+  });
+  document.querySelectorAll('.emp-filter-btn').forEach(btn=>btn.onclick=()=>{
+    currentFilter=btn.dataset.filter;
+    document.querySelectorAll('.emp-filter-btn').forEach(b=>{
+      b.classList.remove('active');
+      b.style.background='#fff';b.style.color='var(--text)';
+    });
+    btn.classList.add('active');
+    btn.style.background='var(--accent)';btn.style.color='#fff';
     renderTable();
   });
   renderTable();
