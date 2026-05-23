@@ -53,26 +53,30 @@ if os.path.exists(_OVERRIDE_PATH):
 _ADS_CACHE = None
 
 
-def fetch_ads_for_campaign(campaign_id):
-    """Retorna todos os ads de uma campanha com status e data de criação."""
+def fetch_ads_for_campaign(campaign_id=None):
+    """Retorna TODOS os ads do ad account (de qualquer campanha) com status e data de criação."""
     global _ADS_CACHE
     if _ADS_CACHE is not None:
         return _ADS_CACHE
     token = os.environ.get("META_ACCESS_TOKEN")
-    if not token or not campaign_id:
+    if not token:
         return []
-    url = f"https://graph.facebook.com/v21.0/{campaign_id}/ads?" + urllib.parse.urlencode({
+    all_ads = []
+    url = f"https://graph.facebook.com/v21.0/{META_AD_ACCOUNT}/ads?" + urllib.parse.urlencode({
         "fields": "id,name,effective_status,created_time",
         "limit": 200,
         "access_token": token,
     })
     try:
-        with urllib.request.urlopen(url, timeout=30) as resp:
-            data = json.loads(resp.read())
-        _ADS_CACHE = data.get("data", [])
+        while url:
+            with urllib.request.urlopen(url, timeout=30) as resp:
+                data = json.loads(resp.read())
+            all_ads.extend(data.get("data", []))
+            url = (data.get("paging") or {}).get("next")
+        _ADS_CACHE = all_ads
     except Exception as e:
         print(f"  [ads] erro: {e}", file=sys.stderr)
-        _ADS_CACHE = []
+        _ADS_CACHE = all_ads
     return _ADS_CACHE
 
 
