@@ -1,5 +1,5 @@
 window.NI_DATA = {
-  "generated_at": "23/05/2026 19:46",
+  "generated_at": "23/05/2026 20:07",
   "default_view": "total",
   "views": {
     "total": {
@@ -11,17 +11,17 @@ window.NI_DATA = {
       },
       "stats": {
         "totals": {
-          "desqualificado": 120,
+          "desqualificado": 121,
           "em_atendimento": 82,
           "qualificado": 8,
           "visita": 10,
-          "sem_status": 43,
+          "sem_status": 42,
           "outros_produtos": 10,
           "nao_momento": 1
         },
         "n_total": 274,
-        "perdidos": 120,
-        "pct_perda": 43.8,
+        "perdidos": 121,
+        "pct_perda": 44.2,
         "empreend": [
           {
             "emp": "Edf. Greco",
@@ -35,14 +35,14 @@ window.NI_DATA = {
             "outros": 8,
             "sem": 3,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-04-01",
+              "end": "2026-05-01",
+              "days_active": 52,
+              "days_left": -22,
+              "start_label": "01/04/26",
+              "end_label": "01/05/26",
+              "ad_status": "PAUSED",
+              "ad_name": "Edf. Greco | Rose",
               "spend": 840.52,
               "spend_shared": false
             }
@@ -59,14 +59,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 7,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-04-01",
+              "end": "2026-05-01",
+              "days_active": 52,
+              "days_left": -22,
+              "start_label": "01/04/26",
+              "end_label": "01/05/26",
+              "ad_status": "PAUSED",
+              "ad_name": "Casa no Antares | Gedson",
               "spend": 370.95,
               "spend_shared": false
             }
@@ -83,15 +83,15 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 7,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
-              "spend": 37.23,
+              "start": "2026-05-22",
+              "end": "2026-06-21",
+              "days_active": 1,
+              "days_left": 29,
+              "start_label": "22/05/26",
+              "end_label": "21/06/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Edf. Paradise Beach | Gedson",
+              "spend": 37.73,
               "spend_shared": false
             }
           },
@@ -103,18 +103,18 @@ window.NI_DATA = {
             "visita": 1,
             "qual": 0,
             "proposta": 0,
-            "perda": 5,
+            "perda": 6,
             "outros": 1,
-            "sem": 3,
+            "sem": 2,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-04-27",
+              "end": "2026-05-27",
+              "days_active": 26,
+              "days_left": 4,
+              "start_label": "27/04/26",
+              "end_label": "27/05/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Jatiúca | Adriana",
               "spend": 557.27,
               "spend_shared": false
             }
@@ -131,14 +131,14 @@ window.NI_DATA = {
             "outros": 2,
             "sem": 10,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-02-27",
+              "end": "2026-03-29",
+              "days_active": 85,
+              "days_left": -55,
+              "start_label": "27/02/26",
+              "end_label": "29/03/26",
+              "ad_status": "PAUSED",
+              "ad_name": "Sensia | Nath/Guilherme/Fernanda",
               "spend": 500.84,
               "spend_shared": false
             }
@@ -155,14 +155,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 10,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-02-27",
+              "end": "2026-03-29",
+              "days_active": 85,
+              "days_left": -55,
+              "start_label": "27/02/26",
+              "end_label": "29/03/26",
+              "ad_status": "PAUSED",
+              "ad_name": "Sensia | Nath/Guilherme/Fernanda",
               "spend": 500.84,
               "spend_shared": false
             }
@@ -179,14 +179,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-02-27",
+              "end": "2026-03-29",
+              "days_active": 85,
+              "days_left": -55,
+              "start_label": "27/02/26",
+              "end_label": "29/03/26",
+              "ad_status": "PAUSED",
+              "ad_name": "Sensia | Nath/Guilherme/Fernanda",
               "spend": 500.84,
               "spend_shared": false
             }
@@ -203,14 +203,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 1,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-04-30",
+              "end": "2026-05-30",
+              "days_active": 23,
+              "days_left": 7,
+              "start_label": "30/04/26",
+              "end_label": "30/05/26",
+              "ad_status": "CAMPAIGN_PAUSED",
+              "ad_name": "Edf. Guaxuma | Fernanda",
               "spend": 201.1,
               "spend_shared": false
             }
@@ -227,14 +227,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 2,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-04-01",
+              "end": "2026-05-01",
+              "days_active": 52,
+              "days_left": -22,
+              "start_label": "01/04/26",
+              "end_label": "01/05/26",
+              "ad_status": "PAUSED",
+              "ad_name": "Edf. Jorge | Tatiana",
               "spend": 69.41,
               "spend_shared": false
             }
@@ -299,14 +299,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-05-21",
+              "end": "2026-06-20",
+              "days_active": 2,
+              "days_left": 28,
+              "start_label": "21/05/26",
+              "end_label": "20/06/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Edf. Ametista | Thati",
               "spend": 40.72,
               "spend_shared": true
             }
@@ -323,14 +323,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-04-27",
+              "end": "2026-05-27",
+              "days_active": 26,
+              "days_left": 4,
+              "start_label": "27/04/26",
+              "end_label": "27/05/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "JTR Jatiúca | Nathalia",
               "spend": 41.12,
               "spend_shared": false
             }
@@ -364,17 +364,17 @@ window.NI_DATA = {
           {
             "label": "Não responde / não atende",
             "value": 65,
-            "pct": 54.2
+            "pct": 53.7
           },
           {
             "label": "Motivo ambíguo (revisar)",
             "value": 26,
-            "pct": 21.7
+            "pct": 21.5
           },
           {
             "label": "Sem motivo registrado",
-            "value": 10,
-            "pct": 8.3
+            "value": 11,
+            "pct": 9.1
           },
           {
             "label": "Lead repetido",
@@ -402,7 +402,7 @@ window.NI_DATA = {
             "pct": 1.7
           }
         ],
-        "motivos_total": 120,
+        "motivos_total": 121,
         "perdas_by_emp": [
           {
             "emp": "Edf. Greco",
@@ -441,6 +441,14 @@ window.NI_DATA = {
             }
           },
           {
+            "emp": "Jatiúca",
+            "corretor": "Adriana",
+            "perdas": 6,
+            "motivos": {
+              "Sem motivo registrado": 6
+            }
+          },
+          {
             "emp": "Edf. Sensia",
             "corretor": "Guilherme",
             "perdas": 5,
@@ -448,14 +456,6 @@ window.NI_DATA = {
               "Não gostou do imóvel/região": 1,
               "Não responde / não atende": 1,
               "Motivo ambíguo (revisar)": 3
-            }
-          },
-          {
-            "emp": "Jatiúca",
-            "corretor": "Adriana",
-            "perdas": 5,
-            "motivos": {
-              "Sem motivo registrado": 5
             }
           },
           {
@@ -645,7 +645,7 @@ window.NI_DATA = {
             0,
             1,
             2,
-            0,
+            1,
             0,
             0,
             0,
@@ -700,7 +700,7 @@ window.NI_DATA = {
             0,
             5,
             2,
-            1,
+            0,
             0,
             1,
             1,
@@ -709,7 +709,7 @@ window.NI_DATA = {
             0,
             0,
             1,
-            1,
+            2,
             2,
             2,
             0,
@@ -884,16 +884,16 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 3082.58,
-        "impressions": 104282,
-        "clicks": 2292,
+        "spend": 3083.17,
+        "impressions": 104300,
+        "clicks": 2294,
         "ctr": 2.2,
         "frequency": 3.21,
         "reach": 32491,
-        "leads_form": 229,
+        "leads_form": 230,
         "msg_started": 23,
-        "total_meta": 252,
-        "cpl": 12.23,
+        "total_meta": 253,
+        "cpl": 12.19,
         "campaign": {
           "name": "Fundo de Funil | Blend Grand Reserva | 12/05 #TP",
           "status": "ACTIVE",
@@ -922,7 +922,7 @@ window.NI_DATA = {
           "cls": "proc",
           "icon": "process",
           "title": "Padronizar planilhas",
-          "desc": "<b>16% dos leads sem status</b> (43 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
+          "desc": "<b>15% dos leads sem status</b> (42 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
         }
       ]
     },
@@ -959,14 +959,14 @@ window.NI_DATA = {
             "outros": 8,
             "sem": 1,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-04-01",
+              "end": "2026-05-01",
+              "days_active": 52,
+              "days_left": -22,
+              "start_label": "01/04/26",
+              "end_label": "01/05/26",
+              "ad_status": "PAUSED",
+              "ad_name": "Edf. Greco | Rose",
               "spend": 770.85,
               "spend_shared": false
             }
@@ -983,14 +983,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 3,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-04-01",
+              "end": "2026-05-01",
+              "days_active": 52,
+              "days_left": -22,
+              "start_label": "01/04/26",
+              "end_label": "01/05/26",
+              "ad_status": "PAUSED",
+              "ad_name": "Casa no Antares | Gedson",
               "spend": 259.34,
               "spend_shared": false
             }
@@ -1007,14 +1007,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 3,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-05-22",
+              "end": "2026-06-21",
+              "days_active": 1,
+              "days_left": 29,
+              "start_label": "22/05/26",
+              "end_label": "21/06/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Edf. Paradise Beach | Gedson",
               "spend": 0.0,
               "spend_shared": false
             }
@@ -1031,14 +1031,14 @@ window.NI_DATA = {
             "outros": 2,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-02-27",
+              "end": "2026-03-29",
+              "days_active": 85,
+              "days_left": -55,
+              "start_label": "27/02/26",
+              "end_label": "29/03/26",
+              "ad_status": "PAUSED",
+              "ad_name": "Sensia | Nath/Guilherme/Fernanda",
               "spend": 139.03,
               "spend_shared": false
             }
@@ -1055,14 +1055,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-04-30",
+              "end": "2026-05-30",
+              "days_active": 23,
+              "days_left": 7,
+              "start_label": "30/04/26",
+              "end_label": "30/05/26",
+              "ad_status": "CAMPAIGN_PAUSED",
+              "ad_name": "Edf. Guaxuma | Fernanda",
               "spend": 195.53,
               "spend_shared": false
             }
@@ -1079,14 +1079,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-02-27",
+              "end": "2026-03-29",
+              "days_active": 85,
+              "days_left": -55,
+              "start_label": "27/02/26",
+              "end_label": "29/03/26",
+              "ad_status": "PAUSED",
+              "ad_name": "Sensia | Nath/Guilherme/Fernanda",
               "spend": 139.03,
               "spend_shared": false
             }
@@ -1103,14 +1103,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-04-27",
+              "end": "2026-05-27",
+              "days_active": 26,
+              "days_left": 4,
+              "start_label": "27/04/26",
+              "end_label": "27/05/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Jatiúca | Adriana",
               "spend": 96.85,
               "spend_shared": false
             }
@@ -1127,14 +1127,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 2,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-04-01",
+              "end": "2026-05-01",
+              "days_active": 52,
+              "days_left": -22,
+              "start_label": "01/04/26",
+              "end_label": "01/05/26",
+              "ad_status": "PAUSED",
+              "ad_name": "Edf. Jorge | Tatiana",
               "spend": 64.91,
               "spend_shared": false
             }
@@ -1151,14 +1151,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-02-27",
+              "end": "2026-03-29",
+              "days_active": 85,
+              "days_left": -55,
+              "start_label": "27/02/26",
+              "end_label": "29/03/26",
+              "ad_status": "PAUSED",
+              "ad_name": "Sensia | Nath/Guilherme/Fernanda",
               "spend": 139.03,
               "spend_shared": false
             }
@@ -1175,14 +1175,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-04-27",
+              "end": "2026-05-27",
+              "days_active": 26,
+              "days_left": 4,
+              "start_label": "27/04/26",
+              "end_label": "27/05/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "JTR Jatiúca | Nathalia",
               "spend": 34.72,
               "spend_shared": false
             }
@@ -1271,14 +1271,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-05-21",
+              "end": "2026-06-20",
+              "days_active": 2,
+              "days_left": 28,
+              "start_label": "21/05/26",
+              "end_label": "20/06/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Edf. Ametista | Thati",
               "spend": 0.0,
               "spend_shared": false
             }
@@ -1699,15 +1699,15 @@ window.NI_DATA = {
       "stats": {
         "totals": {
           "em_atendimento": 28,
-          "desqualificado": 9,
-          "sem_status": 34,
+          "desqualificado": 10,
+          "sem_status": 33,
           "visita": 2,
           "qualificado": 2,
           "outros_produtos": 1
         },
         "n_total": 76,
-        "perdidos": 9,
-        "pct_perda": 11.8,
+        "perdidos": 10,
+        "pct_perda": 13.2,
         "empreend": [
           {
             "emp": "Jatiúca",
@@ -1717,18 +1717,18 @@ window.NI_DATA = {
             "visita": 1,
             "qual": 0,
             "proposta": 0,
-            "perda": 4,
+            "perda": 5,
             "outros": 1,
-            "sem": 3,
+            "sem": 2,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-04-27",
+              "end": "2026-05-27",
+              "days_active": 26,
+              "days_left": 4,
+              "start_label": "27/04/26",
+              "end_label": "27/05/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Jatiúca | Adriana",
               "spend": 460.42,
               "spend_shared": false
             }
@@ -1745,14 +1745,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 10,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-02-27",
+              "end": "2026-03-29",
+              "days_active": 85,
+              "days_left": -55,
+              "start_label": "27/02/26",
+              "end_label": "29/03/26",
+              "ad_status": "PAUSED",
+              "ad_name": "Sensia | Nath/Guilherme/Fernanda",
               "spend": 361.81,
               "spend_shared": false
             }
@@ -1769,14 +1769,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 10,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-02-27",
+              "end": "2026-03-29",
+              "days_active": 85,
+              "days_left": -55,
+              "start_label": "27/02/26",
+              "end_label": "29/03/26",
+              "ad_status": "PAUSED",
+              "ad_name": "Sensia | Nath/Guilherme/Fernanda",
               "spend": 361.81,
               "spend_shared": false
             }
@@ -1793,14 +1793,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-02-27",
+              "end": "2026-03-29",
+              "days_active": 85,
+              "days_left": -55,
+              "start_label": "27/02/26",
+              "end_label": "29/03/26",
+              "ad_status": "PAUSED",
+              "ad_name": "Sensia | Nath/Guilherme/Fernanda",
               "spend": 361.81,
               "spend_shared": false
             }
@@ -1817,14 +1817,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 4,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-04-01",
+              "end": "2026-05-01",
+              "days_active": 52,
+              "days_left": -22,
+              "start_label": "01/04/26",
+              "end_label": "01/05/26",
+              "ad_status": "PAUSED",
+              "ad_name": "Casa no Antares | Gedson",
               "spend": 111.61,
               "spend_shared": false
             }
@@ -1841,15 +1841,15 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 4,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
-              "spend": 37.23,
+              "start": "2026-05-22",
+              "end": "2026-06-21",
+              "days_active": 1,
+              "days_left": 29,
+              "start_label": "22/05/26",
+              "end_label": "21/06/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Edf. Paradise Beach | Gedson",
+              "spend": 37.73,
               "spend_shared": false
             }
           },
@@ -1865,14 +1865,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 2,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-04-01",
+              "end": "2026-05-01",
+              "days_active": 52,
+              "days_left": -22,
+              "start_label": "01/04/26",
+              "end_label": "01/05/26",
+              "ad_status": "PAUSED",
+              "ad_name": "Edf. Greco | Rose",
               "spend": 69.67,
               "spend_shared": false
             }
@@ -1889,14 +1889,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-04-01",
+              "end": "2026-05-01",
+              "days_active": 52,
+              "days_left": -22,
+              "start_label": "01/04/26",
+              "end_label": "01/05/26",
+              "ad_status": "PAUSED",
+              "ad_name": "Edf. Jorge | Tatiana",
               "spend": 4.5,
               "spend_shared": false
             }
@@ -1937,14 +1937,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 1,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-04-30",
+              "end": "2026-05-30",
+              "days_active": 23,
+              "days_left": 7,
+              "start_label": "30/04/26",
+              "end_label": "30/05/26",
+              "ad_status": "CAMPAIGN_PAUSED",
+              "ad_name": "Edf. Guaxuma | Fernanda",
               "spend": 5.57,
               "spend_shared": false
             }
@@ -1985,14 +1985,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-05-21",
+              "end": "2026-06-20",
+              "days_active": 2,
+              "days_left": 28,
+              "start_label": "21/05/26",
+              "end_label": "20/06/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Edf. Ametista | Thati",
               "spend": 40.72,
               "spend_shared": true
             }
@@ -2009,14 +2009,14 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 0,
             "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
+              "start": "2026-04-27",
+              "end": "2026-05-27",
+              "days_active": 26,
+              "days_left": 4,
+              "start_label": "27/04/26",
+              "end_label": "27/05/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "JTR Jatiúca | Nathalia",
               "spend": 6.4,
               "spend_shared": false
             }
@@ -2049,28 +2049,28 @@ window.NI_DATA = {
         "motivos": [
           {
             "label": "Sem motivo registrado",
-            "value": 4,
-            "pct": 44.4
+            "value": 5,
+            "pct": 50.0
           },
           {
             "label": "Não responde / não atende",
             "value": 3,
-            "pct": 33.3
+            "pct": 30.0
           },
           {
             "label": "Motivo ambíguo (revisar)",
             "value": 2,
-            "pct": 22.2
+            "pct": 20.0
           }
         ],
-        "motivos_total": 9,
+        "motivos_total": 10,
         "perdas_by_emp": [
           {
             "emp": "Jatiúca",
             "corretor": "Adriana",
-            "perdas": 4,
+            "perdas": 5,
             "motivos": {
-              "Sem motivo registrado": 4
+              "Sem motivo registrado": 5
             }
           },
           {
@@ -2158,7 +2158,7 @@ window.NI_DATA = {
             0,
             1,
             2,
-            0,
+            1,
             0,
             0,
             0,
@@ -2183,7 +2183,7 @@ window.NI_DATA = {
             0,
             5,
             2,
-            1,
+            0,
             0,
             1,
             1,
@@ -2192,7 +2192,7 @@ window.NI_DATA = {
             0,
             0,
             1,
-            1,
+            2,
             2,
             2,
             0,
@@ -2277,16 +2277,16 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 1427.01,
-        "impressions": 37839,
-        "clicks": 738,
+        "spend": 1427.6,
+        "impressions": 37857,
+        "clicks": 740,
         "ctr": 1.95,
-        "frequency": 3.01,
+        "frequency": 3.02,
         "reach": 12555,
-        "leads_form": 82,
+        "leads_form": 83,
         "msg_started": 9,
-        "total_meta": 91,
-        "cpl": 15.68,
+        "total_meta": 92,
+        "cpl": 15.52,
         "campaign": {
           "name": "Fundo de Funil | Blend Grand Reserva | 12/05 #TP",
           "status": "ACTIVE",
@@ -2296,13 +2296,6 @@ window.NI_DATA = {
         }
       },
       "plan": [
-        {
-          "tag": "Prioridade alta",
-          "cls": "crit",
-          "icon": "alert",
-          "title": "Resgatar a base não respondida",
-          "desc": "<b>3 leads</b> do período entraram e não retornaram contato. Antes de aumentar volume, rodar uma cadência de reengajamento e revisar tempo médio de primeiro toque. <b>Maior ponto de alavancagem do mês.</b>"
-        },
         {
           "tag": "Time comercial",
           "cls": "proc",
@@ -2315,7 +2308,7 @@ window.NI_DATA = {
           "cls": "proc",
           "icon": "process",
           "title": "Padronizar planilhas",
-          "desc": "<b>45% dos leads sem status</b> (34 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
+          "desc": "<b>43% dos leads sem status</b> (33 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
         }
       ]
     }
