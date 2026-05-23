@@ -32,9 +32,11 @@ SHEETS = [
 
 META_AD_ACCOUNT = "act_916115436468748"
 
-# Período "total" do relatório
-PERIOD_START = os.environ.get("PERIOD_START") or "2026-04-01"
-PERIOD_END = os.environ.get("PERIOD_END") or "2026-05-04"
+# Período "total" do relatório (dinâmico: do dia 1 do mês passado até hoje)
+_today = datetime.now() - timedelta(hours=3)  # BRT
+_start_default = (_today.replace(day=1) - timedelta(days=1)).replace(day=1).strftime("%Y-%m-%d")
+PERIOD_START = os.environ.get("PERIOD_START") or _start_default
+PERIOD_END = os.environ.get("PERIOD_END") or _today.strftime("%Y-%m-%d")
 
 # Datas de ativação puxadas dos ads do Meta (cada criativo roda 30 dias).
 # empreendimentos.json funciona como override manual se preciso.
