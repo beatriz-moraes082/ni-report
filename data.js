@@ -1,5 +1,5 @@
 window.NI_DATA = {
-  "generated_at": "23/05/2026 20:07",
+  "generated_at": "23/05/2026 20:14",
   "default_view": "total",
   "views": {
     "total": {
@@ -11,8 +11,8 @@ window.NI_DATA = {
       },
       "stats": {
         "totals": {
-          "desqualificado": 121,
-          "em_atendimento": 82,
+          "desqualificado": 123,
+          "em_atendimento": 80,
           "qualificado": 8,
           "visita": 10,
           "sem_status": 42,
@@ -20,8 +20,8 @@ window.NI_DATA = {
           "nao_momento": 1
         },
         "n_total": 274,
-        "perdidos": 121,
-        "pct_perda": 44.2,
+        "perdidos": 123,
+        "pct_perda": 44.9,
         "empreend": [
           {
             "emp": "Edf. Greco",
@@ -91,7 +91,7 @@ window.NI_DATA = {
               "end_label": "21/06/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Paradise Beach | Gedson",
-              "spend": 37.73,
+              "spend": 37.93,
               "spend_shared": false
             }
           },
@@ -99,11 +99,11 @@ window.NI_DATA = {
             "emp": "Jatiúca",
             "corretor": "Adriana",
             "leads": 28,
-            "atend": 18,
+            "atend": 16,
             "visita": 1,
             "qual": 0,
             "proposta": 0,
-            "perda": 6,
+            "perda": 8,
             "outros": 1,
             "sem": 2,
             "timing": {
@@ -364,22 +364,22 @@ window.NI_DATA = {
           {
             "label": "Não responde / não atende",
             "value": 65,
-            "pct": 53.7
+            "pct": 52.8
           },
           {
             "label": "Motivo ambíguo (revisar)",
             "value": 26,
-            "pct": 21.5
+            "pct": 21.1
           },
           {
             "label": "Sem motivo registrado",
-            "value": 11,
-            "pct": 9.1
+            "value": 13,
+            "pct": 10.6
           },
           {
             "label": "Lead repetido",
             "value": 7,
-            "pct": 5.8
+            "pct": 5.7
           },
           {
             "label": "Não gostou do imóvel/região",
@@ -389,20 +389,20 @@ window.NI_DATA = {
           {
             "label": "Valor / orçamento",
             "value": 3,
-            "pct": 2.5
+            "pct": 2.4
           },
           {
             "label": "Lead inválido",
             "value": 3,
-            "pct": 2.5
+            "pct": 2.4
           },
           {
             "label": "Comprou com concorrente",
             "value": 2,
-            "pct": 1.7
+            "pct": 1.6
           }
         ],
-        "motivos_total": 121,
+        "motivos_total": 123,
         "perdas_by_emp": [
           {
             "emp": "Edf. Greco",
@@ -443,9 +443,9 @@ window.NI_DATA = {
           {
             "emp": "Jatiúca",
             "corretor": "Adriana",
-            "perdas": 6,
+            "perdas": 8,
             "motivos": {
-              "Sem motivo registrado": 6
+              "Sem motivo registrado": 8
             }
           },
           {
@@ -641,9 +641,9 @@ window.NI_DATA = {
             0,
             2,
             1,
-            1,
+            2,
             0,
-            1,
+            2,
             2,
             1,
             0,
@@ -696,9 +696,9 @@ window.NI_DATA = {
             0,
             1,
             2,
-            5,
+            4,
             0,
-            5,
+            4,
             2,
             0,
             0,
@@ -884,8 +884,8 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 3083.17,
-        "impressions": 104300,
+        "spend": 3083.44,
+        "impressions": 104309,
         "clicks": 2294,
         "ctr": 2.2,
         "frequency": 3.21,
@@ -1698,26 +1698,26 @@ window.NI_DATA = {
       },
       "stats": {
         "totals": {
-          "em_atendimento": 28,
-          "desqualificado": 10,
+          "em_atendimento": 26,
+          "desqualificado": 12,
           "sem_status": 33,
           "visita": 2,
           "qualificado": 2,
           "outros_produtos": 1
         },
         "n_total": 76,
-        "perdidos": 10,
-        "pct_perda": 13.2,
+        "perdidos": 12,
+        "pct_perda": 15.8,
         "empreend": [
           {
             "emp": "Jatiúca",
             "corretor": "Adriana",
             "leads": 21,
-            "atend": 12,
+            "atend": 10,
             "visita": 1,
             "qual": 0,
             "proposta": 0,
-            "perda": 5,
+            "perda": 7,
             "outros": 1,
             "sem": 2,
             "timing": {
@@ -1849,7 +1849,7 @@ window.NI_DATA = {
               "end_label": "21/06/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Paradise Beach | Gedson",
-              "spend": 37.73,
+              "spend": 37.93,
               "spend_shared": false
             }
           },
@@ -2049,28 +2049,28 @@ window.NI_DATA = {
         "motivos": [
           {
             "label": "Sem motivo registrado",
-            "value": 5,
-            "pct": 50.0
+            "value": 7,
+            "pct": 58.3
           },
           {
             "label": "Não responde / não atende",
             "value": 3,
-            "pct": 30.0
+            "pct": 25.0
           },
           {
             "label": "Motivo ambíguo (revisar)",
             "value": 2,
-            "pct": 20.0
+            "pct": 16.7
           }
         ],
-        "motivos_total": 10,
+        "motivos_total": 12,
         "perdas_by_emp": [
           {
             "emp": "Jatiúca",
             "corretor": "Adriana",
-            "perdas": 5,
+            "perdas": 7,
             "motivos": {
-              "Sem motivo registrado": 5
+              "Sem motivo registrado": 7
             }
           },
           {
@@ -2154,9 +2154,9 @@ window.NI_DATA = {
             0,
             2,
             1,
-            1,
+            2,
             0,
-            1,
+            2,
             2,
             1,
             0,
@@ -2179,9 +2179,9 @@ window.NI_DATA = {
             0,
             1,
             2,
-            5,
+            4,
             0,
-            5,
+            4,
             2,
             0,
             0,
@@ -2277,8 +2277,8 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 1427.6,
-        "impressions": 37857,
+        "spend": 1427.87,
+        "impressions": 37866,
         "clicks": 740,
         "ctr": 1.95,
         "frequency": 3.02,
