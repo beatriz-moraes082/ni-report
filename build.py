@@ -14,15 +14,20 @@ from collections import Counter, defaultdict
 
 # ─── CONFIG ─────────────────────────────────────────────────────────────
 SHEETS = [
-    {"id": "1yd4nJ1SKuIvDHrjC3U4qmwQ5hYUE43QLpy2Jc2dWD3A", "emp": "Casa no Antares", "corretor": "Gedson"},
-    {"id": "1LX2da2em-wAuKEY-STLrsSSDWLHthvMfGtQO5cyqK7A", "emp": "Edf. Jorge",      "corretor": "Tatiana"},
-    {"id": "1IT1HQIo6D0H4l7BnEqURLawADgKtEn4UtS0M46PiV_c", "emp": "Edf. Greco",      "corretor": "Rose"},
-    {"id": "1bh7_Kskh0AWelAgJHL81g0QfM84ftPA7fOEL2cHBoWc", "emp": "Edf. Sensia",     "corretor": "Fernanda"},
-    {"id": "1XL1IdmiGtzvwwtFYq_7cfLDuZAprjwq5WeWmucLyocs", "emp": "Edf. Sensia",     "corretor": "Guilherme"},
-    {"id": "1QmkWwavrGXhDtYcdPqbYgmCB3E8LBV2pt355BIMk85U", "emp": "Edf. Sensia",     "corretor": "Nath"},
-    {"id": "1r4njxyOa17slTPMU0GDSkoxftTuduDRmPK8XvgsTXKc", "emp": "Edf. Guaxuma",    "corretor": "Fernanda"},
-    {"id": "1cMELjUGTsSmVNVYlHQmpeNqk4ic_eo9J7M23BWVGnJI", "emp": "JTR Jatiúca",     "corretor": "Nathalia"},
-    {"id": "1lHgTHSYo1Bo5xd3AOWNXB_PtcrpfcEBgZMs9GbgOx5Y", "emp": "Jatiúca",         "corretor": "Adriana"},
+    {"id": "1yd4nJ1SKuIvDHrjC3U4qmwQ5hYUE43QLpy2Jc2dWD3A", "emp": "Casa no Antares",       "corretor": "Gedson"},
+    {"id": "1yd4nJ1SKuIvDHrjC3U4qmwQ5hYUE43QLpy2Jc2dWD3A", "emp": "Edf. Paradise Beach",   "corretor": "Gedson"},
+    {"id": "1LX2da2em-wAuKEY-STLrsSSDWLHthvMfGtQO5cyqK7A", "emp": "Edf. Jorge",            "corretor": "Tatiana"},
+    {"id": "1IT1HQIo6D0H4l7BnEqURLawADgKtEn4UtS0M46PiV_c", "emp": "Edf. Greco",            "corretor": "Rose"},
+    {"id": "1bh7_Kskh0AWelAgJHL81g0QfM84ftPA7fOEL2cHBoWc", "emp": "Edf. Sensia",           "corretor": "Fernanda"},
+    {"id": "1XL1IdmiGtzvwwtFYq_7cfLDuZAprjwq5WeWmucLyocs", "emp": "Edf. Sensia",           "corretor": "Guilherme"},
+    {"id": "1QmkWwavrGXhDtYcdPqbYgmCB3E8LBV2pt355BIMk85U", "emp": "Edf. Sensia",           "corretor": "Nath"},
+    {"id": "1r4njxyOa17slTPMU0GDSkoxftTuduDRmPK8XvgsTXKc", "emp": "Edf. Guaxuma",          "corretor": "Fernanda"},
+    {"id": "1cMELjUGTsSmVNVYlHQmpeNqk4ic_eo9J7M23BWVGnJI", "emp": "JTR Jatiúca",           "corretor": "Nathalia"},
+    {"id": "1lHgTHSYo1Bo5xd3AOWNXB_PtcrpfcEBgZMs9GbgOx5Y", "emp": "Jatiúca",               "corretor": "Adriana"},
+    {"id": "13-KSacklkV1cgeRGPeG55YROAuToTM7he3Xbw20N9ac", "emp": "Blend Grand Reserva",   "corretor": "Marcos Jr"},
+    {"id": "1zroEFtWi4HEHiKRR6zDDpiSlVg_zhSsUHIrr7W0ECRs", "emp": "Blend Grand Reserva",   "corretor": "Stefan"},
+    {"id": "1cMRG523pO2PT-yPv5oZ3k6IGxKVMsLN66nCfQ9gMun0", "emp": "Blend Grand Reserva",   "corretor": "Tati"},
+    {"id": "1cMRG523pO2PT-yPv5oZ3k6IGxKVMsLN66nCfQ9gMun0", "emp": "Edf. Ametista",         "corretor": "Tati"},
 ]
 
 META_AD_ACCOUNT = "act_916115436468748"
