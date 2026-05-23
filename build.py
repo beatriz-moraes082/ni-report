@@ -54,7 +54,8 @@ _ADS_CACHE = None
 
 
 def fetch_ads_for_campaign(campaign_id=None):
-    """Retorna TODOS os ads do ad account (de qualquer campanha) com status e data de criação."""
+    """Retorna TODOS os ads do ad account (de qualquer campanha) com status, data de criação
+    e nome da campanha pai (achata 'campaign{name}' em campaign_name)."""
     global _ADS_CACHE
     if _ADS_CACHE is not None:
         return _ADS_CACHE
@@ -63,7 +64,7 @@ def fetch_ads_for_campaign(campaign_id=None):
         return []
     all_ads = []
     url = f"https://graph.facebook.com/v21.0/{META_AD_ACCOUNT}/ads?" + urllib.parse.urlencode({
-        "fields": "id,name,effective_status,created_time",
+        "fields": "id,name,effective_status,created_time,campaign{name}",
         "limit": 200,
         "access_token": token,
     })
@@ -71,7 +72,9 @@ def fetch_ads_for_campaign(campaign_id=None):
         while url:
             with urllib.request.urlopen(url, timeout=30) as resp:
                 data = json.loads(resp.read())
-            all_ads.extend(data.get("data", []))
+            for ad in data.get("data", []):
+                ad["campaign_name"] = (ad.get("campaign") or {}).get("name", "")
+                all_ads.append(ad)
             url = (data.get("paging") or {}).get("next")
         _ADS_CACHE = all_ads
     except Exception as e:
@@ -115,8 +118,8 @@ def _norm(s):
 
 def find_emp_ad(emp, corretor):
     """Procura o ad que corresponde a um empreendimento + corretor.
-    Retorna o ad ATIVO mais antigo (a campanha começou quando subiu o primeiro ad ativo).
-    Se não houver ATIVO, retorna o PAUSED mais recente.
+    Match: nome do empreendimento aparece OU no nome do ad OU no nome da campanha pai.
+    Retorna o ad ATIVO mais antigo. Se não houver ATIVO, retorna o PAUSED mais recente.
     """
     ads = _ADS_CACHE or []
     emp_k = _norm(emp).replace("edf. ", "").replace("edf ", "").strip()
@@ -124,12 +127,11 @@ def find_emp_ad(emp, corretor):
     matches = []
     for ad in ads:
         name = _norm(ad.get("name", ""))
-        if emp_k not in name:
+        camp = _norm(ad.get("campaign_name", ""))
+        if emp_k not in name and emp_k not in camp:
             continue
-        # match perfeito de corretor; ou nome do corretor está na lista (ex "Nath/Guilherme/Fernanda")
         cor_in_name = cor_k in name
         matches.append((ad, cor_in_name))
-    # prioriza match exato de corretor; se não houver, qualquer ad do empreendimento
     exact = [a for a, m in matches if m]
     pool = exact if exact else [a for a, _ in matches]
     if not pool:
