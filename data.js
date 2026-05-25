@@ -1,5 +1,5 @@
 window.NI_DATA = {
-  "generated_at": "25/05/2026 13:58",
+  "generated_at": "25/05/2026 17:21",
   "default_view": "total",
   "views": {
     "total": {
@@ -12,16 +12,16 @@ window.NI_DATA = {
       "stats": {
         "totals": {
           "desqualificado": 123,
-          "em_atendimento": 80,
-          "qualificado": 8,
-          "visita": 10,
+          "em_atendimento": 82,
+          "qualificado": 7,
+          "visita": 11,
           "sem_status": 42,
           "outros_produtos": 10,
           "nao_momento": 1
         },
-        "n_total": 274,
+        "n_total": 276,
         "perdidos": 123,
-        "pct_perda": 44.9,
+        "pct_perda": 44.6,
         "empreend": [
           {
             "emp": "Edf. Greco",
@@ -91,7 +91,7 @@ window.NI_DATA = {
               "end_label": "21/06/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Paradise Beach | Gedson",
-              "spend": 95.27,
+              "spend": 99.86,
               "spend_shared": false
             }
           },
@@ -242,10 +242,10 @@ window.NI_DATA = {
           {
             "emp": "Blend Grand Reserva",
             "corretor": "Stefan",
-            "leads": 2,
-            "atend": 1,
-            "visita": 0,
-            "qual": 1,
+            "leads": 4,
+            "atend": 3,
+            "visita": 1,
+            "qual": 0,
             "proposta": 0,
             "perda": 0,
             "outros": 0,
@@ -307,7 +307,7 @@ window.NI_DATA = {
               "end_label": "20/06/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Ametista | Thati",
-              "spend": 43.38,
+              "spend": 43.6,
               "spend_shared": true
             }
           },
@@ -329,7 +329,7 @@ window.NI_DATA = {
               "days_left": 2,
               "start_label": "27/04/26",
               "end_label": "27/05/26",
-              "ad_status": "ACTIVE",
+              "ad_status": "PAUSED",
               "ad_name": "JTR Jatiúca | Nathalia",
               "spend": 41.12,
               "spend_shared": false
@@ -605,10 +605,10 @@ window.NI_DATA = {
             4,
             2,
             3,
+            1,
             0,
             0,
-            0,
-            0
+            1
           ],
           "perda": [
             6,
@@ -719,10 +719,10 @@ window.NI_DATA = {
             2,
             2,
             0,
+            1,
             0,
             0,
-            0,
-            0
+            1
           ],
           "visita": [
             0,
@@ -770,7 +770,7 @@ window.NI_DATA = {
             0,
             0,
             0,
-            0,
+            1,
             0,
             0,
             0,
@@ -827,7 +827,7 @@ window.NI_DATA = {
             0,
             0,
             1,
-            1,
+            0,
             0,
             0,
             0,
@@ -898,16 +898,16 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 3199.34,
-        "impressions": 106805,
-        "clicks": 2350,
+        "spend": 3211.81,
+        "impressions": 107145,
+        "clicks": 2356,
         "ctr": 2.2,
         "frequency": 3.26,
-        "reach": 32764,
-        "leads_form": 238,
+        "reach": 32841,
+        "leads_form": 240,
         "msg_started": 23,
-        "total_meta": 261,
-        "cpl": 12.26,
+        "total_meta": 263,
+        "cpl": 12.21,
         "campaign": {
           "name": "Fundo de Funil | Blend Grand Reserva | 12/05 #TP",
           "status": "ACTIVE",
@@ -1195,7 +1195,7 @@ window.NI_DATA = {
               "days_left": 2,
               "start_label": "27/04/26",
               "end_label": "27/05/26",
-              "ad_status": "ACTIVE",
+              "ad_status": "PAUSED",
               "ad_name": "JTR Jatiúca | Nathalia",
               "spend": 34.72,
               "spend_shared": false
@@ -1712,16 +1712,16 @@ window.NI_DATA = {
       },
       "stats": {
         "totals": {
-          "em_atendimento": 26,
+          "em_atendimento": 28,
           "desqualificado": 12,
           "sem_status": 33,
-          "visita": 2,
-          "qualificado": 2,
+          "visita": 3,
+          "qualificado": 1,
           "outros_produtos": 1
         },
-        "n_total": 76,
+        "n_total": 78,
         "perdidos": 12,
-        "pct_perda": 15.8,
+        "pct_perda": 15.4,
         "empreend": [
           {
             "emp": "Jatiúca",
@@ -1863,7 +1863,7 @@ window.NI_DATA = {
               "end_label": "21/06/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Paradise Beach | Gedson",
-              "spend": 95.27,
+              "spend": 99.86,
               "spend_shared": false
             }
           },
@@ -1892,6 +1892,30 @@ window.NI_DATA = {
             }
           },
           {
+            "emp": "Blend Grand Reserva",
+            "corretor": "Stefan",
+            "leads": 4,
+            "atend": 3,
+            "visita": 1,
+            "qual": 0,
+            "proposta": 0,
+            "perda": 0,
+            "outros": 0,
+            "sem": 0,
+            "timing": {
+              "start": "2026-05-22",
+              "end": "2026-06-21",
+              "days_active": 3,
+              "days_left": 27,
+              "start_label": "22/05/26",
+              "end_label": "21/06/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "VD01",
+              "spend": 0.0,
+              "spend_shared": false
+            }
+          },
+          {
             "emp": "Edf. Jorge",
             "corretor": "Tatiana",
             "leads": 2,
@@ -1912,30 +1936,6 @@ window.NI_DATA = {
               "ad_status": "PAUSED",
               "ad_name": "Edf. Jorge | Tatiana",
               "spend": 4.5,
-              "spend_shared": false
-            }
-          },
-          {
-            "emp": "Blend Grand Reserva",
-            "corretor": "Stefan",
-            "leads": 2,
-            "atend": 1,
-            "visita": 0,
-            "qual": 1,
-            "proposta": 0,
-            "perda": 0,
-            "outros": 0,
-            "sem": 0,
-            "timing": {
-              "start": "2026-05-22",
-              "end": "2026-06-21",
-              "days_active": 3,
-              "days_left": 27,
-              "start_label": "22/05/26",
-              "end_label": "21/06/26",
-              "ad_status": "ACTIVE",
-              "ad_name": "VD01",
-              "spend": 0.0,
               "spend_shared": false
             }
           },
@@ -2007,7 +2007,7 @@ window.NI_DATA = {
               "end_label": "20/06/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Ametista | Thati",
-              "spend": 43.38,
+              "spend": 43.6,
               "spend_shared": true
             }
           },
@@ -2029,7 +2029,7 @@ window.NI_DATA = {
               "days_left": 2,
               "start_label": "27/04/26",
               "end_label": "27/05/26",
-              "ad_status": "ACTIVE",
+              "ad_status": "PAUSED",
               "ad_name": "JTR Jatiúca | Nathalia",
               "spend": 6.4,
               "spend_shared": false
@@ -2162,10 +2162,10 @@ window.NI_DATA = {
             4,
             2,
             3,
+            1,
             0,
             0,
-            0,
-            0
+            1
           ],
           "perda": [
             2,
@@ -2216,10 +2216,10 @@ window.NI_DATA = {
             2,
             2,
             0,
+            1,
             0,
             0,
-            0,
-            0
+            1
           ],
           "visita": [
             0,
@@ -2237,7 +2237,7 @@ window.NI_DATA = {
             0,
             0,
             0,
-            0,
+            1,
             0,
             0,
             0,
@@ -2264,7 +2264,7 @@ window.NI_DATA = {
             0,
             0,
             1,
-            1,
+            0,
             0,
             0,
             0,
@@ -2305,16 +2305,16 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 1543.77,
-        "impressions": 40362,
-        "clicks": 796,
+        "spend": 1556.24,
+        "impressions": 40702,
+        "clicks": 802,
         "ctr": 1.97,
-        "frequency": 3.1,
-        "reach": 13027,
-        "leads_form": 91,
+        "frequency": 3.11,
+        "reach": 13105,
+        "leads_form": 93,
         "msg_started": 9,
-        "total_meta": 100,
-        "cpl": 15.44,
+        "total_meta": 102,
+        "cpl": 15.26,
         "campaign": {
           "name": "Fundo de Funil | Blend Grand Reserva | 12/05 #TP",
           "status": "ACTIVE",
@@ -2336,7 +2336,7 @@ window.NI_DATA = {
           "cls": "proc",
           "icon": "process",
           "title": "Padronizar planilhas",
-          "desc": "<b>43% dos leads sem status</b> (33 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
+          "desc": "<b>42% dos leads sem status</b> (33 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
         }
       ]
     }
