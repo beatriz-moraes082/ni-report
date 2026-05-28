@@ -9,6 +9,7 @@ import os
 import sys
 import urllib.request
 import urllib.parse
+import urllib.error
 from datetime import datetime, timedelta
 from collections import Counter, defaultdict
 
@@ -28,6 +29,7 @@ SHEETS = [
     {"id": "1zroEFtWi4HEHiKRR6zDDpiSlVg_zhSsUHIrr7W0ECRs", "emp": "Blend Grand Reserva",   "corretor": "Stefan"},
     {"id": "1cMRG523pO2PT-yPv5oZ3k6IGxKVMsLN66nCfQ9gMun0", "emp": "Blend Grand Reserva",   "corretor": "Tati"},
     {"id": "1cMRG523pO2PT-yPv5oZ3k6IGxKVMsLN66nCfQ9gMun0", "emp": "Edf. Ametista",         "corretor": "Tati"},
+    {"id": "1x7sz6UBP6vbWYzU_opPMe-OQdy0yZN_MYjPqleLKwg0", "emp": "Edf. Horto Boulevard",  "corretor": "Dimitry"},
 ]
 
 META_AD_ACCOUNT = "act_916115436468748"
@@ -247,11 +249,24 @@ def cat_motivo(obs):
 
 
 def fetch_csv(sheet_id):
-    url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv&gid=0"
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 ni-report"})
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        text = resp.read().decode("utf-8", errors="replace")
-    return list(csv.DictReader(io.StringIO(text)))
+    # gid=0 = primeira aba na maioria das planilhas; algumas recriaram a aba e a
+    # primeira não é mais gid 0 (export?gid=0 dá 400). Nesse caso cai pro export
+    # sem gid, que devolve a primeira aba visível.
+    urls = [
+        f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv&gid=0",
+        f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv",
+    ]
+    last_err = None
+    for url in urls:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 ni-report"})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                text = resp.read().decode("utf-8", errors="replace")
+            return list(csv.DictReader(io.StringIO(text)))
+        except urllib.error.HTTPError as e:
+            last_err = e
+            continue
+    raise last_err
 
 
 def label_period(start, end):

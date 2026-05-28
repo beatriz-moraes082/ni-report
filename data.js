@@ -1,5 +1,5 @@
 window.NI_DATA = {
-  "generated_at": "28/05/2026 14:37",
+  "generated_at": "28/05/2026 17:00",
   "default_view": "total",
   "views": {
     "total": {
@@ -15,13 +15,13 @@ window.NI_DATA = {
           "em_atendimento": 80,
           "qualificado": 7,
           "visita": 11,
-          "sem_status": 51,
+          "sem_status": 52,
           "outros_produtos": 10,
           "nao_momento": 1
         },
-        "n_total": 283,
+        "n_total": 284,
         "perdidos": 123,
-        "pct_perda": 43.5,
+        "pct_perda": 43.3,
         "empreend": [
           {
             "emp": "Edf. Greco",
@@ -91,7 +91,7 @@ window.NI_DATA = {
               "end_label": "21/06/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Paradise Beach | Gedson",
-              "spend": 175.97,
+              "spend": 182.95,
               "spend_shared": false
             }
           },
@@ -211,7 +211,7 @@ window.NI_DATA = {
               "end_label": "30/05/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Guaxuma | Fernanda",
-              "spend": 284.33,
+              "spend": 290.85,
               "spend_shared": false
             }
           },
@@ -333,6 +333,30 @@ window.NI_DATA = {
               "ad_name": "Edf. Ametista | Thati",
               "spend": 23.76,
               "spend_shared": true
+            }
+          },
+          {
+            "emp": "Edf. Horto Boulevard",
+            "corretor": "Dimitry",
+            "leads": 1,
+            "atend": 0,
+            "visita": 0,
+            "qual": 0,
+            "proposta": 0,
+            "perda": 0,
+            "outros": 0,
+            "sem": 1,
+            "timing": {
+              "start": "2026-05-28",
+              "end": "2026-06-27",
+              "days_active": 0,
+              "days_left": 30,
+              "start_label": "28/05/26",
+              "end_label": "27/06/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Edf. Horto Boulevard | Dimitry",
+              "spend": 3.47,
+              "spend_shared": false
             }
           },
           {
@@ -629,7 +653,7 @@ window.NI_DATA = {
             4,
             0,
             0,
-            0
+            1
           ],
           "perda": [
             6,
@@ -934,16 +958,16 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 3480.15,
-        "impressions": 112775,
-        "clicks": 2454,
+        "spend": 3501.15,
+        "impressions": 113308,
+        "clicks": 2468,
         "ctr": 2.18,
-        "frequency": 3.31,
-        "reach": 34022,
-        "leads_form": 249,
-        "msg_started": 26,
-        "total_meta": 275,
-        "cpl": 12.66,
+        "frequency": 3.32,
+        "reach": 34122,
+        "leads_form": 250,
+        "msg_started": 27,
+        "total_meta": 277,
+        "cpl": 12.64,
         "campaign": {
           "name": "Fundo de Funil | Blend Grand Reserva | 12/05 #TP",
           "status": "ACTIVE",
@@ -972,7 +996,7 @@ window.NI_DATA = {
           "cls": "proc",
           "icon": "process",
           "title": "Padronizar planilhas",
-          "desc": "<b>18% dos leads sem status</b> (51 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
+          "desc": "<b>18% dos leads sem status</b> (52 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
         }
       ]
     },
@@ -1329,6 +1353,30 @@ window.NI_DATA = {
               "end_label": "20/06/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Ametista | Thati",
+              "spend": 0.0,
+              "spend_shared": false
+            }
+          },
+          {
+            "emp": "Edf. Horto Boulevard",
+            "corretor": "Dimitry",
+            "leads": 0,
+            "atend": 0,
+            "visita": 0,
+            "qual": 0,
+            "proposta": 0,
+            "perda": 0,
+            "outros": 0,
+            "sem": 0,
+            "timing": {
+              "start": "2026-05-28",
+              "end": "2026-06-27",
+              "days_active": 0,
+              "days_left": 30,
+              "start_label": "28/05/26",
+              "end_label": "27/06/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Edf. Horto Boulevard | Dimitry",
               "spend": 0.0,
               "spend_shared": false
             }
@@ -1749,14 +1797,14 @@ window.NI_DATA = {
         "totals": {
           "em_atendimento": 26,
           "desqualificado": 14,
-          "sem_status": 42,
+          "sem_status": 43,
           "visita": 3,
           "qualificado": 1,
           "outros_produtos": 1
         },
-        "n_total": 87,
+        "n_total": 88,
         "perdidos": 14,
-        "pct_perda": 16.1,
+        "pct_perda": 15.9,
         "empreend": [
           {
             "emp": "Jatiúca",
@@ -1898,7 +1946,7 @@ window.NI_DATA = {
               "end_label": "21/06/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Paradise Beach | Gedson",
-              "spend": 175.97,
+              "spend": 182.95,
               "spend_shared": false
             }
           },
@@ -2066,7 +2114,31 @@ window.NI_DATA = {
               "end_label": "30/05/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Guaxuma | Fernanda",
-              "spend": 88.8,
+              "spend": 95.32,
+              "spend_shared": false
+            }
+          },
+          {
+            "emp": "Edf. Horto Boulevard",
+            "corretor": "Dimitry",
+            "leads": 1,
+            "atend": 0,
+            "visita": 0,
+            "qual": 0,
+            "proposta": 0,
+            "perda": 0,
+            "outros": 0,
+            "sem": 1,
+            "timing": {
+              "start": "2026-05-28",
+              "end": "2026-06-27",
+              "days_active": 0,
+              "days_left": 30,
+              "start_label": "28/05/26",
+              "end_label": "27/06/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Edf. Horto Boulevard | Dimitry",
+              "spend": 3.47,
               "spend_shared": false
             }
           },
@@ -2222,7 +2294,7 @@ window.NI_DATA = {
             4,
             0,
             0,
-            0
+            1
           ],
           "perda": [
             2,
@@ -2377,16 +2449,16 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 1824.58,
-        "impressions": 46332,
-        "clicks": 900,
-        "ctr": 1.94,
-        "frequency": 3.21,
-        "reach": 14420,
-        "leads_form": 102,
-        "msg_started": 12,
-        "total_meta": 114,
-        "cpl": 16.01,
+        "spend": 1845.58,
+        "impressions": 46865,
+        "clicks": 914,
+        "ctr": 1.95,
+        "frequency": 3.22,
+        "reach": 14561,
+        "leads_form": 103,
+        "msg_started": 13,
+        "total_meta": 116,
+        "cpl": 15.91,
         "campaign": {
           "name": "Fundo de Funil | Blend Grand Reserva | 12/05 #TP",
           "status": "ACTIVE",
@@ -2408,7 +2480,7 @@ window.NI_DATA = {
           "cls": "proc",
           "icon": "process",
           "title": "Padronizar planilhas",
-          "desc": "<b>48% dos leads sem status</b> (42 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
+          "desc": "<b>49% dos leads sem status</b> (43 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
         }
       ]
     }
