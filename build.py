@@ -16,7 +16,7 @@ from collections import Counter, defaultdict
 # ─── CONFIG ─────────────────────────────────────────────────────────────
 SHEETS = [
     {"id": "1yd4nJ1SKuIvDHrjC3U4qmwQ5hYUE43QLpy2Jc2dWD3A", "emp": "Casa no Antares",       "corretor": "Gedson"},
-    {"id": "1yd4nJ1SKuIvDHrjC3U4qmwQ5hYUE43QLpy2Jc2dWD3A", "emp": "Edf. Paradise Beach",   "corretor": "Gedson"},
+    {"id": "1yd4nJ1SKuIvDHrjC3U4qmwQ5hYUE43QLpy2Jc2dWD3A", "emp": "Edf. Paradise Beach",   "corretor": "Gedson", "gid": 1504932048},
     {"id": "1LX2da2em-wAuKEY-STLrsSSDWLHthvMfGtQO5cyqK7A", "emp": "Edf. Jorge",            "corretor": "Tatiana"},
     {"id": "1IT1HQIo6D0H4l7BnEqURLawADgKtEn4UtS0M46PiV_c", "emp": "Edf. Greco",            "corretor": "Rose"},
     {"id": "1bh7_Kskh0AWelAgJHL81g0QfM84ftPA7fOEL2cHBoWc", "emp": "Edf. Sensia",           "corretor": "Fernanda"},
@@ -28,8 +28,9 @@ SHEETS = [
     {"id": "13-KSacklkV1cgeRGPeG55YROAuToTM7he3Xbw20N9ac", "emp": "Blend Grand Reserva",   "corretor": "Marcos Jr"},
     {"id": "1zroEFtWi4HEHiKRR6zDDpiSlVg_zhSsUHIrr7W0ECRs", "emp": "Blend Grand Reserva",   "corretor": "Stefan"},
     {"id": "1cMRG523pO2PT-yPv5oZ3k6IGxKVMsLN66nCfQ9gMun0", "emp": "Blend Grand Reserva",   "corretor": "Tati"},
-    {"id": "1cMRG523pO2PT-yPv5oZ3k6IGxKVMsLN66nCfQ9gMun0", "emp": "Edf. Ametista",         "corretor": "Tati"},
+    {"id": "1cMRG523pO2PT-yPv5oZ3k6IGxKVMsLN66nCfQ9gMun0", "emp": "Edf. Ametista",         "corretor": "Thati", "gid": 1993511715},
     {"id": "1x7sz6UBP6vbWYzU_opPMe-OQdy0yZN_MYjPqleLKwg0", "emp": "Edf. Horto Boulevard",  "corretor": "Dimitry"},
+    {"id": "1epLzGCZbqzFrOmRoSqizDe9OHFdS5XBrrg05jfm_sSo", "emp": "Edf. Aquasol",          "corretor": "Yohanna", "gid": 1504932048},
 ]
 
 META_AD_ACCOUNT = "act_916115436468748"
@@ -248,14 +249,13 @@ def cat_motivo(obs):
     return "Motivo ambíguo (revisar)"
 
 
-def fetch_csv(sheet_id):
-    # gid=0 = primeira aba na maioria das planilhas; algumas recriaram a aba e a
-    # primeira não é mais gid 0 (export?gid=0 dá 400). Nesse caso cai pro export
-    # sem gid, que devolve a primeira aba visível.
-    urls = [
-        f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv&gid=0",
-        f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv",
-    ]
+def fetch_csv(sheet_id, gid=0):
+    # Cada empreendimento pode estar numa aba (gid) diferente do mesmo workbook.
+    # Tenta o gid pedido; se for o gid=0 e falhar (aba recriada não é mais 0),
+    # cai pro export sem gid, que devolve a primeira aba visível.
+    urls = [f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv&gid={gid}"]
+    if gid == 0:
+        urls.append(f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv")
     last_err = None
     for url in urls:
         req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 ni-report"})
@@ -531,7 +531,7 @@ def main():
     rows_by_sheet = []
     for sheet in SHEETS:
         try:
-            rows = fetch_csv(sheet["id"])
+            rows = fetch_csv(sheet["id"], sheet.get("gid", 0))
             print(f"  {sheet['emp']} ({sheet['corretor']}): {len(rows)} linhas", file=sys.stderr)
         except Exception as e:
             print(f"  {sheet['emp']} ({sheet['corretor']}): ERRO {e}", file=sys.stderr)

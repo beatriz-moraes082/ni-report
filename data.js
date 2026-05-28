@@ -1,5 +1,5 @@
 window.NI_DATA = {
-  "generated_at": "28/05/2026 20:01",
+  "generated_at": "28/05/2026 20:14",
   "default_view": "total",
   "views": {
     "total": {
@@ -11,17 +11,18 @@ window.NI_DATA = {
       },
       "stats": {
         "totals": {
-          "desqualificado": 123,
-          "em_atendimento": 80,
-          "qualificado": 7,
-          "visita": 11,
-          "sem_status": 52,
+          "desqualificado": 106,
+          "em_atendimento": 74,
+          "qualificado": 6,
+          "visita": 10,
+          "sem_status": 66,
+          "proposta": 1,
           "outros_produtos": 10,
           "nao_momento": 1
         },
-        "n_total": 284,
-        "perdidos": 123,
-        "pct_perda": 43.3,
+        "n_total": 274,
+        "perdidos": 106,
+        "pct_perda": 38.7,
         "empreend": [
           {
             "emp": "Edf. Greco",
@@ -72,30 +73,6 @@ window.NI_DATA = {
             }
           },
           {
-            "emp": "Edf. Paradise Beach",
-            "corretor": "Gedson",
-            "leads": 33,
-            "atend": 7,
-            "visita": 1,
-            "qual": 1,
-            "proposta": 0,
-            "perda": 17,
-            "outros": 0,
-            "sem": 7,
-            "timing": {
-              "start": "2026-05-22",
-              "end": "2026-06-21",
-              "days_active": 6,
-              "days_left": 24,
-              "start_label": "22/05/26",
-              "end_label": "21/06/26",
-              "ad_status": "ACTIVE",
-              "ad_name": "Edf. Paradise Beach | Gedson",
-              "spend": 182.95,
-              "spend_shared": false
-            }
-          },
-          {
             "emp": "Jatiúca",
             "corretor": "Adriana",
             "leads": 28,
@@ -140,6 +117,30 @@ window.NI_DATA = {
               "ad_status": "PAUSED",
               "ad_name": "Sensia | Nath/Guilherme/Fernanda",
               "spend": 500.84,
+              "spend_shared": false
+            }
+          },
+          {
+            "emp": "Edf. Paradise Beach",
+            "corretor": "Gedson",
+            "leads": 21,
+            "atend": 0,
+            "visita": 0,
+            "qual": 0,
+            "proposta": 1,
+            "perda": 0,
+            "outros": 0,
+            "sem": 20,
+            "timing": {
+              "start": "2026-05-22",
+              "end": "2026-06-21",
+              "days_active": 6,
+              "days_left": 24,
+              "start_label": "22/05/26",
+              "end_label": "21/06/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Edf. Paradise Beach | Gedson",
+              "spend": 182.95,
               "spend_shared": false
             }
           },
@@ -211,7 +212,7 @@ window.NI_DATA = {
               "end_label": "30/05/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Guaxuma | Fernanda",
-              "spend": 290.85,
+              "spend": 295.21,
               "spend_shared": false
             }
           },
@@ -313,15 +314,15 @@ window.NI_DATA = {
           },
           {
             "emp": "Edf. Ametista",
-            "corretor": "Tati",
+            "corretor": "Thati",
             "leads": 3,
-            "atend": 0,
+            "atend": 1,
             "visita": 0,
             "qual": 0,
             "proposta": 0,
             "perda": 1,
             "outros": 0,
-            "sem": 2,
+            "sem": 1,
             "timing": {
               "start": "2026-05-21",
               "end": "2026-06-20",
@@ -331,21 +332,21 @@ window.NI_DATA = {
               "end_label": "20/06/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Ametista | Thati",
-              "spend": 23.76,
-              "spend_shared": true
+              "spend": 23.81,
+              "spend_shared": false
             }
           },
           {
             "emp": "Edf. Horto Boulevard",
             "corretor": "Dimitry",
-            "leads": 1,
+            "leads": 2,
             "atend": 0,
             "visita": 0,
             "qual": 0,
             "proposta": 0,
             "perda": 0,
             "outros": 0,
-            "sem": 1,
+            "sem": 2,
             "timing": {
               "start": "2026-05-28",
               "end": "2026-06-27",
@@ -355,7 +356,31 @@ window.NI_DATA = {
               "end_label": "27/06/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Horto Boulevard | Dimitry",
-              "spend": 3.47,
+              "spend": 10.86,
+              "spend_shared": false
+            }
+          },
+          {
+            "emp": "Edf. Aquasol",
+            "corretor": "Yohanna",
+            "leads": 1,
+            "atend": 0,
+            "visita": 0,
+            "qual": 0,
+            "proposta": 0,
+            "perda": 0,
+            "outros": 0,
+            "sem": 1,
+            "timing": {
+              "start": "2026-05-21",
+              "end": "2026-06-20",
+              "days_active": 7,
+              "days_left": 23,
+              "start_label": "21/05/26",
+              "end_label": "20/06/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Edf. Aquasol | Yohanna",
+              "spend": 41.78,
               "spend_shared": false
             }
           },
@@ -387,46 +412,46 @@ window.NI_DATA = {
         "motivos": [
           {
             "label": "Não responde / não atende",
-            "value": 65,
+            "value": 56,
             "pct": 52.8
           },
           {
             "label": "Motivo ambíguo (revisar)",
-            "value": 27,
-            "pct": 22.0
+            "value": 24,
+            "pct": 22.6
           },
           {
             "label": "Sem motivo registrado",
-            "value": 12,
-            "pct": 9.8
+            "value": 11,
+            "pct": 10.4
           },
           {
             "label": "Lead repetido",
-            "value": 7,
-            "pct": 5.7
+            "value": 4,
+            "pct": 3.8
           },
           {
             "label": "Não gostou do imóvel/região",
-            "value": 4,
-            "pct": 3.3
+            "value": 3,
+            "pct": 2.8
           },
           {
             "label": "Valor / orçamento",
             "value": 3,
-            "pct": 2.4
+            "pct": 2.8
           },
           {
             "label": "Lead inválido",
             "value": 3,
-            "pct": 2.4
+            "pct": 2.8
           },
           {
             "label": "Comprou com concorrente",
             "value": 2,
-            "pct": 1.6
+            "pct": 1.9
           }
         ],
-        "motivos_total": 123,
+        "motivos_total": 106,
         "perdas_by_emp": [
           {
             "emp": "Edf. Greco",
@@ -442,18 +467,6 @@ window.NI_DATA = {
           },
           {
             "emp": "Casa no Antares",
-            "corretor": "Gedson",
-            "perdas": 17,
-            "motivos": {
-              "Sem motivo registrado": 2,
-              "Não gostou do imóvel/região": 1,
-              "Não responde / não atende": 9,
-              "Motivo ambíguo (revisar)": 2,
-              "Lead repetido": 3
-            }
-          },
-          {
-            "emp": "Edf. Paradise Beach",
             "corretor": "Gedson",
             "perdas": 17,
             "motivos": {
@@ -527,10 +540,10 @@ window.NI_DATA = {
           },
           {
             "emp": "Edf. Ametista",
-            "corretor": "Tati",
+            "corretor": "Thati",
             "perdas": 1,
             "motivos": {
-              "Motivo ambíguo (revisar)": 1
+              "Sem motivo registrado": 1
             }
           }
         ],
@@ -596,34 +609,34 @@ window.NI_DATA = {
             "28/05"
           ],
           "total": [
-            7,
-            4,
             6,
+            3,
             6,
+            5,
+            10,
             11,
-            11,
-            9,
-            7,
-            4,
+            8,
+            6,
+            3,
             3,
             1,
             0,
-            8,
-            2,
-            1,
-            34,
             4,
-            9,
-            10,
+            1,
+            1,
+            27,
+            3,
             8,
-            8,
+            7,
+            7,
+            7,
             2,
             6,
             2,
             2,
             5,
             3,
-            5,
+            4,
             12,
             6,
             4,
@@ -632,47 +645,47 @@ window.NI_DATA = {
             4,
             8,
             0,
-            7,
-            8,
-            4,
+            6,
+            5,
+            3,
             0,
             4,
             4,
             5,
             2,
-            5,
+            4,
             4,
             3,
             2,
             4,
-            2,
-            3,
+            1,
             5,
+            4,
             1,
             0,
-            4,
-            0,
-            0,
-            1
+            22,
+            1,
+            1,
+            4
           ],
           "perda": [
+            5,
+            2,
+            4,
+            1,
             6,
-            3,
-            4,
-            1,
             7,
-            7,
-            9,
-            4,
-            3,
-            1,
-            1,
-            0,
             8,
+            3,
             2,
             1,
-            22,
+            1,
+            0,
             4,
+            1,
+            1,
+            18,
+            3,
             4,
             3,
             5,
@@ -693,7 +706,7 @@ window.NI_DATA = {
             2,
             0,
             2,
-            2,
+            1,
             1,
             0,
             0,
@@ -705,8 +718,8 @@ window.NI_DATA = {
             0,
             0,
             0,
-            2,
-            0,
+            1,
+            1,
             0,
             0,
             0,
@@ -719,7 +732,7 @@ window.NI_DATA = {
             0,
             0,
             1,
-            4,
+            3,
             4,
             1,
             0,
@@ -731,10 +744,10 @@ window.NI_DATA = {
             0,
             0,
             0,
-            8,
+            6,
             0,
-            4,
-            4,
+            3,
+            2,
             0,
             0,
             1,
@@ -752,7 +765,7 @@ window.NI_DATA = {
             2,
             4,
             0,
-            4,
+            3,
             2,
             0,
             0,
@@ -766,7 +779,7 @@ window.NI_DATA = {
             2,
             2,
             0,
-            0,
+            1,
             1,
             0,
             0,
@@ -794,7 +807,7 @@ window.NI_DATA = {
             0,
             0,
             0,
-            2,
+            1,
             1,
             0,
             0,
@@ -851,7 +864,7 @@ window.NI_DATA = {
             0,
             0,
             0,
-            2,
+            1,
             0,
             1,
             1,
@@ -950,7 +963,7 @@ window.NI_DATA = {
             0,
             0,
             0,
-            0,
+            1,
             0,
             0,
             0
@@ -958,16 +971,16 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 3501.15,
-        "impressions": 113308,
-        "clicks": 2468,
-        "ctr": 2.18,
-        "frequency": 3.32,
-        "reach": 34122,
-        "leads_form": 250,
+        "spend": 3517.1,
+        "impressions": 113887,
+        "clicks": 2474,
+        "ctr": 2.17,
+        "frequency": 3.33,
+        "reach": 34183,
+        "leads_form": 251,
         "msg_started": 27,
-        "total_meta": 277,
-        "cpl": 12.64,
+        "total_meta": 278,
+        "cpl": 12.65,
         "campaign": {
           "name": "Fundo de Funil | Blend Grand Reserva | 12/05 #TP",
           "status": "ACTIVE",
@@ -982,7 +995,7 @@ window.NI_DATA = {
           "cls": "crit",
           "icon": "alert",
           "title": "Resgatar a base não respondida",
-          "desc": "<b>65 leads</b> do período entraram e não retornaram contato. Antes de aumentar volume, rodar uma cadência de reengajamento e revisar tempo médio de primeiro toque. <b>Maior ponto de alavancagem do mês.</b>"
+          "desc": "<b>56 leads</b> do período entraram e não retornaram contato. Antes de aumentar volume, rodar uma cadência de reengajamento e revisar tempo médio de primeiro toque. <b>Maior ponto de alavancagem do mês.</b>"
         },
         {
           "tag": "Time comercial",
@@ -996,7 +1009,7 @@ window.NI_DATA = {
           "cls": "proc",
           "icon": "process",
           "title": "Padronizar planilhas",
-          "desc": "<b>18% dos leads sem status</b> (52 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
+          "desc": "<b>24% dos leads sem status</b> (66 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
         }
       ]
     },
@@ -1009,17 +1022,17 @@ window.NI_DATA = {
       },
       "stats": {
         "totals": {
-          "desqualificado": 109,
-          "em_atendimento": 54,
-          "qualificado": 6,
-          "visita": 8,
-          "sem_status": 9,
+          "desqualificado": 93,
+          "em_atendimento": 48,
+          "qualificado": 5,
+          "visita": 7,
+          "sem_status": 6,
           "outros_produtos": 9,
           "nao_momento": 1
         },
-        "n_total": 196,
-        "perdidos": 109,
-        "pct_perda": 55.6,
+        "n_total": 169,
+        "perdidos": 93,
+        "pct_perda": 55.0,
         "empreend": [
           {
             "emp": "Edf. Greco",
@@ -1066,30 +1079,6 @@ window.NI_DATA = {
               "ad_status": "PAUSED",
               "ad_name": "Casa no Antares | Gedson",
               "spend": 259.34,
-              "spend_shared": false
-            }
-          },
-          {
-            "emp": "Edf. Paradise Beach",
-            "corretor": "Gedson",
-            "leads": 27,
-            "atend": 6,
-            "visita": 1,
-            "qual": 1,
-            "proposta": 0,
-            "perda": 16,
-            "outros": 0,
-            "sem": 3,
-            "timing": {
-              "start": "2026-05-22",
-              "end": "2026-06-21",
-              "days_active": 6,
-              "days_left": 24,
-              "start_label": "22/05/26",
-              "end_label": "21/06/26",
-              "ad_status": "ACTIVE",
-              "ad_name": "Edf. Paradise Beach | Gedson",
-              "spend": 0.0,
               "spend_shared": false
             }
           },
@@ -1238,6 +1227,30 @@ window.NI_DATA = {
             }
           },
           {
+            "emp": "Edf. Paradise Beach",
+            "corretor": "Gedson",
+            "leads": 0,
+            "atend": 0,
+            "visita": 0,
+            "qual": 0,
+            "proposta": 0,
+            "perda": 0,
+            "outros": 0,
+            "sem": 0,
+            "timing": {
+              "start": "2026-05-22",
+              "end": "2026-06-21",
+              "days_active": 6,
+              "days_left": 24,
+              "start_label": "22/05/26",
+              "end_label": "21/06/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Edf. Paradise Beach | Gedson",
+              "spend": 0.0,
+              "spend_shared": false
+            }
+          },
+          {
             "emp": "JTR Jatiúca",
             "corretor": "Nathalia",
             "leads": 0,
@@ -1335,7 +1348,7 @@ window.NI_DATA = {
           },
           {
             "emp": "Edf. Ametista",
-            "corretor": "Tati",
+            "corretor": "Thati",
             "leads": 0,
             "atend": 0,
             "visita": 0,
@@ -1380,51 +1393,75 @@ window.NI_DATA = {
               "spend": 0.0,
               "spend_shared": false
             }
+          },
+          {
+            "emp": "Edf. Aquasol",
+            "corretor": "Yohanna",
+            "leads": 0,
+            "atend": 0,
+            "visita": 0,
+            "qual": 0,
+            "proposta": 0,
+            "perda": 0,
+            "outros": 0,
+            "sem": 0,
+            "timing": {
+              "start": "2026-05-21",
+              "end": "2026-06-20",
+              "days_active": 7,
+              "days_left": 23,
+              "start_label": "21/05/26",
+              "end_label": "20/06/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Edf. Aquasol | Yohanna",
+              "spend": 0.0,
+              "spend_shared": false
+            }
           }
         ],
         "motivos": [
           {
             "label": "Não responde / não atende",
-            "value": 62,
-            "pct": 56.9
+            "value": 53,
+            "pct": 57.0
           },
           {
             "label": "Motivo ambíguo (revisar)",
-            "value": 23,
-            "pct": 21.1
+            "value": 22,
+            "pct": 23.7
           },
           {
             "label": "Lead repetido",
-            "value": 7,
-            "pct": 6.4
+            "value": 4,
+            "pct": 4.3
           },
           {
             "label": "Sem motivo registrado",
-            "value": 5,
-            "pct": 4.6
+            "value": 3,
+            "pct": 3.2
           },
           {
             "label": "Não gostou do imóvel/região",
-            "value": 4,
-            "pct": 3.7
+            "value": 3,
+            "pct": 3.2
           },
           {
             "label": "Valor / orçamento",
             "value": 3,
-            "pct": 2.8
+            "pct": 3.2
           },
           {
             "label": "Lead inválido",
             "value": 3,
-            "pct": 2.8
+            "pct": 3.2
           },
           {
             "label": "Comprou com concorrente",
             "value": 2,
-            "pct": 1.8
+            "pct": 2.2
           }
         ],
-        "motivos_total": 109,
+        "motivos_total": 93,
         "perdas_by_emp": [
           {
             "emp": "Edf. Greco",
@@ -1440,18 +1477,6 @@ window.NI_DATA = {
           },
           {
             "emp": "Casa no Antares",
-            "corretor": "Gedson",
-            "perdas": 16,
-            "motivos": {
-              "Sem motivo registrado": 2,
-              "Não gostou do imóvel/região": 1,
-              "Não responde / não atende": 9,
-              "Motivo ambíguo (revisar)": 1,
-              "Lead repetido": 3
-            }
-          },
-          {
-            "emp": "Edf. Paradise Beach",
             "corretor": "Gedson",
             "perdas": 16,
             "motivos": {
@@ -1550,55 +1575,55 @@ window.NI_DATA = {
             "30/04"
           ],
           "total": [
-            7,
-            4,
             6,
+            3,
             6,
+            5,
+            10,
             11,
-            11,
-            9,
-            7,
-            4,
+            8,
+            6,
+            3,
             3,
             1,
             0,
-            8,
-            2,
-            1,
-            34,
             4,
-            9,
-            10,
+            1,
+            1,
+            27,
+            3,
             8,
-            8,
+            7,
+            7,
+            7,
             2,
             6,
             2,
             2,
             5,
             3,
-            5,
+            4,
             12,
             6
           ],
           "perda": [
-            6,
-            3,
+            5,
+            2,
             4,
             1,
+            6,
             7,
-            7,
-            9,
-            4,
+            8,
             3,
+            2,
             1,
             1,
             0,
-            8,
-            2,
-            1,
-            22,
             4,
+            1,
+            1,
+            18,
+            3,
             4,
             3,
             5,
@@ -1617,7 +1642,7 @@ window.NI_DATA = {
             0,
             0,
             1,
-            4,
+            3,
             4,
             1,
             0,
@@ -1629,10 +1654,10 @@ window.NI_DATA = {
             0,
             0,
             0,
-            8,
+            6,
             0,
-            4,
-            4,
+            3,
+            2,
             0,
             0,
             1,
@@ -1664,7 +1689,7 @@ window.NI_DATA = {
             0,
             0,
             0,
-            2,
+            1,
             1,
             0,
             0,
@@ -1693,7 +1718,7 @@ window.NI_DATA = {
             0,
             0,
             0,
-            2,
+            1,
             0,
             1,
             1,
@@ -1768,7 +1793,7 @@ window.NI_DATA = {
           "cls": "crit",
           "icon": "alert",
           "title": "Resgatar a base não respondida",
-          "desc": "<b>62 leads</b> do período entraram e não retornaram contato. Antes de aumentar volume, rodar uma cadência de reengajamento e revisar tempo médio de primeiro toque. <b>Maior ponto de alavancagem do mês.</b>"
+          "desc": "<b>53 leads</b> do período entraram e não retornaram contato. Antes de aumentar volume, rodar uma cadência de reengajamento e revisar tempo médio de primeiro toque. <b>Maior ponto de alavancagem do mês.</b>"
         },
         {
           "tag": "Time comercial",
@@ -1782,7 +1807,7 @@ window.NI_DATA = {
           "cls": "proc",
           "icon": "process",
           "title": "Padronizar planilhas",
-          "desc": "<b>5% dos leads sem status</b> (9 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
+          "desc": "<b>4% dos leads sem status</b> (6 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
         }
       ]
     },
@@ -1796,16 +1821,41 @@ window.NI_DATA = {
       "stats": {
         "totals": {
           "em_atendimento": 26,
-          "desqualificado": 14,
-          "sem_status": 43,
+          "desqualificado": 13,
+          "sem_status": 60,
+          "proposta": 1,
           "visita": 3,
           "qualificado": 1,
           "outros_produtos": 1
         },
-        "n_total": 88,
-        "perdidos": 14,
-        "pct_perda": 15.9,
+        "n_total": 105,
+        "perdidos": 13,
+        "pct_perda": 12.4,
         "empreend": [
+          {
+            "emp": "Edf. Paradise Beach",
+            "corretor": "Gedson",
+            "leads": 21,
+            "atend": 0,
+            "visita": 0,
+            "qual": 0,
+            "proposta": 1,
+            "perda": 0,
+            "outros": 0,
+            "sem": 20,
+            "timing": {
+              "start": "2026-05-22",
+              "end": "2026-06-21",
+              "days_active": 6,
+              "days_left": 24,
+              "start_label": "22/05/26",
+              "end_label": "21/06/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Edf. Paradise Beach | Gedson",
+              "spend": 182.95,
+              "spend_shared": false
+            }
+          },
           {
             "emp": "Jatiúca",
             "corretor": "Adriana",
@@ -1927,30 +1977,6 @@ window.NI_DATA = {
             }
           },
           {
-            "emp": "Edf. Paradise Beach",
-            "corretor": "Gedson",
-            "leads": 6,
-            "atend": 1,
-            "visita": 0,
-            "qual": 0,
-            "proposta": 0,
-            "perda": 1,
-            "outros": 0,
-            "sem": 4,
-            "timing": {
-              "start": "2026-05-22",
-              "end": "2026-06-21",
-              "days_active": 6,
-              "days_left": 24,
-              "start_label": "22/05/26",
-              "end_label": "21/06/26",
-              "ad_status": "ACTIVE",
-              "ad_name": "Edf. Paradise Beach | Gedson",
-              "spend": 182.95,
-              "spend_shared": false
-            }
-          },
-          {
             "emp": "Edf. Greco",
             "corretor": "Rose",
             "leads": 6,
@@ -2048,15 +2074,15 @@ window.NI_DATA = {
           },
           {
             "emp": "Edf. Ametista",
-            "corretor": "Tati",
+            "corretor": "Thati",
             "leads": 3,
-            "atend": 0,
+            "atend": 1,
             "visita": 0,
             "qual": 0,
             "proposta": 0,
             "perda": 1,
             "outros": 0,
-            "sem": 2,
+            "sem": 1,
             "timing": {
               "start": "2026-05-21",
               "end": "2026-06-20",
@@ -2066,8 +2092,8 @@ window.NI_DATA = {
               "end_label": "20/06/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Ametista | Thati",
-              "spend": 23.76,
-              "spend_shared": true
+              "spend": 23.81,
+              "spend_shared": false
             }
           },
           {
@@ -2095,6 +2121,30 @@ window.NI_DATA = {
             }
           },
           {
+            "emp": "Edf. Horto Boulevard",
+            "corretor": "Dimitry",
+            "leads": 2,
+            "atend": 0,
+            "visita": 0,
+            "qual": 0,
+            "proposta": 0,
+            "perda": 0,
+            "outros": 0,
+            "sem": 2,
+            "timing": {
+              "start": "2026-05-28",
+              "end": "2026-06-27",
+              "days_active": 0,
+              "days_left": 30,
+              "start_label": "28/05/26",
+              "end_label": "27/06/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Edf. Horto Boulevard | Dimitry",
+              "spend": 10.86,
+              "spend_shared": false
+            }
+          },
+          {
             "emp": "Edf. Guaxuma",
             "corretor": "Fernanda",
             "leads": 1,
@@ -2114,13 +2164,13 @@ window.NI_DATA = {
               "end_label": "30/05/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Guaxuma | Fernanda",
-              "spend": 95.32,
+              "spend": 99.68,
               "spend_shared": false
             }
           },
           {
-            "emp": "Edf. Horto Boulevard",
-            "corretor": "Dimitry",
+            "emp": "Edf. Aquasol",
+            "corretor": "Yohanna",
             "leads": 1,
             "atend": 0,
             "visita": 0,
@@ -2130,15 +2180,15 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 1,
             "timing": {
-              "start": "2026-05-28",
-              "end": "2026-06-27",
-              "days_active": 0,
-              "days_left": 30,
-              "start_label": "28/05/26",
-              "end_label": "27/06/26",
+              "start": "2026-05-21",
+              "end": "2026-06-20",
+              "days_active": 7,
+              "days_left": 23,
+              "start_label": "21/05/26",
+              "end_label": "20/06/26",
               "ad_status": "ACTIVE",
-              "ad_name": "Edf. Horto Boulevard | Dimitry",
-              "spend": 3.47,
+              "ad_name": "Edf. Aquasol | Yohanna",
+              "spend": 41.78,
               "spend_shared": false
             }
           },
@@ -2170,21 +2220,21 @@ window.NI_DATA = {
         "motivos": [
           {
             "label": "Sem motivo registrado",
-            "value": 7,
-            "pct": 50.0
-          },
-          {
-            "label": "Motivo ambíguo (revisar)",
-            "value": 4,
-            "pct": 28.6
+            "value": 8,
+            "pct": 61.5
           },
           {
             "label": "Não responde / não atende",
             "value": 3,
-            "pct": 21.4
+            "pct": 23.1
+          },
+          {
+            "label": "Motivo ambíguo (revisar)",
+            "value": 2,
+            "pct": 15.4
           }
         ],
-        "motivos_total": 14,
+        "motivos_total": 13,
         "perdas_by_emp": [
           {
             "emp": "Jatiúca",
@@ -2211,14 +2261,6 @@ window.NI_DATA = {
             }
           },
           {
-            "emp": "Edf. Paradise Beach",
-            "corretor": "Gedson",
-            "perdas": 1,
-            "motivos": {
-              "Motivo ambíguo (revisar)": 1
-            }
-          },
-          {
             "emp": "Blend Grand Reserva",
             "corretor": "Tati",
             "perdas": 1,
@@ -2228,10 +2270,10 @@ window.NI_DATA = {
           },
           {
             "emp": "Edf. Ametista",
-            "corretor": "Tati",
+            "corretor": "Thati",
             "perdas": 1,
             "motivos": {
-              "Motivo ambíguo (revisar)": 1
+              "Sem motivo registrado": 1
             }
           }
         ],
@@ -2273,28 +2315,28 @@ window.NI_DATA = {
             4,
             8,
             0,
-            7,
-            8,
-            4,
+            6,
+            5,
+            3,
             0,
             4,
             4,
             5,
             2,
-            5,
+            4,
             4,
             3,
             2,
             4,
-            2,
-            3,
+            1,
             5,
+            4,
             1,
             0,
-            4,
-            0,
-            0,
-            1
+            22,
+            1,
+            1,
+            4
           ],
           "perda": [
             2,
@@ -2304,7 +2346,7 @@ window.NI_DATA = {
             2,
             0,
             2,
-            2,
+            1,
             1,
             0,
             0,
@@ -2316,8 +2358,8 @@ window.NI_DATA = {
             0,
             0,
             0,
-            2,
-            0,
+            1,
+            1,
             0,
             0,
             0,
@@ -2333,7 +2375,7 @@ window.NI_DATA = {
             2,
             4,
             0,
-            4,
+            3,
             2,
             0,
             0,
@@ -2347,7 +2389,7 @@ window.NI_DATA = {
             2,
             2,
             0,
-            0,
+            1,
             1,
             0,
             0,
@@ -2441,7 +2483,7 @@ window.NI_DATA = {
             0,
             0,
             0,
-            0,
+            1,
             0,
             0,
             0
@@ -2449,15 +2491,15 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 1845.58,
-        "impressions": 46865,
-        "clicks": 914,
-        "ctr": 1.95,
-        "frequency": 3.22,
-        "reach": 14561,
-        "leads_form": 103,
+        "spend": 1861.53,
+        "impressions": 47444,
+        "clicks": 920,
+        "ctr": 1.94,
+        "frequency": 3.25,
+        "reach": 14616,
+        "leads_form": 104,
         "msg_started": 13,
-        "total_meta": 116,
+        "total_meta": 117,
         "cpl": 15.91,
         "campaign": {
           "name": "Fundo de Funil | Blend Grand Reserva | 12/05 #TP",
@@ -2480,7 +2522,7 @@ window.NI_DATA = {
           "cls": "proc",
           "icon": "process",
           "title": "Padronizar planilhas",
-          "desc": "<b>49% dos leads sem status</b> (43 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
+          "desc": "<b>57% dos leads sem status</b> (60 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
         }
       ]
     }
