@@ -1,5 +1,5 @@
 window.NI_DATA = {
-  "generated_at": "28/05/2026 20:14",
+  "generated_at": "28/05/2026 23:21",
   "default_view": "total",
   "views": {
     "total": {
@@ -212,7 +212,7 @@ window.NI_DATA = {
               "end_label": "30/05/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Guaxuma | Fernanda",
-              "spend": 295.21,
+              "spend": 295.43,
               "spend_shared": false
             }
           },
@@ -356,7 +356,7 @@ window.NI_DATA = {
               "end_label": "27/06/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Horto Boulevard | Dimitry",
-              "spend": 10.86,
+              "spend": 11.13,
               "spend_shared": false
             }
           },
@@ -971,16 +971,16 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 3517.1,
-        "impressions": 113887,
-        "clicks": 2474,
+        "spend": 3518.28,
+        "impressions": 113926,
+        "clicks": 2475,
         "ctr": 2.17,
         "frequency": 3.33,
         "reach": 34183,
         "leads_form": 251,
         "msg_started": 27,
         "total_meta": 278,
-        "cpl": 12.65,
+        "cpl": 12.66,
         "campaign": {
           "name": "Fundo de Funil | Blend Grand Reserva | 12/05 #TP",
           "status": "ACTIVE",
@@ -2140,7 +2140,7 @@ window.NI_DATA = {
               "end_label": "27/06/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Horto Boulevard | Dimitry",
-              "spend": 10.86,
+              "spend": 11.13,
               "spend_shared": false
             }
           },
@@ -2164,7 +2164,7 @@ window.NI_DATA = {
               "end_label": "30/05/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Guaxuma | Fernanda",
-              "spend": 99.68,
+              "spend": 99.9,
               "spend_shared": false
             }
           },
@@ -2491,16 +2491,16 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 1861.53,
-        "impressions": 47444,
-        "clicks": 920,
+        "spend": 1862.71,
+        "impressions": 47483,
+        "clicks": 921,
         "ctr": 1.94,
         "frequency": 3.25,
         "reach": 14616,
         "leads_form": 104,
         "msg_started": 13,
         "total_meta": 117,
-        "cpl": 15.91,
+        "cpl": 15.92,
         "campaign": {
           "name": "Fundo de Funil | Blend Grand Reserva | 12/05 #TP",
           "status": "ACTIVE",
