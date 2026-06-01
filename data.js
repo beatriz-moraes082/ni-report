@@ -1,5 +1,5 @@
 window.NI_DATA = {
-  "generated_at": "01/06/2026 16:30",
+  "generated_at": "01/06/2026 16:37",
   "default_view": "total",
   "views": {
     "total": {
@@ -43,7 +43,7 @@ window.NI_DATA = {
               "end_label": "21/06/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Paradise Beach | Gedson",
-              "spend": 236.16,
+              "spend": 236.24,
               "spend_shared": false
             }
           },
@@ -283,7 +283,7 @@ window.NI_DATA = {
               "end_label": "20/06/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Ametista | Thati",
-              "spend": 26.4,
+              "spend": 26.42,
               "spend_shared": false
             }
           },
@@ -379,7 +379,7 @@ window.NI_DATA = {
               "end_label": "30/05/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Guaxuma | Fernanda",
-              "spend": 242.4,
+              "spend": 242.68,
               "spend_shared": false
             }
           },
@@ -710,8 +710,8 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 2252.89,
-        "impressions": 56517,
+        "spend": 2253.55,
+        "impressions": 56542,
         "clicks": 1035,
         "ctr": 1.83,
         "frequency": 3.34,
@@ -719,7 +719,7 @@ window.NI_DATA = {
         "leads_form": 115,
         "msg_started": 15,
         "total_meta": 130,
-        "cpl": 17.33,
+        "cpl": 17.34,
         "campaign": {
           "name": "Fundo de Funil | Blend Grand Reserva | 12/05 #TP",
           "status": "ACTIVE",
@@ -1584,7 +1584,7 @@ window.NI_DATA = {
               "end_label": "21/06/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Paradise Beach | Gedson",
-              "spend": 236.16,
+              "spend": 236.24,
               "spend_shared": false
             }
           },
@@ -1824,7 +1824,7 @@ window.NI_DATA = {
               "end_label": "20/06/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Ametista | Thati",
-              "spend": 26.4,
+              "spend": 26.42,
               "spend_shared": false
             }
           },
@@ -1920,7 +1920,7 @@ window.NI_DATA = {
               "end_label": "30/05/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Guaxuma | Fernanda",
-              "spend": 242.4,
+              "spend": 242.68,
               "spend_shared": false
             }
           },
@@ -2251,8 +2251,8 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 2252.89,
-        "impressions": 56517,
+        "spend": 2253.55,
+        "impressions": 56542,
         "clicks": 1035,
         "ctr": 1.83,
         "frequency": 3.34,
@@ -2260,7 +2260,7 @@ window.NI_DATA = {
         "leads_form": 115,
         "msg_started": 15,
         "total_meta": 130,
-        "cpl": 17.33,
+        "cpl": 17.34,
         "campaign": {
           "name": "Fundo de Funil | Blend Grand Reserva | 12/05 #TP",
           "status": "ACTIVE",
