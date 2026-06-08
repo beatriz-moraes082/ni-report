@@ -1,5 +1,5 @@
 window.NI_DATA = {
-  "generated_at": "08/06/2026 14:41",
+  "generated_at": "08/06/2026 14:47",
   "default_view": "total",
   "views": {
     "total": {
@@ -211,7 +211,7 @@ window.NI_DATA = {
               "end_label": "30/05/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Guaxuma | Fernanda",
-              "spend": 524.3,
+              "spend": 524.48,
               "spend_shared": false
             }
           },
@@ -283,7 +283,7 @@ window.NI_DATA = {
               "end_label": "20/06/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Ametista | Thati",
-              "spend": 32.56,
+              "spend": 32.62,
               "spend_shared": false
             }
           },
@@ -331,7 +331,7 @@ window.NI_DATA = {
               "end_label": "27/06/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Horto Boulevard | Dimitry",
-              "spend": 105.27,
+              "spend": 105.43,
               "spend_shared": false
             }
           },
@@ -759,8 +759,8 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 2979.42,
-        "impressions": 72682,
+        "spend": 2979.84,
+        "impressions": 72692,
         "clicks": 1285,
         "ctr": 1.77,
         "frequency": 3.18,
@@ -1633,7 +1633,7 @@ window.NI_DATA = {
               "end_label": "24/06/26",
               "ad_status": "PAUSED",
               "ad_name": "Edf. Paradise Beach | Gedson",
-              "spend": 432.75,
+              "spend": 432.77,
               "spend_shared": false
             }
           },
@@ -1801,7 +1801,7 @@ window.NI_DATA = {
               "end_label": "30/05/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Guaxuma | Fernanda",
-              "spend": 524.3,
+              "spend": 524.48,
               "spend_shared": false
             }
           },
@@ -1873,7 +1873,7 @@ window.NI_DATA = {
               "end_label": "20/06/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Ametista | Thati",
-              "spend": 32.56,
+              "spend": 32.62,
               "spend_shared": false
             }
           },
@@ -1921,7 +1921,7 @@ window.NI_DATA = {
               "end_label": "27/06/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Horto Boulevard | Dimitry",
-              "spend": 105.27,
+              "spend": 105.43,
               "spend_shared": false
             }
           },
@@ -2349,8 +2349,8 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 2979.42,
-        "impressions": 72682,
+        "spend": 2979.84,
+        "impressions": 72692,
         "clicks": 1285,
         "ctr": 1.77,
         "frequency": 3.18,
