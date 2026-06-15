@@ -1,5 +1,5 @@
 window.NI_DATA = {
-  "generated_at": "15/06/2026 16:11",
+  "generated_at": "15/06/2026 16:16",
   "default_view": "total",
   "views": {
     "total": {
@@ -163,7 +163,7 @@ window.NI_DATA = {
               "end_label": "30/05/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Guaxuma | Fernanda",
-              "spend": 754.03,
+              "spend": 754.17,
               "spend_shared": false
             }
           },
@@ -235,7 +235,7 @@ window.NI_DATA = {
               "end_label": "09/07/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. El Greco - Rose",
-              "spend": 382.15,
+              "spend": 382.4,
               "spend_shared": false
             }
           },
@@ -821,8 +821,8 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 3641.01,
-        "impressions": 90063,
+        "spend": 3641.4,
+        "impressions": 90069,
         "clicks": 1770,
         "ctr": 1.97,
         "frequency": 3.61,
@@ -1817,7 +1817,7 @@ window.NI_DATA = {
               "end_label": "30/05/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Guaxuma | Fernanda",
-              "spend": 754.03,
+              "spend": 754.17,
               "spend_shared": false
             }
           },
@@ -1889,7 +1889,7 @@ window.NI_DATA = {
               "end_label": "09/07/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. El Greco - Rose",
-              "spend": 382.15,
+              "spend": 382.4,
               "spend_shared": false
             }
           },
@@ -2475,8 +2475,8 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 3641.01,
-        "impressions": 90063,
+        "spend": 3641.4,
+        "impressions": 90069,
         "clicks": 1770,
         "ctr": 1.97,
         "frequency": 3.61,
