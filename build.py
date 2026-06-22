@@ -15,7 +15,7 @@ from collections import Counter, defaultdict
 
 # ─── CONFIG ─────────────────────────────────────────────────────────────
 SHEETS = [
-    {"id": "1yd4nJ1SKuIvDHrjC3U4qmwQ5hYUE43QLpy2Jc2dWD3A", "emp": "Casa no Antares",       "corretor": "Gedson"},
+    {"id": "1yd4nJ1SKuIvDHrjC3U4qmwQ5hYUE43QLpy2Jc2dWD3A", "emp": "Jardim América",         "corretor": "Gedson"},
     {"id": "1yd4nJ1SKuIvDHrjC3U4qmwQ5hYUE43QLpy2Jc2dWD3A", "emp": "Edf. Paradise Beach",   "corretor": "Gedson", "gid": 1504932048},
     {"id": "1LX2da2em-wAuKEY-STLrsSSDWLHthvMfGtQO5cyqK7A", "emp": "Edf. Jorge",            "corretor": "Tatiana"},
     {"id": "1IT1HQIo6D0H4l7BnEqURLawADgKtEn4UtS0M46PiV_c", "emp": "Edf. Greco",            "corretor": "Rose"},
