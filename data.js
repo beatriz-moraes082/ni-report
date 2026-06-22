@@ -1,5 +1,5 @@
 window.NI_DATA = {
-  "generated_at": "22/06/2026 15:46",
+  "generated_at": "22/06/2026 15:49",
   "default_view": "total",
   "views": {
     "total": {
@@ -91,7 +91,7 @@ window.NI_DATA = {
               "end_label": "18/07/26",
               "ad_status": "ACTIVE",
               "ad_name": "Alto da boa vista",
-              "spend": 202.3,
+              "spend": 202.46,
               "spend_shared": true
             }
           },
@@ -115,7 +115,7 @@ window.NI_DATA = {
               "end_label": "16/07/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Guaxuma | Fernanda (crop)",
-              "spend": 962.45,
+              "spend": 962.59,
               "spend_shared": false
             }
           },
@@ -982,8 +982,8 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 4484.84,
-        "impressions": 110160,
+        "spend": 4485.4,
+        "impressions": 110174,
         "clicks": 2208,
         "ctr": 2.0,
         "frequency": 3.83,
@@ -2002,7 +2002,7 @@ window.NI_DATA = {
               "end_label": "18/07/26",
               "ad_status": "ACTIVE",
               "ad_name": "Alto da boa vista",
-              "spend": 202.3,
+              "spend": 202.46,
               "spend_shared": true
             }
           },
@@ -2026,7 +2026,7 @@ window.NI_DATA = {
               "end_label": "16/07/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Guaxuma | Fernanda (crop)",
-              "spend": 962.45,
+              "spend": 962.59,
               "spend_shared": false
             }
           },
