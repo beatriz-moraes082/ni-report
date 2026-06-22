@@ -1,5 +1,5 @@
 window.NI_DATA = {
-  "generated_at": "22/06/2026 13:06",
+  "generated_at": "22/06/2026 13:34",
   "default_view": "total",
   "views": {
     "total": {
@@ -115,7 +115,7 @@ window.NI_DATA = {
               "end_label": "16/07/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Guaxuma | Fernanda (crop)",
-              "spend": 959.63,
+              "spend": 959.9,
               "spend_shared": false
             }
           },
@@ -240,7 +240,7 @@ window.NI_DATA = {
             }
           },
           {
-            "emp": "Casa no Antares",
+            "emp": "Jardim América",
             "corretor": "Gedson",
             "leads": 6,
             "atend": 1,
@@ -251,15 +251,15 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 4,
             "timing": {
-              "start": "2026-04-01",
-              "end": "2026-05-01",
-              "days_active": 82,
-              "days_left": -52,
-              "start_label": "01/04/26",
-              "end_label": "01/05/26",
-              "ad_status": "PAUSED",
-              "ad_name": "Casa no Antares | Gedson",
-              "spend": 111.61,
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null,
+              "ad_status": null,
+              "ad_name": null,
+              "spend": 0.0,
               "spend_shared": false
             }
           },
@@ -545,7 +545,7 @@ window.NI_DATA = {
             }
           },
           {
-            "emp": "Casa no Antares",
+            "emp": "Jardim América",
             "corretor": "Gedson",
             "perdas": 1,
             "motivos": {
@@ -982,8 +982,8 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 4466.19,
-        "impressions": 109635,
+        "spend": 4467.04,
+        "impressions": 109656,
         "clicks": 2199,
         "ctr": 2.01,
         "frequency": 3.82,
@@ -991,7 +991,7 @@ window.NI_DATA = {
         "leads_form": 228,
         "msg_started": 41,
         "total_meta": 269,
-        "cpl": 16.6,
+        "cpl": 16.61,
         "campaign": {
           "name": "Fundo de Funil | Blend Grand Reserva | 12/05 #TP",
           "status": "ACTIVE",
@@ -1063,7 +1063,7 @@ window.NI_DATA = {
             }
           },
           {
-            "emp": "Casa no Antares",
+            "emp": "Jardim América",
             "corretor": "Gedson",
             "leads": 27,
             "atend": 6,
@@ -1074,15 +1074,15 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 3,
             "timing": {
-              "start": "2026-04-01",
-              "end": "2026-05-01",
-              "days_active": 82,
-              "days_left": -52,
-              "start_label": "01/04/26",
-              "end_label": "01/05/26",
-              "ad_status": "PAUSED",
-              "ad_name": "Casa no Antares | Gedson",
-              "spend": 259.34,
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null,
+              "ad_status": null,
+              "ad_name": null,
+              "spend": 0.0,
               "spend_shared": false
             }
           },
@@ -1576,7 +1576,7 @@ window.NI_DATA = {
             }
           },
           {
-            "emp": "Casa no Antares",
+            "emp": "Jardim América",
             "corretor": "Gedson",
             "perdas": 16,
             "motivos": {
@@ -2026,7 +2026,7 @@ window.NI_DATA = {
               "end_label": "16/07/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Guaxuma | Fernanda (crop)",
-              "spend": 959.63,
+              "spend": 959.9,
               "spend_shared": false
             }
           },
@@ -2151,7 +2151,7 @@ window.NI_DATA = {
             }
           },
           {
-            "emp": "Casa no Antares",
+            "emp": "Jardim América",
             "corretor": "Gedson",
             "leads": 6,
             "atend": 1,
@@ -2162,15 +2162,15 @@ window.NI_DATA = {
             "outros": 0,
             "sem": 4,
             "timing": {
-              "start": "2026-04-01",
-              "end": "2026-05-01",
-              "days_active": 82,
-              "days_left": -52,
-              "start_label": "01/04/26",
-              "end_label": "01/05/26",
-              "ad_status": "PAUSED",
-              "ad_name": "Casa no Antares | Gedson",
-              "spend": 111.61,
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null,
+              "ad_status": null,
+              "ad_name": null,
+              "spend": 0.0,
               "spend_shared": false
             }
           },
@@ -2456,7 +2456,7 @@ window.NI_DATA = {
             }
           },
           {
-            "emp": "Casa no Antares",
+            "emp": "Jardim América",
             "corretor": "Gedson",
             "perdas": 1,
             "motivos": {
@@ -2893,8 +2893,8 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 4466.19,
-        "impressions": 109635,
+        "spend": 4467.04,
+        "impressions": 109656,
         "clicks": 2199,
         "ctr": 2.01,
         "frequency": 3.82,
@@ -2902,7 +2902,7 @@ window.NI_DATA = {
         "leads_form": 228,
         "msg_started": 41,
         "total_meta": 269,
-        "cpl": 16.6,
+        "cpl": 16.61,
         "campaign": {
           "name": "Fundo de Funil | Blend Grand Reserva | 12/05 #TP",
           "status": "ACTIVE",
