@@ -596,6 +596,8 @@ function renderEmpreendTiming(D){
     const k=`${e.emp}|${e.corretor}`;
     if(seen.has(k))return;seen.add(k);
     const t=e.timing||{};
+    // Mostra só os criativos ativos (rodando)
+    if((t.ad_status||'NONE')!=='ACTIVE')return;
     const startVal=t.start_label?`<span class="val">${t.start_label}</span>`:'<span class="val muted">a definir</span>';
     const activeVal=t.days_active!=null?`<span class="val">${t.days_active} dias</span>`:'<span class="val muted">—</span>';
     let endVal='<span class="val muted">a definir</span>',progress='';
@@ -632,8 +634,9 @@ function renderEmpreendTiming(D){
         ${progress}
       </div>`);
   });
+  if(!cards.length){wrap.innerHTML='<div class="empty">Nenhum criativo rodando no momento</div>';return;}
   wrap.innerHTML=`<div class="timing-grid">${cards.join('')}</div>
-    <p style="font-size:11px;color:var(--muted);margin-top:10px">Cada criativo de empreendimento roda 30 dias. Datas puxadas automaticamente do criativo correspondente no Meta Ads.</p>`;
+    <p style="font-size:11px;color:var(--muted);margin-top:10px">Mostrando apenas criativos ativos. Cada criativo de empreendimento roda 30 dias. Datas puxadas automaticamente do criativo correspondente no Meta Ads.</p>`;
 }
 
 function renderCampaignStatus(D){
