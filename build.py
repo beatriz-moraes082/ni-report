@@ -31,6 +31,10 @@ SHEETS = [
     {"id": "1cMRG523pO2PT-yPv5oZ3k6IGxKVMsLN66nCfQ9gMun0", "emp": "Edf. Ametista",         "corretor": "Thati", "gid": 1993511715},
     {"id": "1x7sz6UBP6vbWYzU_opPMe-OQdy0yZN_MYjPqleLKwg0", "emp": "Edf. Horto Boulevard",  "corretor": "Dimitry"},
     {"id": "1epLzGCZbqzFrOmRoSqizDe9OHFdS5XBrrg05jfm_sSo", "emp": "Edf. Aquasol",          "corretor": "Yohanna", "gid": 1504932048},
+    {"id": "1yd4nJ1SKuIvDHrjC3U4qmwQ5hYUE43QLpy2Jc2dWD3A", "emp": "Pedras do Farol",        "corretor": "Gedson", "gid": 344394057},
+    {"id": "1yd4nJ1SKuIvDHrjC3U4qmwQ5hYUE43QLpy2Jc2dWD3A", "emp": "Edifício Gênesis",       "corretor": "Gedson", "gid": 900337667},
+    {"id": "1wdcSnqB1-BLGqILdxArq084hUKwFJF0cpFGC5dKvY4M", "emp": "Edf. Barão de Mauá",     "corretor": "Gabi", "gid": 1993511715},
+    {"id": "1UQf1XR9KLGRHIH7BWyhi3uxvJ5ZXqr4EP6ixzkBnPww", "emp": "Edf. Alto da boa vista", "corretor": "Marcos Jr", "gid": 1993511715},
 ]
 
 META_AD_ACCOUNT = "act_916115436468748"
