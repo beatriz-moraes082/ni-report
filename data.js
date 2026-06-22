@@ -1,5 +1,5 @@
 window.NI_DATA = {
-  "generated_at": "22/06/2026 12:16",
+  "generated_at": "22/06/2026 13:06",
   "default_view": "total",
   "views": {
     "total": {
@@ -11,17 +11,17 @@ window.NI_DATA = {
       },
       "stats": {
         "totals": {
-          "em_atendimento": 43,
-          "desqualificado": 14,
-          "sem_status": 85,
+          "em_atendimento": 57,
+          "desqualificado": 16,
+          "sem_status": 100,
           "proposta": 2,
           "visita": 3,
           "qualificado": 1,
           "outros_produtos": 1
         },
-        "n_total": 149,
-        "perdidos": 14,
-        "pct_perda": 9.4,
+        "n_total": 180,
+        "perdidos": 16,
+        "pct_perda": 8.9,
         "empreend": [
           {
             "emp": "Edf. Paradise Beach",
@@ -72,6 +72,30 @@ window.NI_DATA = {
             }
           },
           {
+            "emp": "Edf. Alto da boa vista",
+            "corretor": "Marcos Jr",
+            "leads": 15,
+            "atend": 11,
+            "visita": 0,
+            "qual": 0,
+            "proposta": 0,
+            "perda": 1,
+            "outros": 0,
+            "sem": 3,
+            "timing": {
+              "start": "2026-06-18",
+              "end": "2026-07-18",
+              "days_active": 4,
+              "days_left": 26,
+              "start_label": "18/06/26",
+              "end_label": "18/07/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Alto da boa vista",
+              "spend": 190.81,
+              "spend_shared": true
+            }
+          },
+          {
             "emp": "Edf. Guaxuma",
             "corretor": "Fernanda",
             "leads": 11,
@@ -91,7 +115,7 @@ window.NI_DATA = {
               "end_label": "16/07/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Guaxuma | Fernanda (crop)",
-              "spend": 959.22,
+              "spend": 959.63,
               "spend_shared": false
             }
           },
@@ -192,6 +216,30 @@ window.NI_DATA = {
             }
           },
           {
+            "emp": "Edifício Gênesis",
+            "corretor": "Gedson",
+            "leads": 8,
+            "atend": 0,
+            "visita": 0,
+            "qual": 0,
+            "proposta": 0,
+            "perda": 0,
+            "outros": 0,
+            "sem": 8,
+            "timing": {
+              "start": "2026-06-16",
+              "end": "2026-07-16",
+              "days_active": 6,
+              "days_left": 24,
+              "start_label": "16/06/26",
+              "end_label": "16/07/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Edifício Gênesis",
+              "spend": 108.9,
+              "spend_shared": true
+            }
+          },
+          {
             "emp": "Casa no Antares",
             "corretor": "Gedson",
             "leads": 6,
@@ -260,6 +308,30 @@ window.NI_DATA = {
               "ad_status": "ACTIVE",
               "ad_name": "VD02",
               "spend": 0.0,
+              "spend_shared": false
+            }
+          },
+          {
+            "emp": "Edf. Barão de Mauá",
+            "corretor": "Gabi",
+            "leads": 5,
+            "atend": 1,
+            "visita": 0,
+            "qual": 0,
+            "proposta": 0,
+            "perda": 0,
+            "outros": 0,
+            "sem": 4,
+            "timing": {
+              "start": "2026-06-09",
+              "end": "2026-07-09",
+              "days_active": 13,
+              "days_left": 17,
+              "start_label": "09/06/26",
+              "end_label": "09/07/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Edf. Barão de Mauá - Gabi",
+              "spend": 53.61,
               "spend_shared": false
             }
           },
@@ -360,6 +432,30 @@ window.NI_DATA = {
             }
           },
           {
+            "emp": "Pedras do Farol",
+            "corretor": "Gedson",
+            "leads": 3,
+            "atend": 2,
+            "visita": 0,
+            "qual": 0,
+            "proposta": 0,
+            "perda": 1,
+            "outros": 0,
+            "sem": 0,
+            "timing": {
+              "start": "2026-06-09",
+              "end": "2026-07-09",
+              "days_active": 13,
+              "days_left": 17,
+              "start_label": "09/06/26",
+              "end_label": "09/07/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Pedras do Farol",
+              "spend": 57.26,
+              "spend_shared": true
+            }
+          },
+          {
             "emp": "Edf. Jorge",
             "corretor": "Tatiana",
             "leads": 2,
@@ -411,26 +507,26 @@ window.NI_DATA = {
         "motivos": [
           {
             "label": "Sem motivo registrado",
-            "value": 8,
-            "pct": 57.1
+            "value": 9,
+            "pct": 56.2
+          },
+          {
+            "label": "Motivo ambíguo (revisar)",
+            "value": 3,
+            "pct": 18.8
           },
           {
             "label": "Não responde / não atende",
             "value": 3,
-            "pct": 21.4
-          },
-          {
-            "label": "Motivo ambíguo (revisar)",
-            "value": 2,
-            "pct": 14.3
+            "pct": 18.8
           },
           {
             "label": "Lead inválido",
             "value": 1,
-            "pct": 7.1
+            "pct": 6.2
           }
         ],
-        "motivos_total": 14,
+        "motivos_total": 16,
         "perdas_by_emp": [
           {
             "emp": "Jatiúca",
@@ -475,6 +571,22 @@ window.NI_DATA = {
           {
             "emp": "Edf. Ametista",
             "corretor": "Thati",
+            "perdas": 1,
+            "motivos": {
+              "Sem motivo registrado": 1
+            }
+          },
+          {
+            "emp": "Pedras do Farol",
+            "corretor": "Gedson",
+            "perdas": 1,
+            "motivos": {
+              "Motivo ambíguo (revisar)": 1
+            }
+          },
+          {
+            "emp": "Edf. Alto da boa vista",
+            "corretor": "Marcos Jr",
             "perdas": 1,
             "motivos": {
               "Sem motivo registrado": 1
@@ -577,20 +689,20 @@ window.NI_DATA = {
             10,
             3,
             3,
-            1,
-            1,
+            5,
+            3,
             0,
             0,
             1,
             1,
             0,
-            0,
-            0,
+            4,
+            6,
+            5,
+            6,
             1,
-            1,
-            0,
-            1,
-            0
+            5,
+            1
           ],
           "perda": [
             2,
@@ -632,6 +744,7 @@ window.NI_DATA = {
             0,
             0,
             0,
+            1,
             0,
             0,
             0,
@@ -640,8 +753,7 @@ window.NI_DATA = {
             0,
             0,
             0,
-            0,
-            0,
+            1,
             0,
             0,
             0,
@@ -687,19 +799,19 @@ window.NI_DATA = {
             1,
             0,
             1,
+            2,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            5,
             1,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            2,
             0
           ],
           "visita": [
@@ -870,16 +982,16 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 4463.92,
-        "impressions": 109591,
-        "clicks": 2198,
+        "spend": 4466.19,
+        "impressions": 109635,
+        "clicks": 2199,
         "ctr": 2.01,
-        "frequency": 3.83,
-        "reach": 28641,
+        "frequency": 3.82,
+        "reach": 28682,
         "leads_form": 228,
         "msg_started": 41,
         "total_meta": 269,
-        "cpl": 16.59,
+        "cpl": 16.6,
         "campaign": {
           "name": "Fundo de Funil | Blend Grand Reserva | 12/05 #TP",
           "status": "ACTIVE",
@@ -901,7 +1013,7 @@ window.NI_DATA = {
           "cls": "proc",
           "icon": "process",
           "title": "Padronizar planilhas",
-          "desc": "<b>57% dos leads sem status</b> (85 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
+          "desc": "<b>56% dos leads sem status</b> (100 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
         }
       ]
     },
@@ -1306,6 +1418,102 @@ window.NI_DATA = {
               "end_label": "24/06/26",
               "ad_status": "PAUSED",
               "ad_name": "Edf. Aquasol | Yohanna",
+              "spend": 0.0,
+              "spend_shared": false
+            }
+          },
+          {
+            "emp": "Pedras do Farol",
+            "corretor": "Gedson",
+            "leads": 0,
+            "atend": 0,
+            "visita": 0,
+            "qual": 0,
+            "proposta": 0,
+            "perda": 0,
+            "outros": 0,
+            "sem": 0,
+            "timing": {
+              "start": "2026-06-09",
+              "end": "2026-07-09",
+              "days_active": 13,
+              "days_left": 17,
+              "start_label": "09/06/26",
+              "end_label": "09/07/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Pedras do Farol",
+              "spend": 0.0,
+              "spend_shared": false
+            }
+          },
+          {
+            "emp": "Edifício Gênesis",
+            "corretor": "Gedson",
+            "leads": 0,
+            "atend": 0,
+            "visita": 0,
+            "qual": 0,
+            "proposta": 0,
+            "perda": 0,
+            "outros": 0,
+            "sem": 0,
+            "timing": {
+              "start": "2026-06-16",
+              "end": "2026-07-16",
+              "days_active": 6,
+              "days_left": 24,
+              "start_label": "16/06/26",
+              "end_label": "16/07/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Edifício Gênesis",
+              "spend": 0.0,
+              "spend_shared": false
+            }
+          },
+          {
+            "emp": "Edf. Barão de Mauá",
+            "corretor": "Gabi",
+            "leads": 0,
+            "atend": 0,
+            "visita": 0,
+            "qual": 0,
+            "proposta": 0,
+            "perda": 0,
+            "outros": 0,
+            "sem": 0,
+            "timing": {
+              "start": "2026-06-09",
+              "end": "2026-07-09",
+              "days_active": 13,
+              "days_left": 17,
+              "start_label": "09/06/26",
+              "end_label": "09/07/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Edf. Barão de Mauá - Gabi",
+              "spend": 0.0,
+              "spend_shared": false
+            }
+          },
+          {
+            "emp": "Edf. Alto da boa vista",
+            "corretor": "Marcos Jr",
+            "leads": 0,
+            "atend": 0,
+            "visita": 0,
+            "qual": 0,
+            "proposta": 0,
+            "perda": 0,
+            "outros": 0,
+            "sem": 0,
+            "timing": {
+              "start": "2026-06-18",
+              "end": "2026-07-18",
+              "days_active": 4,
+              "days_left": 26,
+              "start_label": "18/06/26",
+              "end_label": "18/07/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Alto da boa vista",
               "spend": 0.0,
               "spend_shared": false
             }
@@ -1714,17 +1922,17 @@ window.NI_DATA = {
       },
       "stats": {
         "totals": {
-          "em_atendimento": 43,
-          "desqualificado": 14,
-          "sem_status": 85,
+          "em_atendimento": 57,
+          "desqualificado": 16,
+          "sem_status": 100,
           "proposta": 2,
           "visita": 3,
           "qualificado": 1,
           "outros_produtos": 1
         },
-        "n_total": 149,
-        "perdidos": 14,
-        "pct_perda": 9.4,
+        "n_total": 180,
+        "perdidos": 16,
+        "pct_perda": 8.9,
         "empreend": [
           {
             "emp": "Edf. Paradise Beach",
@@ -1775,6 +1983,30 @@ window.NI_DATA = {
             }
           },
           {
+            "emp": "Edf. Alto da boa vista",
+            "corretor": "Marcos Jr",
+            "leads": 15,
+            "atend": 11,
+            "visita": 0,
+            "qual": 0,
+            "proposta": 0,
+            "perda": 1,
+            "outros": 0,
+            "sem": 3,
+            "timing": {
+              "start": "2026-06-18",
+              "end": "2026-07-18",
+              "days_active": 4,
+              "days_left": 26,
+              "start_label": "18/06/26",
+              "end_label": "18/07/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Alto da boa vista",
+              "spend": 190.81,
+              "spend_shared": true
+            }
+          },
+          {
             "emp": "Edf. Guaxuma",
             "corretor": "Fernanda",
             "leads": 11,
@@ -1794,7 +2026,7 @@ window.NI_DATA = {
               "end_label": "16/07/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Guaxuma | Fernanda (crop)",
-              "spend": 959.22,
+              "spend": 959.63,
               "spend_shared": false
             }
           },
@@ -1895,6 +2127,30 @@ window.NI_DATA = {
             }
           },
           {
+            "emp": "Edifício Gênesis",
+            "corretor": "Gedson",
+            "leads": 8,
+            "atend": 0,
+            "visita": 0,
+            "qual": 0,
+            "proposta": 0,
+            "perda": 0,
+            "outros": 0,
+            "sem": 8,
+            "timing": {
+              "start": "2026-06-16",
+              "end": "2026-07-16",
+              "days_active": 6,
+              "days_left": 24,
+              "start_label": "16/06/26",
+              "end_label": "16/07/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Edifício Gênesis",
+              "spend": 108.9,
+              "spend_shared": true
+            }
+          },
+          {
             "emp": "Casa no Antares",
             "corretor": "Gedson",
             "leads": 6,
@@ -1963,6 +2219,30 @@ window.NI_DATA = {
               "ad_status": "ACTIVE",
               "ad_name": "VD02",
               "spend": 0.0,
+              "spend_shared": false
+            }
+          },
+          {
+            "emp": "Edf. Barão de Mauá",
+            "corretor": "Gabi",
+            "leads": 5,
+            "atend": 1,
+            "visita": 0,
+            "qual": 0,
+            "proposta": 0,
+            "perda": 0,
+            "outros": 0,
+            "sem": 4,
+            "timing": {
+              "start": "2026-06-09",
+              "end": "2026-07-09",
+              "days_active": 13,
+              "days_left": 17,
+              "start_label": "09/06/26",
+              "end_label": "09/07/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Edf. Barão de Mauá - Gabi",
+              "spend": 53.61,
               "spend_shared": false
             }
           },
@@ -2063,6 +2343,30 @@ window.NI_DATA = {
             }
           },
           {
+            "emp": "Pedras do Farol",
+            "corretor": "Gedson",
+            "leads": 3,
+            "atend": 2,
+            "visita": 0,
+            "qual": 0,
+            "proposta": 0,
+            "perda": 1,
+            "outros": 0,
+            "sem": 0,
+            "timing": {
+              "start": "2026-06-09",
+              "end": "2026-07-09",
+              "days_active": 13,
+              "days_left": 17,
+              "start_label": "09/06/26",
+              "end_label": "09/07/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Pedras do Farol",
+              "spend": 57.26,
+              "spend_shared": true
+            }
+          },
+          {
             "emp": "Edf. Jorge",
             "corretor": "Tatiana",
             "leads": 2,
@@ -2114,26 +2418,26 @@ window.NI_DATA = {
         "motivos": [
           {
             "label": "Sem motivo registrado",
-            "value": 8,
-            "pct": 57.1
+            "value": 9,
+            "pct": 56.2
+          },
+          {
+            "label": "Motivo ambíguo (revisar)",
+            "value": 3,
+            "pct": 18.8
           },
           {
             "label": "Não responde / não atende",
             "value": 3,
-            "pct": 21.4
-          },
-          {
-            "label": "Motivo ambíguo (revisar)",
-            "value": 2,
-            "pct": 14.3
+            "pct": 18.8
           },
           {
             "label": "Lead inválido",
             "value": 1,
-            "pct": 7.1
+            "pct": 6.2
           }
         ],
-        "motivos_total": 14,
+        "motivos_total": 16,
         "perdas_by_emp": [
           {
             "emp": "Jatiúca",
@@ -2178,6 +2482,22 @@ window.NI_DATA = {
           {
             "emp": "Edf. Ametista",
             "corretor": "Thati",
+            "perdas": 1,
+            "motivos": {
+              "Sem motivo registrado": 1
+            }
+          },
+          {
+            "emp": "Pedras do Farol",
+            "corretor": "Gedson",
+            "perdas": 1,
+            "motivos": {
+              "Motivo ambíguo (revisar)": 1
+            }
+          },
+          {
+            "emp": "Edf. Alto da boa vista",
+            "corretor": "Marcos Jr",
             "perdas": 1,
             "motivos": {
               "Sem motivo registrado": 1
@@ -2280,20 +2600,20 @@ window.NI_DATA = {
             10,
             3,
             3,
-            1,
-            1,
+            5,
+            3,
             0,
             0,
             1,
             1,
             0,
-            0,
-            0,
+            4,
+            6,
+            5,
+            6,
             1,
-            1,
-            0,
-            1,
-            0
+            5,
+            1
           ],
           "perda": [
             2,
@@ -2335,6 +2655,7 @@ window.NI_DATA = {
             0,
             0,
             0,
+            1,
             0,
             0,
             0,
@@ -2343,8 +2664,7 @@ window.NI_DATA = {
             0,
             0,
             0,
-            0,
-            0,
+            1,
             0,
             0,
             0,
@@ -2390,19 +2710,19 @@ window.NI_DATA = {
             1,
             0,
             1,
+            2,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            5,
             1,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            2,
             0
           ],
           "visita": [
@@ -2573,16 +2893,16 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 4463.92,
-        "impressions": 109591,
-        "clicks": 2198,
+        "spend": 4466.19,
+        "impressions": 109635,
+        "clicks": 2199,
         "ctr": 2.01,
-        "frequency": 3.83,
-        "reach": 28641,
+        "frequency": 3.82,
+        "reach": 28682,
         "leads_form": 228,
         "msg_started": 41,
         "total_meta": 269,
-        "cpl": 16.59,
+        "cpl": 16.6,
         "campaign": {
           "name": "Fundo de Funil | Blend Grand Reserva | 12/05 #TP",
           "status": "ACTIVE",
@@ -2604,7 +2924,7 @@ window.NI_DATA = {
           "cls": "proc",
           "icon": "process",
           "title": "Padronizar planilhas",
-          "desc": "<b>57% dos leads sem status</b> (85 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
+          "desc": "<b>56% dos leads sem status</b> (100 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
         }
       ]
     }
