@@ -1,5 +1,5 @@
 window.NI_DATA = {
-  "generated_at": "22/06/2026 13:34",
+  "generated_at": "22/06/2026 15:46",
   "default_view": "total",
   "views": {
     "total": {
@@ -11,7 +11,7 @@ window.NI_DATA = {
       },
       "stats": {
         "totals": {
-          "em_atendimento": 57,
+          "em_atendimento": 59,
           "desqualificado": 16,
           "sem_status": 100,
           "proposta": 2,
@@ -19,9 +19,9 @@ window.NI_DATA = {
           "qualificado": 1,
           "outros_produtos": 1
         },
-        "n_total": 180,
+        "n_total": 182,
         "perdidos": 16,
-        "pct_perda": 8.9,
+        "pct_perda": 8.8,
         "empreend": [
           {
             "emp": "Edf. Paradise Beach",
@@ -91,7 +91,7 @@ window.NI_DATA = {
               "end_label": "18/07/26",
               "ad_status": "ACTIVE",
               "ad_name": "Alto da boa vista",
-              "spend": 190.81,
+              "spend": 202.3,
               "spend_shared": true
             }
           },
@@ -115,7 +115,7 @@ window.NI_DATA = {
               "end_label": "16/07/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Guaxuma | Fernanda (crop)",
-              "spend": 959.9,
+              "spend": 962.45,
               "spend_shared": false
             }
           },
@@ -240,6 +240,30 @@ window.NI_DATA = {
             }
           },
           {
+            "emp": "Edf. Barão de Mauá",
+            "corretor": "Gabi",
+            "leads": 7,
+            "atend": 3,
+            "visita": 0,
+            "qual": 0,
+            "proposta": 0,
+            "perda": 0,
+            "outros": 0,
+            "sem": 4,
+            "timing": {
+              "start": "2026-06-09",
+              "end": "2026-07-09",
+              "days_active": 13,
+              "days_left": 17,
+              "start_label": "09/06/26",
+              "end_label": "09/07/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Edf. Barão de Mauá - Gabi",
+              "spend": 53.61,
+              "spend_shared": false
+            }
+          },
+          {
             "emp": "Jardim América",
             "corretor": "Gedson",
             "leads": 6,
@@ -308,30 +332,6 @@ window.NI_DATA = {
               "ad_status": "ACTIVE",
               "ad_name": "VD02",
               "spend": 0.0,
-              "spend_shared": false
-            }
-          },
-          {
-            "emp": "Edf. Barão de Mauá",
-            "corretor": "Gabi",
-            "leads": 5,
-            "atend": 1,
-            "visita": 0,
-            "qual": 0,
-            "proposta": 0,
-            "perda": 0,
-            "outros": 0,
-            "sem": 4,
-            "timing": {
-              "start": "2026-06-09",
-              "end": "2026-07-09",
-              "days_active": 13,
-              "days_left": 17,
-              "start_label": "09/06/26",
-              "end_label": "09/07/26",
-              "ad_status": "ACTIVE",
-              "ad_name": "Edf. Barão de Mauá - Gabi",
-              "spend": 53.61,
               "spend_shared": false
             }
           },
@@ -702,7 +702,7 @@ window.NI_DATA = {
             6,
             1,
             5,
-            1
+            3
           ],
           "perda": [
             2,
@@ -806,8 +806,8 @@ window.NI_DATA = {
             0,
             0,
             0,
-            0,
-            0,
+            1,
+            1,
             3,
             5,
             1,
@@ -982,16 +982,16 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 4467.04,
-        "impressions": 109656,
-        "clicks": 2199,
-        "ctr": 2.01,
-        "frequency": 3.82,
-        "reach": 28682,
+        "spend": 4484.84,
+        "impressions": 110160,
+        "clicks": 2208,
+        "ctr": 2.0,
+        "frequency": 3.83,
+        "reach": 28761,
         "leads_form": 228,
         "msg_started": 41,
         "total_meta": 269,
-        "cpl": 16.61,
+        "cpl": 16.67,
         "campaign": {
           "name": "Fundo de Funil | Blend Grand Reserva | 12/05 #TP",
           "status": "ACTIVE",
@@ -1013,7 +1013,7 @@ window.NI_DATA = {
           "cls": "proc",
           "icon": "process",
           "title": "Padronizar planilhas",
-          "desc": "<b>56% dos leads sem status</b> (100 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
+          "desc": "<b>55% dos leads sem status</b> (100 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
         }
       ]
     },
@@ -1922,7 +1922,7 @@ window.NI_DATA = {
       },
       "stats": {
         "totals": {
-          "em_atendimento": 57,
+          "em_atendimento": 59,
           "desqualificado": 16,
           "sem_status": 100,
           "proposta": 2,
@@ -1930,9 +1930,9 @@ window.NI_DATA = {
           "qualificado": 1,
           "outros_produtos": 1
         },
-        "n_total": 180,
+        "n_total": 182,
         "perdidos": 16,
-        "pct_perda": 8.9,
+        "pct_perda": 8.8,
         "empreend": [
           {
             "emp": "Edf. Paradise Beach",
@@ -2002,7 +2002,7 @@ window.NI_DATA = {
               "end_label": "18/07/26",
               "ad_status": "ACTIVE",
               "ad_name": "Alto da boa vista",
-              "spend": 190.81,
+              "spend": 202.3,
               "spend_shared": true
             }
           },
@@ -2026,7 +2026,7 @@ window.NI_DATA = {
               "end_label": "16/07/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Guaxuma | Fernanda (crop)",
-              "spend": 959.9,
+              "spend": 962.45,
               "spend_shared": false
             }
           },
@@ -2151,6 +2151,30 @@ window.NI_DATA = {
             }
           },
           {
+            "emp": "Edf. Barão de Mauá",
+            "corretor": "Gabi",
+            "leads": 7,
+            "atend": 3,
+            "visita": 0,
+            "qual": 0,
+            "proposta": 0,
+            "perda": 0,
+            "outros": 0,
+            "sem": 4,
+            "timing": {
+              "start": "2026-06-09",
+              "end": "2026-07-09",
+              "days_active": 13,
+              "days_left": 17,
+              "start_label": "09/06/26",
+              "end_label": "09/07/26",
+              "ad_status": "ACTIVE",
+              "ad_name": "Edf. Barão de Mauá - Gabi",
+              "spend": 53.61,
+              "spend_shared": false
+            }
+          },
+          {
             "emp": "Jardim América",
             "corretor": "Gedson",
             "leads": 6,
@@ -2219,30 +2243,6 @@ window.NI_DATA = {
               "ad_status": "ACTIVE",
               "ad_name": "VD02",
               "spend": 0.0,
-              "spend_shared": false
-            }
-          },
-          {
-            "emp": "Edf. Barão de Mauá",
-            "corretor": "Gabi",
-            "leads": 5,
-            "atend": 1,
-            "visita": 0,
-            "qual": 0,
-            "proposta": 0,
-            "perda": 0,
-            "outros": 0,
-            "sem": 4,
-            "timing": {
-              "start": "2026-06-09",
-              "end": "2026-07-09",
-              "days_active": 13,
-              "days_left": 17,
-              "start_label": "09/06/26",
-              "end_label": "09/07/26",
-              "ad_status": "ACTIVE",
-              "ad_name": "Edf. Barão de Mauá - Gabi",
-              "spend": 53.61,
               "spend_shared": false
             }
           },
@@ -2613,7 +2613,7 @@ window.NI_DATA = {
             6,
             1,
             5,
-            1
+            3
           ],
           "perda": [
             2,
@@ -2717,8 +2717,8 @@ window.NI_DATA = {
             0,
             0,
             0,
-            0,
-            0,
+            1,
+            1,
             3,
             5,
             1,
@@ -2893,16 +2893,16 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 4467.04,
-        "impressions": 109656,
-        "clicks": 2199,
-        "ctr": 2.01,
-        "frequency": 3.82,
-        "reach": 28682,
+        "spend": 4484.84,
+        "impressions": 110160,
+        "clicks": 2208,
+        "ctr": 2.0,
+        "frequency": 3.83,
+        "reach": 28761,
         "leads_form": 228,
         "msg_started": 41,
         "total_meta": 269,
-        "cpl": 16.61,
+        "cpl": 16.67,
         "campaign": {
           "name": "Fundo de Funil | Blend Grand Reserva | 12/05 #TP",
           "status": "ACTIVE",
@@ -2924,7 +2924,7 @@ window.NI_DATA = {
           "cls": "proc",
           "icon": "process",
           "title": "Padronizar planilhas",
-          "desc": "<b>56% dos leads sem status</b> (100 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
+          "desc": "<b>55% dos leads sem status</b> (100 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
         }
       ]
     }
