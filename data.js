@@ -1,5 +1,5 @@
 window.NI_DATA = {
-  "generated_at": "13/07/2026 13:11",
+  "generated_at": "13/07/2026 13:21",
   "default_view": "total",
   "views": {
     "total": {
@@ -351,7 +351,7 @@ window.NI_DATA = {
               "end_label": "09/07/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. El Greco - Rose",
-              "spend": 975.89,
+              "spend": 975.93,
               "spend_shared": false
             }
           },
@@ -863,8 +863,8 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 4441.87,
-        "impressions": 104784,
+        "spend": 4441.91,
+        "impressions": 104786,
         "clicks": 2300,
         "ctr": 2.19,
         "frequency": 3.75,
@@ -2140,7 +2140,7 @@ window.NI_DATA = {
               "end_label": "09/07/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. El Greco - Rose",
-              "spend": 1045.56,
+              "spend": 1045.6,
               "spend_shared": false
             }
           },
@@ -2914,8 +2914,8 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 6644.94,
-        "impressions": 160146,
+        "spend": 6644.98,
+        "impressions": 160148,
         "clicks": 3322,
         "ctr": 2.07,
         "frequency": 4.22,
