@@ -1,12 +1,12 @@
 window.NI_DATA = {
-  "generated_at": "30/07/2026 12:28",
+  "generated_at": "31/07/2026 12:53",
   "default_view": "total",
   "views": {
     "total": {
       "period": {
         "start": "2026-06-01",
-        "end": "2026-07-30",
-        "label": "01/06 a 30/07",
+        "end": "2026-07-31",
+        "label": "01/06 a 31/07",
         "name": "Período total"
       },
       "stats": {
@@ -34,8 +34,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-06-18",
               "end": "2026-07-18",
-              "days_active": 42,
-              "days_left": -12,
+              "days_active": 43,
+              "days_left": -13,
               "start_label": "18/06/26",
               "end_label": "18/07/26",
               "ad_status": "PAUSED",
@@ -58,8 +58,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-05-25",
               "end": "2026-06-24",
-              "days_active": 66,
-              "days_left": -36,
+              "days_active": 67,
+              "days_left": -37,
               "start_label": "25/05/26",
               "end_label": "24/06/26",
               "ad_status": "PAUSED",
@@ -82,8 +82,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-07-22",
               "end": "2026-08-21",
-              "days_active": 8,
-              "days_left": 22,
+              "days_active": 9,
+              "days_left": 21,
               "start_label": "22/07/26",
               "end_label": "21/08/26",
               "ad_status": "ACTIVE",
@@ -106,8 +106,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-06-16",
               "end": "2026-07-16",
-              "days_active": 44,
-              "days_left": -14,
+              "days_active": 45,
+              "days_left": -15,
               "start_label": "16/06/26",
               "end_label": "16/07/26",
               "ad_status": "ADSET_PAUSED",
@@ -130,8 +130,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-05-25",
               "end": "2026-06-24",
-              "days_active": 66,
-              "days_left": -36,
+              "days_active": 67,
+              "days_left": -37,
               "start_label": "25/05/26",
               "end_label": "24/06/26",
               "ad_status": "PAUSED",
@@ -154,8 +154,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-07-22",
               "end": "2026-08-21",
-              "days_active": 8,
-              "days_left": 22,
+              "days_active": 9,
+              "days_left": 21,
               "start_label": "22/07/26",
               "end_label": "21/08/26",
               "ad_status": "ACTIVE",
@@ -178,13 +178,13 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-06-16",
               "end": "2026-07-16",
-              "days_active": 44,
-              "days_left": -14,
+              "days_active": 45,
+              "days_left": -15,
               "start_label": "16/06/26",
               "end_label": "16/07/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edifício Gênesis",
-              "spend": 227.11,
+              "spend": 235.68,
               "spend_shared": true
             }
           },
@@ -202,8 +202,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-06-09",
               "end": "2026-07-09",
-              "days_active": 51,
-              "days_left": -21,
+              "days_active": 52,
+              "days_left": -22,
               "start_label": "09/06/26",
               "end_label": "09/07/26",
               "ad_status": "PAUSED",
@@ -226,13 +226,13 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-05-28",
               "end": "2026-06-27",
-              "days_active": 63,
-              "days_left": -33,
+              "days_active": 64,
+              "days_left": -34,
               "start_label": "28/05/26",
               "end_label": "27/06/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Horto Boulevard | Dimitry",
-              "spend": 307.12,
+              "spend": 307.29,
               "spend_shared": false
             }
           },
@@ -250,8 +250,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-06-09",
               "end": "2026-07-09",
-              "days_active": 51,
-              "days_left": -21,
+              "days_active": 52,
+              "days_left": -22,
               "start_label": "09/06/26",
               "end_label": "09/07/26",
               "ad_status": "PAUSED",
@@ -274,8 +274,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-05-25",
               "end": "2026-06-24",
-              "days_active": 66,
-              "days_left": -36,
+              "days_active": 67,
+              "days_left": -37,
               "start_label": "25/05/26",
               "end_label": "24/06/26",
               "ad_status": "PAUSED",
@@ -322,8 +322,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-04-01",
               "end": "2026-05-01",
-              "days_active": 120,
-              "days_left": -90,
+              "days_active": 121,
+              "days_left": -91,
               "start_label": "01/04/26",
               "end_label": "01/05/26",
               "ad_status": "PAUSED",
@@ -346,8 +346,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-06-09",
               "end": "2026-07-09",
-              "days_active": 51,
-              "days_left": -21,
+              "days_active": 52,
+              "days_left": -22,
               "start_label": "09/06/26",
               "end_label": "09/07/26",
               "ad_status": "PAUSED",
@@ -370,8 +370,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-02-27",
               "end": "2026-03-29",
-              "days_active": 153,
-              "days_left": -123,
+              "days_active": 154,
+              "days_left": -124,
               "start_label": "27/02/26",
               "end_label": "29/03/26",
               "ad_status": "PAUSED",
@@ -394,8 +394,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-02-27",
               "end": "2026-03-29",
-              "days_active": 153,
-              "days_left": -123,
+              "days_active": 154,
+              "days_left": -124,
               "start_label": "27/02/26",
               "end_label": "29/03/26",
               "ad_status": "PAUSED",
@@ -418,8 +418,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-02-27",
               "end": "2026-03-29",
-              "days_active": 153,
-              "days_left": -123,
+              "days_active": 154,
+              "days_left": -124,
               "start_label": "27/02/26",
               "end_label": "29/03/26",
               "ad_status": "PAUSED",
@@ -442,8 +442,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-04-27",
               "end": "2026-05-27",
-              "days_active": 94,
-              "days_left": -64,
+              "days_active": 95,
+              "days_left": -65,
               "start_label": "27/04/26",
               "end_label": "27/05/26",
               "ad_status": "PAUSED",
@@ -466,8 +466,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-04-27",
               "end": "2026-05-27",
-              "days_active": 94,
-              "days_left": -64,
+              "days_active": 95,
+              "days_left": -65,
               "start_label": "27/04/26",
               "end_label": "27/05/26",
               "ad_status": "PAUSED",
@@ -490,8 +490,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-07-22",
               "end": "2026-08-21",
-              "days_active": 8,
-              "days_left": 22,
+              "days_active": 9,
+              "days_left": 21,
               "start_label": "22/07/26",
               "end_label": "21/08/26",
               "ad_status": "ACTIVE",
@@ -620,7 +620,8 @@ window.NI_DATA = {
             "27/07",
             "28/07",
             "29/07",
-            "30/07"
+            "30/07",
+            "31/07"
           ],
           "total": [
             5,
@@ -682,6 +683,7 @@ window.NI_DATA = {
             5,
             2,
             0,
+            0,
             0
           ],
           "perda": [
@@ -742,6 +744,7 @@ window.NI_DATA = {
             0,
             0,
             2,
+            0,
             0,
             0,
             0
@@ -806,9 +809,11 @@ window.NI_DATA = {
             1,
             2,
             0,
+            0,
             0
           ],
           "visita": [
+            0,
             0,
             0,
             0,
@@ -930,9 +935,11 @@ window.NI_DATA = {
             0,
             0,
             0,
+            0,
             0
           ],
           "proposta": [
+            0,
             0,
             0,
             0,
@@ -997,16 +1004,16 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 6111.7,
-        "impressions": 139639,
-        "clicks": 2910,
-        "ctr": 2.08,
-        "frequency": 4.34,
-        "reach": 32154,
-        "leads_form": 228,
-        "msg_started": 65,
-        "total_meta": 293,
-        "cpl": 20.86,
+        "spend": 6295.45,
+        "impressions": 144005,
+        "clicks": 2977,
+        "ctr": 2.07,
+        "frequency": 4.33,
+        "reach": 33266,
+        "leads_form": 231,
+        "msg_started": 66,
+        "total_meta": 297,
+        "cpl": 21.2,
         "campaign": {
           "name": "Fundo de Funil | Blend Grand Reserva | 12/05 #TP",
           "status": "ACTIVE",
@@ -1060,8 +1067,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-06-09",
               "end": "2026-07-09",
-              "days_active": 51,
-              "days_left": -21,
+              "days_active": 52,
+              "days_left": -22,
               "start_label": "09/06/26",
               "end_label": "09/07/26",
               "ad_status": "PAUSED",
@@ -1108,8 +1115,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-02-27",
               "end": "2026-03-29",
-              "days_active": 153,
-              "days_left": -123,
+              "days_active": 154,
+              "days_left": -124,
               "start_label": "27/02/26",
               "end_label": "29/03/26",
               "ad_status": "PAUSED",
@@ -1132,8 +1139,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-06-16",
               "end": "2026-07-16",
-              "days_active": 44,
-              "days_left": -14,
+              "days_active": 45,
+              "days_left": -15,
               "start_label": "16/06/26",
               "end_label": "16/07/26",
               "ad_status": "ADSET_PAUSED",
@@ -1156,8 +1163,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-02-27",
               "end": "2026-03-29",
-              "days_active": 153,
-              "days_left": -123,
+              "days_active": 154,
+              "days_left": -124,
               "start_label": "27/02/26",
               "end_label": "29/03/26",
               "ad_status": "PAUSED",
@@ -1180,8 +1187,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-04-27",
               "end": "2026-05-27",
-              "days_active": 94,
-              "days_left": -64,
+              "days_active": 95,
+              "days_left": -65,
               "start_label": "27/04/26",
               "end_label": "27/05/26",
               "ad_status": "PAUSED",
@@ -1204,8 +1211,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-04-01",
               "end": "2026-05-01",
-              "days_active": 120,
-              "days_left": -90,
+              "days_active": 121,
+              "days_left": -91,
               "start_label": "01/04/26",
               "end_label": "01/05/26",
               "ad_status": "PAUSED",
@@ -1228,8 +1235,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-02-27",
               "end": "2026-03-29",
-              "days_active": 153,
-              "days_left": -123,
+              "days_active": 154,
+              "days_left": -124,
               "start_label": "27/02/26",
               "end_label": "29/03/26",
               "ad_status": "PAUSED",
@@ -1252,8 +1259,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-05-25",
               "end": "2026-06-24",
-              "days_active": 66,
-              "days_left": -36,
+              "days_active": 67,
+              "days_left": -37,
               "start_label": "25/05/26",
               "end_label": "24/06/26",
               "ad_status": "PAUSED",
@@ -1276,8 +1283,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-04-27",
               "end": "2026-05-27",
-              "days_active": 94,
-              "days_left": -64,
+              "days_active": 95,
+              "days_left": -65,
               "start_label": "27/04/26",
               "end_label": "27/05/26",
               "ad_status": "PAUSED",
@@ -1300,8 +1307,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-07-22",
               "end": "2026-08-21",
-              "days_active": 8,
-              "days_left": 22,
+              "days_active": 9,
+              "days_left": 21,
               "start_label": "22/07/26",
               "end_label": "21/08/26",
               "ad_status": "ACTIVE",
@@ -1324,8 +1331,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-07-22",
               "end": "2026-08-21",
-              "days_active": 8,
-              "days_left": 22,
+              "days_active": 9,
+              "days_left": 21,
               "start_label": "22/07/26",
               "end_label": "21/08/26",
               "ad_status": "ACTIVE",
@@ -1348,8 +1355,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-07-22",
               "end": "2026-08-21",
-              "days_active": 8,
-              "days_left": 22,
+              "days_active": 9,
+              "days_left": 21,
               "start_label": "22/07/26",
               "end_label": "21/08/26",
               "ad_status": "ACTIVE",
@@ -1372,8 +1379,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-05-25",
               "end": "2026-06-24",
-              "days_active": 66,
-              "days_left": -36,
+              "days_active": 67,
+              "days_left": -37,
               "start_label": "25/05/26",
               "end_label": "24/06/26",
               "ad_status": "PAUSED",
@@ -1396,8 +1403,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-05-28",
               "end": "2026-06-27",
-              "days_active": 63,
-              "days_left": -33,
+              "days_active": 64,
+              "days_left": -34,
               "start_label": "28/05/26",
               "end_label": "27/06/26",
               "ad_status": "ACTIVE",
@@ -1420,8 +1427,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-05-25",
               "end": "2026-06-24",
-              "days_active": 66,
-              "days_left": -36,
+              "days_active": 67,
+              "days_left": -37,
               "start_label": "25/05/26",
               "end_label": "24/06/26",
               "ad_status": "PAUSED",
@@ -1444,8 +1451,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-06-09",
               "end": "2026-07-09",
-              "days_active": 51,
-              "days_left": -21,
+              "days_active": 52,
+              "days_left": -22,
               "start_label": "09/06/26",
               "end_label": "09/07/26",
               "ad_status": "PAUSED",
@@ -1468,8 +1475,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-06-16",
               "end": "2026-07-16",
-              "days_active": 44,
-              "days_left": -14,
+              "days_active": 45,
+              "days_left": -15,
               "start_label": "16/06/26",
               "end_label": "16/07/26",
               "ad_status": "ACTIVE",
@@ -1492,8 +1499,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-06-09",
               "end": "2026-07-09",
-              "days_active": 51,
-              "days_left": -21,
+              "days_active": 52,
+              "days_left": -22,
               "start_label": "09/06/26",
               "end_label": "09/07/26",
               "ad_status": "PAUSED",
@@ -1516,8 +1523,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-06-18",
               "end": "2026-07-18",
-              "days_active": 42,
-              "days_left": -12,
+              "days_active": 43,
+              "days_left": -13,
               "start_label": "18/06/26",
               "end_label": "18/07/26",
               "ad_status": "PAUSED",
@@ -1924,8 +1931,8 @@ window.NI_DATA = {
     "maio": {
       "period": {
         "start": "2026-05-01",
-        "end": "2026-07-30",
-        "label": "01/05 a 30/07",
+        "end": "2026-07-31",
+        "label": "01/05 a 31/07",
         "name": "Maio"
       },
       "stats": {
@@ -1956,8 +1963,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-05-25",
               "end": "2026-06-24",
-              "days_active": 66,
-              "days_left": -36,
+              "days_active": 67,
+              "days_left": -37,
               "start_label": "25/05/26",
               "end_label": "24/06/26",
               "ad_status": "PAUSED",
@@ -1980,8 +1987,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-06-18",
               "end": "2026-07-18",
-              "days_active": 42,
-              "days_left": -12,
+              "days_active": 43,
+              "days_left": -13,
               "start_label": "18/06/26",
               "end_label": "18/07/26",
               "ad_status": "PAUSED",
@@ -2004,8 +2011,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-04-27",
               "end": "2026-05-27",
-              "days_active": 94,
-              "days_left": -64,
+              "days_active": 95,
+              "days_left": -65,
               "start_label": "27/04/26",
               "end_label": "27/05/26",
               "ad_status": "PAUSED",
@@ -2028,8 +2035,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-07-22",
               "end": "2026-08-21",
-              "days_active": 8,
-              "days_left": 22,
+              "days_active": 9,
+              "days_left": 21,
               "start_label": "22/07/26",
               "end_label": "21/08/26",
               "ad_status": "ACTIVE",
@@ -2052,8 +2059,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-07-22",
               "end": "2026-08-21",
-              "days_active": 8,
-              "days_left": 22,
+              "days_active": 9,
+              "days_left": 21,
               "start_label": "22/07/26",
               "end_label": "21/08/26",
               "ad_status": "ACTIVE",
@@ -2076,8 +2083,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-05-25",
               "end": "2026-06-24",
-              "days_active": 66,
-              "days_left": -36,
+              "days_active": 67,
+              "days_left": -37,
               "start_label": "25/05/26",
               "end_label": "24/06/26",
               "ad_status": "PAUSED",
@@ -2100,8 +2107,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-06-16",
               "end": "2026-07-16",
-              "days_active": 44,
-              "days_left": -14,
+              "days_active": 45,
+              "days_left": -15,
               "start_label": "16/06/26",
               "end_label": "16/07/26",
               "ad_status": "ADSET_PAUSED",
@@ -2124,8 +2131,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-02-27",
               "end": "2026-03-29",
-              "days_active": 153,
-              "days_left": -123,
+              "days_active": 154,
+              "days_left": -124,
               "start_label": "27/02/26",
               "end_label": "29/03/26",
               "ad_status": "PAUSED",
@@ -2148,8 +2155,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-02-27",
               "end": "2026-03-29",
-              "days_active": 153,
-              "days_left": -123,
+              "days_active": 154,
+              "days_left": -124,
               "start_label": "27/02/26",
               "end_label": "29/03/26",
               "ad_status": "PAUSED",
@@ -2172,8 +2179,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-02-27",
               "end": "2026-03-29",
-              "days_active": 153,
-              "days_left": -123,
+              "days_active": 154,
+              "days_left": -124,
               "start_label": "27/02/26",
               "end_label": "29/03/26",
               "ad_status": "PAUSED",
@@ -2196,13 +2203,13 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-06-16",
               "end": "2026-07-16",
-              "days_active": 44,
-              "days_left": -14,
+              "days_active": 45,
+              "days_left": -15,
               "start_label": "16/06/26",
               "end_label": "16/07/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edifício Gênesis",
-              "spend": 227.11,
+              "spend": 235.68,
               "spend_shared": true
             }
           },
@@ -2220,13 +2227,13 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-05-28",
               "end": "2026-06-27",
-              "days_active": 63,
-              "days_left": -33,
+              "days_active": 64,
+              "days_left": -34,
               "start_label": "28/05/26",
               "end_label": "27/06/26",
               "ad_status": "ACTIVE",
               "ad_name": "Edf. Horto Boulevard | Dimitry",
-              "spend": 388.71,
+              "spend": 388.88,
               "spend_shared": false
             }
           },
@@ -2244,8 +2251,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-06-09",
               "end": "2026-07-09",
-              "days_active": 51,
-              "days_left": -21,
+              "days_active": 52,
+              "days_left": -22,
               "start_label": "09/06/26",
               "end_label": "09/07/26",
               "ad_status": "PAUSED",
@@ -2292,8 +2299,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-06-09",
               "end": "2026-07-09",
-              "days_active": 51,
-              "days_left": -21,
+              "days_active": 52,
+              "days_left": -22,
               "start_label": "09/06/26",
               "end_label": "09/07/26",
               "ad_status": "PAUSED",
@@ -2316,8 +2323,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-07-22",
               "end": "2026-08-21",
-              "days_active": 8,
-              "days_left": 22,
+              "days_active": 9,
+              "days_left": 21,
               "start_label": "22/07/26",
               "end_label": "21/08/26",
               "ad_status": "ACTIVE",
@@ -2340,8 +2347,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-05-25",
               "end": "2026-06-24",
-              "days_active": 66,
-              "days_left": -36,
+              "days_active": 67,
+              "days_left": -37,
               "start_label": "25/05/26",
               "end_label": "24/06/26",
               "ad_status": "PAUSED",
@@ -2364,8 +2371,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-06-09",
               "end": "2026-07-09",
-              "days_active": 51,
-              "days_left": -21,
+              "days_active": 52,
+              "days_left": -22,
               "start_label": "09/06/26",
               "end_label": "09/07/26",
               "ad_status": "PAUSED",
@@ -2388,8 +2395,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-04-01",
               "end": "2026-05-01",
-              "days_active": 120,
-              "days_left": -90,
+              "days_active": 121,
+              "days_left": -91,
               "start_label": "01/04/26",
               "end_label": "01/05/26",
               "ad_status": "PAUSED",
@@ -2412,8 +2419,8 @@ window.NI_DATA = {
             "timing": {
               "start": "2026-04-27",
               "end": "2026-05-27",
-              "days_active": 94,
-              "days_left": -64,
+              "days_active": 95,
+              "days_left": -65,
               "start_label": "27/04/26",
               "end_label": "27/05/26",
               "ad_status": "PAUSED",
@@ -2605,7 +2612,8 @@ window.NI_DATA = {
             "27/07",
             "28/07",
             "29/07",
-            "30/07"
+            "30/07",
+            "31/07"
           ],
           "total": [
             4,
@@ -2698,6 +2706,7 @@ window.NI_DATA = {
             5,
             2,
             0,
+            0,
             0
           ],
           "perda": [
@@ -2789,6 +2798,7 @@ window.NI_DATA = {
             0,
             0,
             2,
+            0,
             0,
             0,
             0
@@ -2884,6 +2894,7 @@ window.NI_DATA = {
             1,
             2,
             0,
+            0,
             0
           ],
           "visita": [
@@ -2977,6 +2988,7 @@ window.NI_DATA = {
             0,
             0,
             0,
+            0,
             0
           ],
           "qual": [
@@ -2995,6 +3007,7 @@ window.NI_DATA = {
             0,
             0,
             1,
+            0,
             0,
             0,
             0,
@@ -3163,21 +3176,22 @@ window.NI_DATA = {
             0,
             0,
             0,
+            0,
             0
           ]
         }
       },
       "meta": {
-        "spend": 8314.77,
-        "impressions": 195001,
-        "clicks": 3932,
-        "ctr": 2.02,
-        "frequency": 4.66,
-        "reach": 41826,
-        "leads_form": 340,
-        "msg_started": 80,
-        "total_meta": 420,
-        "cpl": 19.8,
+        "spend": 8498.52,
+        "impressions": 199367,
+        "clicks": 3999,
+        "ctr": 2.01,
+        "frequency": 4.67,
+        "reach": 42646,
+        "leads_form": 343,
+        "msg_started": 81,
+        "total_meta": 424,
+        "cpl": 20.04,
         "campaign": {
           "name": "Fundo de Funil | Blend Grand Reserva | 12/05 #TP",
           "status": "ACTIVE",
