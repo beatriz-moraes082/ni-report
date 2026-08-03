@@ -1,5 +1,5 @@
 window.NI_DATA = {
-  "generated_at": "03/08/2026 13:32",
+  "generated_at": "03/08/2026 13:39",
   "default_view": "total",
   "views": {
     "total": {
@@ -781,8 +781,8 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 3803.41,
-        "impressions": 81819,
+        "spend": 3805.97,
+        "impressions": 81836,
         "clicks": 1583,
         "ctr": 1.93,
         "frequency": 4.02,
@@ -790,7 +790,7 @@ window.NI_DATA = {
         "leads_form": 99,
         "msg_started": 33,
         "total_meta": 132,
-        "cpl": 28.81,
+        "cpl": 28.83,
         "campaign": {
           "name": "Fundo de Funil | Blend Grand Reserva | 12/05 #TP",
           "status": "ACTIVE",
@@ -2980,8 +2980,8 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 9210.65,
-        "impressions": 215537,
+        "spend": 9213.21,
+        "impressions": 215554,
         "clicks": 4309,
         "ctr": 2.0,
         "frequency": 4.68,
@@ -2989,7 +2989,7 @@ window.NI_DATA = {
         "leads_form": 355,
         "msg_started": 85,
         "total_meta": 440,
-        "cpl": 20.93,
+        "cpl": 20.94,
         "campaign": {
           "name": "Fundo de Funil | Blend Grand Reserva | 12/05 #TP",
           "status": "ACTIVE",
