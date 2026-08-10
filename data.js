@@ -1,12 +1,12 @@
 window.NI_DATA = {
-  "generated_at": "09/08/2026 11:26",
+  "generated_at": "10/08/2026 11:40",
   "default_view": "total",
   "views": {
     "total": {
       "period": {
         "start": "2026-07-01",
-        "end": "2026-08-09",
-        "label": "01/07 a 09/08",
+        "end": "2026-08-10",
+        "label": "01/07 a 10/08",
         "name": "Período total"
       },
       "stats": {
@@ -14,23 +14,23 @@ window.NI_DATA = {
           "em_atendimento": 8,
           "desqualificado": 5,
           "outros_produtos": 1,
-          "sem_status": 14
+          "sem_status": 15
         },
-        "n_total": 28,
+        "n_total": 29,
         "perdidos": 5,
-        "pct_perda": 17.9,
+        "pct_perda": 17.2,
         "empreend": [
           {
             "emp": "Blend Grand Reserva",
             "corretor": "Tati",
-            "leads": 12,
+            "leads": 13,
             "atend": 3,
             "visita": 0,
             "qual": 0,
             "proposta": 0,
             "perda": 5,
             "outros": 1,
-            "sem": 3,
+            "sem": 4,
             "timing": {
               "start": null,
               "end": null,
@@ -566,7 +566,8 @@ window.NI_DATA = {
             "06/08",
             "07/08",
             "08/08",
-            "09/08"
+            "09/08",
+            "10/08"
           ],
           "total": [
             0,
@@ -608,6 +609,7 @@ window.NI_DATA = {
             0,
             0,
             0,
+            1,
             0
           ],
           "perda": [
@@ -638,6 +640,7 @@ window.NI_DATA = {
             0,
             0,
             2,
+            0,
             0,
             0,
             0,
@@ -692,9 +695,11 @@ window.NI_DATA = {
             0,
             0,
             0,
+            0,
             0
           ],
           "visita": [
+            0,
             0,
             0,
             0,
@@ -776,9 +781,11 @@ window.NI_DATA = {
             0,
             0,
             0,
+            0,
             0
           ],
           "proposta": [
+            0,
             0,
             0,
             0,
@@ -847,7 +854,7 @@ window.NI_DATA = {
           "cls": "proc",
           "icon": "process",
           "title": "Padronizar planilhas",
-          "desc": "<b>50% dos leads sem status</b> (14 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
+          "desc": "<b>52% dos leads sem status</b> (15 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
         }
       ]
     },
@@ -1750,24 +1757,24 @@ window.NI_DATA = {
     "maio": {
       "period": {
         "start": "2026-05-01",
-        "end": "2026-08-09",
-        "label": "01/05 a 09/08",
+        "end": "2026-08-10",
+        "label": "01/05 a 10/08",
         "name": "Maio"
       },
       "stats": {
         "totals": {
           "em_atendimento": 71,
           "desqualificado": 27,
-          "sem_status": 128,
+          "sem_status": 129,
           "proposta": 2,
           "visita": 3,
           "qualificado": 1,
           "outros_produtos": 2,
           "nao_momento": 1
         },
-        "n_total": 235,
+        "n_total": 236,
         "perdidos": 27,
-        "pct_perda": 11.5,
+        "pct_perda": 11.4,
         "empreend": [
           {
             "emp": "Edf. Paradise Beach",
@@ -1868,14 +1875,14 @@ window.NI_DATA = {
           {
             "emp": "Blend Grand Reserva",
             "corretor": "Tati",
-            "leads": 14,
+            "leads": 15,
             "atend": 3,
             "visita": 0,
             "qual": 0,
             "proposta": 0,
             "perda": 7,
             "outros": 1,
-            "sem": 3,
+            "sem": 4,
             "timing": {
               "start": null,
               "end": null,
@@ -2457,7 +2464,8 @@ window.NI_DATA = {
             "06/08",
             "07/08",
             "08/08",
-            "09/08"
+            "09/08",
+            "10/08"
           ],
           "total": [
             4,
@@ -2560,6 +2568,7 @@ window.NI_DATA = {
             0,
             0,
             0,
+            1,
             0
           ],
           "perda": [
@@ -2651,6 +2660,7 @@ window.NI_DATA = {
             0,
             0,
             2,
+            0,
             0,
             0,
             0,
@@ -2766,6 +2776,7 @@ window.NI_DATA = {
             0,
             0,
             0,
+            0,
             0
           ],
           "visita": [
@@ -2869,6 +2880,7 @@ window.NI_DATA = {
             0,
             0,
             0,
+            0,
             0
           ],
           "qual": [
@@ -2887,6 +2899,7 @@ window.NI_DATA = {
             0,
             0,
             1,
+            0,
             0,
             0,
             0,
@@ -3075,6 +3088,7 @@ window.NI_DATA = {
             0,
             0,
             0,
+            0,
             0
           ]
         }
@@ -3111,7 +3125,7 @@ window.NI_DATA = {
           "cls": "proc",
           "icon": "process",
           "title": "Padronizar planilhas",
-          "desc": "<b>54% dos leads sem status</b> (128 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
+          "desc": "<b>55% dos leads sem status</b> (129 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
         }
       ]
     }
