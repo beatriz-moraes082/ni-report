@@ -1,24 +1,24 @@
 window.NI_DATA = {
-  "generated_at": "13/08/2026 11:43",
+  "generated_at": "14/08/2026 11:42",
   "default_view": "total",
   "views": {
     "total": {
       "period": {
         "start": "2026-07-01",
-        "end": "2026-08-13",
-        "label": "01/07 a 13/08",
+        "end": "2026-08-14",
+        "label": "01/07 a 14/08",
         "name": "Período total"
       },
       "stats": {
         "totals": {
           "em_atendimento": 8,
-          "desqualificado": 5,
+          "desqualificado": 6,
           "outros_produtos": 1,
-          "sem_status": 15
+          "sem_status": 14
         },
         "n_total": 29,
-        "perdidos": 5,
-        "pct_perda": 17.2,
+        "perdidos": 6,
+        "pct_perda": 20.7,
         "empreend": [
           {
             "emp": "Blend Grand Reserva",
@@ -100,9 +100,9 @@ window.NI_DATA = {
             "visita": 0,
             "qual": 0,
             "proposta": 0,
-            "perda": 0,
+            "perda": 1,
             "outros": 0,
-            "sem": 5,
+            "sem": 4,
             "timing": {
               "start": null,
               "end": null,
@@ -505,15 +505,20 @@ window.NI_DATA = {
           {
             "label": "Motivo ambíguo (revisar)",
             "value": 4,
-            "pct": 80.0
+            "pct": 66.7
           },
           {
             "label": "Não responde / não atende",
             "value": 1,
-            "pct": 20.0
+            "pct": 16.7
+          },
+          {
+            "label": "Comprou com concorrente",
+            "value": 1,
+            "pct": 16.7
           }
         ],
-        "motivos_total": 5,
+        "motivos_total": 6,
         "perdas_by_emp": [
           {
             "emp": "Blend Grand Reserva",
@@ -522,6 +527,14 @@ window.NI_DATA = {
             "motivos": {
               "Motivo ambíguo (revisar)": 4,
               "Não responde / não atende": 1
+            }
+          },
+          {
+            "emp": "Edf. Horto Boulevard",
+            "corretor": "Dimitry",
+            "perdas": 1,
+            "motivos": {
+              "Comprou com concorrente": 1
             }
           }
         ],
@@ -570,7 +583,8 @@ window.NI_DATA = {
             "10/08",
             "11/08",
             "12/08",
-            "13/08"
+            "13/08",
+            "14/08"
           ],
           "total": [
             0,
@@ -616,6 +630,7 @@ window.NI_DATA = {
             0,
             0,
             0,
+            0,
             0
           ],
           "perda": [
@@ -637,7 +652,7 @@ window.NI_DATA = {
             0,
             0,
             0,
-            0,
+            1,
             3,
             0,
             0,
@@ -646,6 +661,7 @@ window.NI_DATA = {
             0,
             0,
             2,
+            0,
             0,
             0,
             0,
@@ -708,9 +724,11 @@ window.NI_DATA = {
             0,
             0,
             0,
+            0,
             0
           ],
           "visita": [
+            0,
             0,
             0,
             0,
@@ -800,9 +818,11 @@ window.NI_DATA = {
             0,
             0,
             0,
+            0,
             0
           ],
           "proposta": [
+            0,
             0,
             0,
             0,
@@ -875,7 +895,7 @@ window.NI_DATA = {
           "cls": "proc",
           "icon": "process",
           "title": "Padronizar planilhas",
-          "desc": "<b>52% dos leads sem status</b> (15 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
+          "desc": "<b>48% dos leads sem status</b> (14 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
         }
       ]
     },
@@ -1778,15 +1798,15 @@ window.NI_DATA = {
     "maio": {
       "period": {
         "start": "2026-05-01",
-        "end": "2026-08-13",
-        "label": "01/05 a 13/08",
+        "end": "2026-08-14",
+        "label": "01/05 a 14/08",
         "name": "Maio"
       },
       "stats": {
         "totals": {
-          "em_atendimento": 71,
-          "desqualificado": 27,
-          "sem_status": 129,
+          "em_atendimento": 69,
+          "desqualificado": 30,
+          "sem_status": 128,
           "proposta": 2,
           "visita": 3,
           "qualificado": 1,
@@ -1794,8 +1814,8 @@ window.NI_DATA = {
           "nao_momento": 1
         },
         "n_total": 236,
-        "perdidos": 27,
-        "pct_perda": 11.4,
+        "perdidos": 30,
+        "pct_perda": 12.7,
         "empreend": [
           {
             "emp": "Edf. Paradise Beach",
@@ -2065,13 +2085,13 @@ window.NI_DATA = {
             "emp": "Edf. Horto Boulevard",
             "corretor": "Dimitry",
             "leads": 8,
-            "atend": 2,
+            "atend": 0,
             "visita": 0,
             "qual": 0,
             "proposta": 0,
-            "perda": 0,
+            "perda": 3,
             "outros": 0,
-            "sem": 6,
+            "sem": 5,
             "timing": {
               "start": null,
               "end": null,
@@ -2281,31 +2301,31 @@ window.NI_DATA = {
         "motivos": [
           {
             "label": "Motivo ambíguo (revisar)",
-            "value": 9,
-            "pct": 33.3
+            "value": 11,
+            "pct": 36.7
           },
           {
             "label": "Sem motivo registrado",
             "value": 9,
-            "pct": 33.3
+            "pct": 30.0
           },
           {
             "label": "Não responde / não atende",
             "value": 5,
-            "pct": 18.5
+            "pct": 16.7
           },
           {
             "label": "Lead inválido",
             "value": 3,
-            "pct": 11.1
+            "pct": 10.0
           },
           {
             "label": "Comprou com concorrente",
-            "value": 1,
-            "pct": 3.7
+            "value": 2,
+            "pct": 6.7
           }
         ],
-        "motivos_total": 27,
+        "motivos_total": 30,
         "perdas_by_emp": [
           {
             "emp": "Jatiúca",
@@ -2348,6 +2368,15 @@ window.NI_DATA = {
               "Não responde / não atende": 1,
               "Comprou com concorrente": 1,
               "Motivo ambíguo (revisar)": 1
+            }
+          },
+          {
+            "emp": "Edf. Horto Boulevard",
+            "corretor": "Dimitry",
+            "perdas": 3,
+            "motivos": {
+              "Motivo ambíguo (revisar)": 2,
+              "Comprou com concorrente": 1
             }
           },
           {
@@ -2489,7 +2518,8 @@ window.NI_DATA = {
             "10/08",
             "11/08",
             "12/08",
-            "13/08"
+            "13/08",
+            "14/08"
           ],
           "total": [
             4,
@@ -2596,6 +2626,7 @@ window.NI_DATA = {
             0,
             0,
             0,
+            0,
             0
           ],
           "perda": [
@@ -2626,13 +2657,13 @@ window.NI_DATA = {
             1,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
             0,
             0,
             2,
@@ -2678,7 +2709,7 @@ window.NI_DATA = {
             0,
             0,
             0,
-            0,
+            1,
             3,
             0,
             0,
@@ -2687,6 +2718,7 @@ window.NI_DATA = {
             0,
             0,
             2,
+            0,
             0,
             0,
             0,
@@ -2733,13 +2765,13 @@ window.NI_DATA = {
             2,
             0,
             1,
-            1,
+            0,
             0,
             0,
             3,
             0,
             2,
-            1,
+            0,
             0,
             0,
             0,
@@ -2800,6 +2832,7 @@ window.NI_DATA = {
             0,
             0,
             1,
+            0,
             0,
             0,
             0,
@@ -2917,6 +2950,7 @@ window.NI_DATA = {
             0,
             0,
             0,
+            0,
             0
           ],
           "qual": [
@@ -2935,6 +2969,7 @@ window.NI_DATA = {
             0,
             0,
             1,
+            0,
             0,
             0,
             0,
@@ -3131,6 +3166,7 @@ window.NI_DATA = {
             0,
             0,
             0,
+            0,
             0
           ]
         }
@@ -3167,7 +3203,7 @@ window.NI_DATA = {
           "cls": "proc",
           "icon": "process",
           "title": "Padronizar planilhas",
-          "desc": "<b>55% dos leads sem status</b> (129 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
+          "desc": "<b>54% dos leads sem status</b> (128 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
         }
       ]
     }
