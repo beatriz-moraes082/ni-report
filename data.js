@@ -1,12 +1,12 @@
 window.NI_DATA = {
-  "generated_at": "30/08/2026 15:10",
+  "generated_at": "31/08/2026 17:45",
   "default_view": "total",
   "views": {
     "total": {
       "period": {
         "start": "2026-07-01",
-        "end": "2026-08-30",
-        "label": "01/07 a 30/08",
+        "end": "2026-08-31",
+        "label": "01/07 a 31/08",
         "name": "Período total"
       },
       "stats": {
@@ -600,7 +600,8 @@ window.NI_DATA = {
             "27/08",
             "28/08",
             "29/08",
-            "30/08"
+            "30/08",
+            "31/08"
           ],
           "total": [
             0,
@@ -663,6 +664,7 @@ window.NI_DATA = {
             0,
             0,
             0,
+            0,
             0
           ],
           "perda": [
@@ -693,6 +695,7 @@ window.NI_DATA = {
             0,
             0,
             2,
+            0,
             0,
             0,
             0,
@@ -789,9 +792,11 @@ window.NI_DATA = {
             0,
             0,
             0,
+            0,
             0
           ],
           "visita": [
+            0,
             0,
             0,
             0,
@@ -915,9 +920,11 @@ window.NI_DATA = {
             0,
             0,
             0,
+            0,
             0
           ],
           "proposta": [
+            0,
             0,
             0,
             0,
@@ -1020,7 +1027,7 @@ window.NI_DATA = {
       },
       "stats": {
         "totals": {
-          "desqualificado": 91,
+          "desqualificado": 100,
           "em_atendimento": 41,
           "qualificado": 5,
           "visita": 7,
@@ -1028,9 +1035,9 @@ window.NI_DATA = {
           "outros_produtos": 9,
           "nao_momento": 1
         },
-        "n_total": 160,
-        "perdidos": 91,
-        "pct_perda": 56.9,
+        "n_total": 169,
+        "perdidos": 100,
+        "pct_perda": 59.2,
         "empreend": [
           {
             "emp": "Edf. Greco",
@@ -1101,6 +1108,30 @@ window.NI_DATA = {
               "ad_status": null,
               "ad_name": null,
               "spend": 139.03,
+              "spend_shared": false
+            }
+          },
+          {
+            "emp": "Edf. Guaxuma",
+            "corretor": "Fernanda",
+            "leads": 9,
+            "atend": 0,
+            "visita": 0,
+            "qual": 0,
+            "proposta": 0,
+            "perda": 9,
+            "outros": 0,
+            "sem": 0,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null,
+              "ad_status": null,
+              "ad_name": null,
+              "spend": 195.53,
               "spend_shared": false
             }
           },
@@ -1221,30 +1252,6 @@ window.NI_DATA = {
               "ad_status": null,
               "ad_name": null,
               "spend": 0.0,
-              "spend_shared": false
-            }
-          },
-          {
-            "emp": "Edf. Guaxuma",
-            "corretor": "Fernanda",
-            "leads": 0,
-            "atend": 0,
-            "visita": 0,
-            "qual": 0,
-            "proposta": 0,
-            "perda": 0,
-            "outros": 0,
-            "sem": 0,
-            "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
-              "spend": 195.53,
               "spend_shared": false
             }
           },
@@ -1516,46 +1523,46 @@ window.NI_DATA = {
         "motivos": [
           {
             "label": "Não responde / não atende",
-            "value": 52,
-            "pct": 57.1
+            "value": 57,
+            "pct": 57.0
           },
           {
             "label": "Motivo ambíguo (revisar)",
-            "value": 21,
-            "pct": 23.1
+            "value": 22,
+            "pct": 22.0
+          },
+          {
+            "label": "Lead inválido",
+            "value": 5,
+            "pct": 5.0
           },
           {
             "label": "Lead repetido",
             "value": 4,
-            "pct": 4.4
+            "pct": 4.0
+          },
+          {
+            "label": "Valor / orçamento",
+            "value": 4,
+            "pct": 4.0
           },
           {
             "label": "Sem motivo registrado",
             "value": 3,
-            "pct": 3.3
+            "pct": 3.0
           },
           {
             "label": "Não gostou do imóvel/região",
             "value": 3,
-            "pct": 3.3
-          },
-          {
-            "label": "Valor / orçamento",
-            "value": 3,
-            "pct": 3.3
-          },
-          {
-            "label": "Lead inválido",
-            "value": 3,
-            "pct": 3.3
+            "pct": 3.0
           },
           {
             "label": "Comprou com concorrente",
             "value": 2,
-            "pct": 2.2
+            "pct": 2.0
           }
         ],
-        "motivos_total": 91,
+        "motivos_total": 100,
         "perdas_by_emp": [
           {
             "emp": "Edf. Greco",
@@ -1579,6 +1586,17 @@ window.NI_DATA = {
               "Não responde / não atende": 9,
               "Motivo ambíguo (revisar)": 1,
               "Lead repetido": 3
+            }
+          },
+          {
+            "emp": "Edf. Guaxuma",
+            "corretor": "Fernanda",
+            "perdas": 9,
+            "motivos": {
+              "Lead inválido": 2,
+              "Valor / orçamento": 1,
+              "Não responde / não atende": 5,
+              "Motivo ambíguo (revisar)": 1
             }
           },
           {
@@ -1681,11 +1699,11 @@ window.NI_DATA = {
             7,
             7,
             7,
-            1,
-            1,
-            1,
             2,
-            3,
+            6,
+            2,
+            2,
+            5,
             3,
             4,
             12,
@@ -1713,11 +1731,11 @@ window.NI_DATA = {
             3,
             5,
             5,
-            1,
+            2,
+            5,
+            2,
             0,
-            1,
-            0,
-            1,
+            3,
             1,
             1,
             0,
@@ -1878,7 +1896,7 @@ window.NI_DATA = {
           "cls": "crit",
           "icon": "alert",
           "title": "Resgatar a base não respondida",
-          "desc": "<b>52 leads</b> do período entraram e não retornaram contato. Antes de aumentar volume, rodar uma cadência de reengajamento e revisar tempo médio de primeiro toque. <b>Maior ponto de alavancagem do mês.</b>"
+          "desc": "<b>57 leads</b> do período entraram e não retornaram contato. Antes de aumentar volume, rodar uma cadência de reengajamento e revisar tempo médio de primeiro toque. <b>Maior ponto de alavancagem do mês.</b>"
         },
         {
           "tag": "Time comercial",
@@ -1899,14 +1917,14 @@ window.NI_DATA = {
     "maio": {
       "period": {
         "start": "2026-05-01",
-        "end": "2026-08-30",
-        "label": "01/05 a 30/08",
+        "end": "2026-08-31",
+        "label": "01/05 a 31/08",
         "name": "Maio"
       },
       "stats": {
         "totals": {
-          "em_atendimento": 61,
-          "desqualificado": 27,
+          "em_atendimento": 69,
+          "desqualificado": 30,
           "sem_status": 128,
           "proposta": 2,
           "visita": 3,
@@ -1914,9 +1932,9 @@ window.NI_DATA = {
           "outros_produtos": 2,
           "nao_momento": 1
         },
-        "n_total": 225,
-        "perdidos": 27,
-        "pct_perda": 12.0,
+        "n_total": 236,
+        "perdidos": 30,
+        "pct_perda": 12.7,
         "empreend": [
           {
             "emp": "Edf. Paradise Beach",
@@ -2059,6 +2077,30 @@ window.NI_DATA = {
               "ad_status": null,
               "ad_name": null,
               "spend": 236.87,
+              "spend_shared": false
+            }
+          },
+          {
+            "emp": "Edf. Guaxuma",
+            "corretor": "Fernanda",
+            "leads": 11,
+            "atend": 8,
+            "visita": 0,
+            "qual": 0,
+            "proposta": 0,
+            "perda": 3,
+            "outros": 0,
+            "sem": 0,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null,
+              "ad_status": null,
+              "ad_name": null,
+              "spend": 1005.53,
               "spend_shared": false
             }
           },
@@ -2351,30 +2393,6 @@ window.NI_DATA = {
             }
           },
           {
-            "emp": "Edf. Guaxuma",
-            "corretor": "Fernanda",
-            "leads": 0,
-            "atend": 0,
-            "visita": 0,
-            "qual": 0,
-            "proposta": 0,
-            "perda": 0,
-            "outros": 0,
-            "sem": 0,
-            "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
-              "spend": 1005.53,
-              "spend_shared": false
-            }
-          },
-          {
             "emp": "JTR Jatiúca",
             "corretor": "Nathalia",
             "leads": 0,
@@ -2403,25 +2421,30 @@ window.NI_DATA = {
           {
             "label": "Motivo ambíguo (revisar)",
             "value": 11,
-            "pct": 40.7
+            "pct": 36.7
           },
           {
             "label": "Sem motivo registrado",
             "value": 9,
-            "pct": 33.3
+            "pct": 30.0
           },
           {
             "label": "Não responde / não atende",
             "value": 5,
-            "pct": 18.5
+            "pct": 16.7
+          },
+          {
+            "label": "Lead inválido",
+            "value": 3,
+            "pct": 10.0
           },
           {
             "label": "Comprou com concorrente",
             "value": 2,
-            "pct": 7.4
+            "pct": 6.7
           }
         ],
-        "motivos_total": 27,
+        "motivos_total": 30,
         "perdas_by_emp": [
           {
             "emp": "Jatiúca",
@@ -2446,6 +2469,14 @@ window.NI_DATA = {
             "perdas": 3,
             "motivos": {
               "Não responde / não atende": 3
+            }
+          },
+          {
+            "emp": "Edf. Guaxuma",
+            "corretor": "Fernanda",
+            "perdas": 3,
+            "motivos": {
+              "Lead inválido": 3
             }
           },
           {
@@ -2623,7 +2654,8 @@ window.NI_DATA = {
             "27/08",
             "28/08",
             "29/08",
-            "30/08"
+            "30/08",
+            "31/08"
           ],
           "total": [
             4,
@@ -2634,7 +2666,7 @@ window.NI_DATA = {
             0,
             6,
             5,
-            2,
+            3,
             0,
             4,
             4,
@@ -2658,15 +2690,15 @@ window.NI_DATA = {
             0,
             4,
             5,
-            2,
-            2,
-            3,
-            2,
-            10,
-            3,
-            2,
             4,
+            3,
+            3,
             2,
+            11,
+            3,
+            3,
+            5,
+            3,
             0,
             0,
             1,
@@ -2674,10 +2706,10 @@ window.NI_DATA = {
             0,
             4,
             6,
-            4,
-            6,
+            5,
+            7,
             1,
-            4,
+            5,
             4,
             1,
             5,
@@ -2727,6 +2759,7 @@ window.NI_DATA = {
             0,
             0,
             1,
+            0,
             0,
             0,
             0,
@@ -2758,7 +2791,7 @@ window.NI_DATA = {
             0,
             2,
             1,
-            1,
+            2,
             0,
             0,
             0,
@@ -2783,10 +2816,10 @@ window.NI_DATA = {
             0,
             0,
             0,
-            1,
+            2,
             0,
             0,
-            1,
+            2,
             0,
             0,
             1,
@@ -2838,6 +2871,7 @@ window.NI_DATA = {
             0,
             0,
             2,
+            0,
             0,
             0,
             0,
@@ -2906,14 +2940,6 @@ window.NI_DATA = {
             0,
             3,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
             2,
             0,
             0,
@@ -2921,11 +2947,19 @@ window.NI_DATA = {
             0,
             0,
             1,
+            2,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            4,
+            7,
             1,
             3,
-            6,
-            1,
-            2,
             0,
             0,
             0,
@@ -2968,6 +3002,7 @@ window.NI_DATA = {
             0,
             0,
             1,
+            0,
             0,
             0,
             0,
@@ -3119,6 +3154,7 @@ window.NI_DATA = {
             0,
             0,
             0,
+            0,
             0
           ],
           "qual": [
@@ -3137,6 +3173,7 @@ window.NI_DATA = {
             0,
             0,
             1,
+            0,
             0,
             0,
             0,
@@ -3367,6 +3404,7 @@ window.NI_DATA = {
             0,
             0,
             0,
+            0,
             0
           ]
         }
@@ -3403,7 +3441,7 @@ window.NI_DATA = {
           "cls": "proc",
           "icon": "process",
           "title": "Padronizar planilhas",
-          "desc": "<b>57% dos leads sem status</b> (128 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
+          "desc": "<b>54% dos leads sem status</b> (128 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
         }
       ]
     }
