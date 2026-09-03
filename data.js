@@ -1,12 +1,12 @@
 window.NI_DATA = {
-  "generated_at": "02/09/2026 14:58",
+  "generated_at": "03/09/2026 14:51",
   "default_view": "total",
   "views": {
     "total": {
       "period": {
         "start": "2026-08-01",
-        "end": "2026-09-02",
-        "label": "01/08 a 02/09",
+        "end": "2026-09-03",
+        "label": "01/08 a 03/09",
         "name": "Período total"
       },
       "stats": {
@@ -536,7 +536,8 @@ window.NI_DATA = {
             "30/08",
             "31/08",
             "01/09",
-            "02/09"
+            "02/09",
+            "03/09"
           ],
           "total": [
             0,
@@ -571,9 +572,11 @@ window.NI_DATA = {
             0,
             0,
             0,
+            0,
             0
           ],
           "perda": [
+            0,
             0,
             0,
             0,
@@ -641,9 +644,11 @@ window.NI_DATA = {
             0,
             0,
             0,
+            0,
             0
           ],
           "visita": [
+            0,
             0,
             0,
             0,
@@ -711,9 +716,11 @@ window.NI_DATA = {
             0,
             0,
             0,
+            0,
             0
           ],
           "proposta": [
+            0,
             0,
             0,
             0,
@@ -788,17 +795,17 @@ window.NI_DATA = {
       },
       "stats": {
         "totals": {
-          "desqualificado": 99,
-          "em_atendimento": 39,
-          "qualificado": 4,
-          "visita": 5,
+          "desqualificado": 100,
+          "em_atendimento": 41,
+          "qualificado": 5,
+          "visita": 7,
           "sem_status": 6,
           "outros_produtos": 9,
           "nao_momento": 1
         },
-        "n_total": 163,
-        "perdidos": 99,
-        "pct_perda": 60.7,
+        "n_total": 169,
+        "perdidos": 100,
+        "pct_perda": 59.2,
         "empreend": [
           {
             "emp": "Edf. Greco",
@@ -969,6 +976,30 @@ window.NI_DATA = {
             }
           },
           {
+            "emp": "Edf. Sensia",
+            "corretor": "Nath",
+            "leads": 6,
+            "atend": 2,
+            "visita": 2,
+            "qual": 1,
+            "proposta": 0,
+            "perda": 1,
+            "outros": 0,
+            "sem": 0,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null,
+              "ad_status": null,
+              "ad_name": null,
+              "spend": 139.03,
+              "spend_shared": false
+            }
+          },
+          {
             "emp": "Edf. Paradise Beach",
             "corretor": "Gedson",
             "leads": 0,
@@ -989,30 +1020,6 @@ window.NI_DATA = {
               "ad_status": null,
               "ad_name": null,
               "spend": 0.0,
-              "spend_shared": false
-            }
-          },
-          {
-            "emp": "Edf. Sensia",
-            "corretor": "Nath",
-            "leads": 0,
-            "atend": 0,
-            "visita": 0,
-            "qual": 0,
-            "proposta": 0,
-            "perda": 0,
-            "outros": 0,
-            "sem": 0,
-            "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
-              "spend": 139.03,
               "spend_shared": false
             }
           },
@@ -1285,17 +1292,17 @@ window.NI_DATA = {
           {
             "label": "Não responde / não atende",
             "value": 57,
-            "pct": 57.6
+            "pct": 57.0
           },
           {
             "label": "Motivo ambíguo (revisar)",
-            "value": 21,
-            "pct": 21.2
+            "value": 22,
+            "pct": 22.0
           },
           {
             "label": "Lead inválido",
             "value": 5,
-            "pct": 5.1
+            "pct": 5.0
           },
           {
             "label": "Lead repetido",
@@ -1323,7 +1330,7 @@ window.NI_DATA = {
             "pct": 2.0
           }
         ],
-        "motivos_total": 99,
+        "motivos_total": 100,
         "perdas_by_emp": [
           {
             "emp": "Edf. Greco",
@@ -1389,6 +1396,14 @@ window.NI_DATA = {
             }
           },
           {
+            "emp": "Edf. Sensia",
+            "corretor": "Nath",
+            "perdas": 1,
+            "motivos": {
+              "Motivo ambíguo (revisar)": 1
+            }
+          },
+          {
             "emp": "Jatiúca",
             "corretor": "Adriana",
             "perdas": 1,
@@ -1431,9 +1446,9 @@ window.NI_DATA = {
             "30/04"
           ],
           "total": [
-            5,
+            6,
             3,
-            4,
+            6,
             5,
             10,
             11,
@@ -1449,21 +1464,21 @@ window.NI_DATA = {
             27,
             3,
             8,
-            6,
+            7,
             7,
             7,
             2,
             6,
             2,
-            1,
+            2,
             5,
-            2,
+            3,
             4,
             12,
             6
           ],
           "perda": [
-            4,
+            5,
             2,
             4,
             1,
@@ -1497,7 +1512,7 @@ window.NI_DATA = {
           "atend": [
             0,
             0,
-            0,
+            1,
             3,
             4,
             1,
@@ -1519,7 +1534,7 @@ window.NI_DATA = {
             0,
             1,
             0,
-            1,
+            2,
             0,
             1,
             2,
@@ -1529,7 +1544,7 @@ window.NI_DATA = {
           "visita": [
             0,
             0,
-            0,
+            1,
             0,
             0,
             1,
@@ -1553,7 +1568,7 @@ window.NI_DATA = {
             0,
             0,
             1,
-            0,
+            1,
             0,
             0,
             0
@@ -1577,7 +1592,7 @@ window.NI_DATA = {
             1,
             0,
             1,
-            0,
+            1,
             0,
             0,
             0,
@@ -1670,23 +1685,24 @@ window.NI_DATA = {
     "maio": {
       "period": {
         "start": "2026-05-01",
-        "end": "2026-09-02",
-        "label": "01/05 a 02/09",
+        "end": "2026-09-03",
+        "label": "01/05 a 03/09",
         "name": "Maio"
       },
       "stats": {
         "totals": {
-          "em_atendimento": 61,
+          "em_atendimento": 69,
           "desqualificado": 30,
           "sem_status": 128,
           "proposta": 2,
+          "visita": 3,
+          "qualificado": 1,
           "outros_produtos": 2,
-          "visita": 2,
           "nao_momento": 1
         },
-        "n_total": 226,
+        "n_total": 236,
         "perdidos": 30,
-        "pct_perda": 13.3,
+        "pct_perda": 12.7,
         "empreend": [
           {
             "emp": "Edf. Paradise Beach",
@@ -1891,6 +1907,30 @@ window.NI_DATA = {
             "perda": 0,
             "outros": 0,
             "sem": 10,
+            "timing": {
+              "start": null,
+              "end": null,
+              "days_active": null,
+              "days_left": null,
+              "start_label": null,
+              "end_label": null,
+              "ad_status": null,
+              "ad_name": null,
+              "spend": 361.81,
+              "spend_shared": false
+            }
+          },
+          {
+            "emp": "Edf. Sensia",
+            "corretor": "Nath",
+            "leads": 10,
+            "atend": 8,
+            "visita": 1,
+            "qual": 1,
+            "proposta": 0,
+            "perda": 0,
+            "outros": 0,
+            "sem": 0,
             "timing": {
               "start": null,
               "end": null,
@@ -2117,30 +2157,6 @@ window.NI_DATA = {
               "ad_status": null,
               "ad_name": null,
               "spend": 4.5,
-              "spend_shared": false
-            }
-          },
-          {
-            "emp": "Edf. Sensia",
-            "corretor": "Nath",
-            "leads": 0,
-            "atend": 0,
-            "visita": 0,
-            "qual": 0,
-            "proposta": 0,
-            "perda": 0,
-            "outros": 0,
-            "sem": 0,
-            "timing": {
-              "start": null,
-              "end": null,
-              "days_active": null,
-              "days_left": null,
-              "start_label": null,
-              "end_label": null,
-              "ad_status": null,
-              "ad_name": null,
-              "spend": 361.81,
               "spend_shared": false
             }
           },
@@ -2409,28 +2425,29 @@ window.NI_DATA = {
             "30/08",
             "31/08",
             "01/09",
-            "02/09"
+            "02/09",
+            "03/09"
           ],
           "total": [
             4,
             0,
             4,
-            3,
+            4,
             8,
             0,
             6,
             5,
             3,
             0,
+            4,
+            4,
+            5,
+            2,
+            4,
+            4,
             3,
             2,
             4,
-            1,
-            3,
-            4,
-            2,
-            1,
-            3,
             1,
             5,
             4,
@@ -2513,6 +2530,7 @@ window.NI_DATA = {
             0,
             0,
             1,
+            0,
             0,
             0,
             0,
@@ -2663,28 +2681,29 @@ window.NI_DATA = {
             0,
             0,
             0,
+            0,
             0
           ],
           "atend": [
             2,
             0,
             1,
-            1,
+            2,
             5,
             0,
             3,
             2,
             0,
             0,
-            0,
-            0,
             1,
-            0,
-            0,
+            1,
+            2,
             1,
             0,
             1,
             1,
+            2,
+            2,
             0,
             1,
             1,
@@ -2790,6 +2809,7 @@ window.NI_DATA = {
             0,
             0,
             0,
+            0,
             0
           ],
           "visita": [
@@ -2804,7 +2824,7 @@ window.NI_DATA = {
             0,
             0,
             0,
-            0,
+            1,
             0,
             0,
             0,
@@ -2814,6 +2834,7 @@ window.NI_DATA = {
             0,
             0,
             1,
+            0,
             0,
             0,
             0,
@@ -2934,6 +2955,7 @@ window.NI_DATA = {
             0,
             0,
             0,
+            1,
             0,
             0,
             0,
@@ -3171,6 +3193,7 @@ window.NI_DATA = {
             0,
             0,
             0,
+            0,
             0
           ]
         }
@@ -3207,7 +3230,7 @@ window.NI_DATA = {
           "cls": "proc",
           "icon": "process",
           "title": "Padronizar planilhas",
-          "desc": "<b>57% dos leads sem status</b> (128 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
+          "desc": "<b>54% dos leads sem status</b> (128 leads). Definir status obrigatório e motivo de perda destrava a próxima camada de análise por produto."
         }
       ]
     }
