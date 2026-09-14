@@ -1,5 +1,5 @@
 window.NI_DATA = {
-  "generated_at": "14/09/2026 16:40",
+  "generated_at": "14/09/2026 16:46",
   "default_view": "total",
   "views": {
     "total": {
@@ -835,16 +835,16 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 1001.82,
-        "impressions": 27596,
+        "spend": 1002.1,
+        "impressions": 27619,
         "clicks": 653,
-        "ctr": 2.37,
-        "frequency": 2.11,
+        "ctr": 2.36,
+        "frequency": 2.12,
         "reach": 13055,
         "leads_form": 26,
         "msg_started": 9,
         "total_meta": 35,
-        "cpl": 28.62,
+        "cpl": 28.63,
         "campaign": {
           "name": "Fundo de Funil | Formulário | Alto padrão | 13/11/25 #TP",
           "status": "ACTIVE",
@@ -3353,8 +3353,8 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 9669.89,
-        "impressions": 231056,
+        "spend": 9670.17,
+        "impressions": 231079,
         "clicks": 4718,
         "ctr": 2.04,
         "frequency": 4.63,
