@@ -1,5 +1,5 @@
 window.NI_DATA = {
-  "generated_at": "26/10/2026 17:03",
+  "generated_at": "26/10/2026 17:07",
   "default_view": "total",
   "views": {
     "total": {
@@ -909,8 +909,8 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 4173.72,
-        "impressions": 199985,
+        "spend": 4173.98,
+        "impressions": 199995,
         "clicks": 4077,
         "ctr": 2.04,
         "frequency": 4.14,
@@ -3713,8 +3713,8 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 13455.7,
-        "impressions": 417218,
+        "spend": 13455.96,
+        "impressions": 417228,
         "clicks": 8410,
         "ctr": 2.02,
         "frequency": 4.9,
