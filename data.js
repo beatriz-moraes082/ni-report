@@ -1,5 +1,5 @@
 window.NI_DATA = {
-  "generated_at": "02/11/2026 20:33",
+  "generated_at": "02/11/2026 20:37",
   "default_view": "total",
   "views": {
     "total": {
@@ -3601,8 +3601,8 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 13757.05,
-        "impressions": 432841,
+        "spend": 13757.29,
+        "impressions": 432852,
         "clicks": 8844,
         "ctr": 2.04,
         "frequency": 5.02,
