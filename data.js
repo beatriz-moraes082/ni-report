@@ -1,5 +1,5 @@
 window.NI_DATA = {
-  "generated_at": "23/11/2026 22:17",
+  "generated_at": "23/11/2026 22:26",
   "default_view": "total",
   "views": {
     "total": {
@@ -895,16 +895,16 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 3765.36,
-        "impressions": 193953,
+        "spend": 3765.44,
+        "impressions": 193966,
         "clicks": 4420,
         "ctr": 2.28,
         "frequency": 4.17,
         "reach": 46509,
         "leads_form": 225,
-        "msg_started": 74,
-        "total_meta": 299,
-        "cpl": 12.59,
+        "msg_started": 75,
+        "total_meta": 300,
+        "cpl": 12.55,
         "campaign": {
           "name": "Fundo de Funil | Formulário | Alto padrão | 13/11/25 #TP",
           "status": "ACTIVE",
@@ -3895,16 +3895,16 @@ window.NI_DATA = {
         }
       },
       "meta": {
-        "spend": 14588.45,
-        "impressions": 473801,
+        "spend": 14588.53,
+        "impressions": 473814,
         "clicks": 10213,
         "ctr": 2.16,
         "frequency": 5.26,
         "reach": 90157,
         "leads_form": 647,
-        "msg_started": 176,
-        "total_meta": 823,
-        "cpl": 17.73,
+        "msg_started": 177,
+        "total_meta": 824,
+        "cpl": 17.7,
         "campaign": {
           "name": "Fundo de Funil | Formulário | Alto padrão | 13/11/25 #TP",
           "status": "ACTIVE",
